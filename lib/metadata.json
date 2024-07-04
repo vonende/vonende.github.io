@@ -1,6 +1,6 @@
 {
   "vaultName": "Openboard",
-  "lastExport": 1720108515745,
+  "lastExport": 1720120785930,
   "pluginVersion": "1.8.01",
   "validBodyClasses": "publish css-settings-manager theme-dark show-inline-title show-ribbon",
   "useCustomHeadContent": false,
@@ -26,49 +26,8 @@
     "Abbildungen/Installation15.png",
     "Abbildungen/Installation16.png",
     "Abbildungen/windows.png",
-    "html/Abbildungen/2019_Openboard-Kurzanleitung.pdf",
-    "html/Abbildungen/2019_Openboard-Kurzanleitung_1.png",
-    "html/Abbildungen/Installation01.png",
-    "html/Abbildungen/Installation02.png",
-    "html/Abbildungen/Installation03.png",
-    "html/Abbildungen/Installation03a.png",
-    "html/Abbildungen/Installation04.png",
-    "html/Abbildungen/Installation05.png",
-    "html/Abbildungen/Installation06.png",
-    "html/Abbildungen/Installation07.png",
-    "html/Abbildungen/Installation08.png",
-    "html/Abbildungen/Installation09.png",
-    "html/Abbildungen/Installation10.png",
-    "html/Abbildungen/Installation11.png",
-    "html/Abbildungen/Installation12.png",
-    "html/Abbildungen/Installation13.png",
-    "html/Abbildungen/Installation14.png",
-    "html/Abbildungen/Installation15.png",
-    "html/Abbildungen/Installation16.png",
-    "html/Abbildungen/windows.png",
-    "html/lib/fonts/2d5198822ab091ce4305.woff2",
-    "html/lib/fonts/4bb6ac751d1c5478ff3a.woff2",
-    "html/lib/fonts/05b618077343fbbd92b7.ttf",
-    "html/lib/fonts/52ac8f3034507f1d9e53.ttf",
-    "html/lib/fonts/70cc7ff27245e82ad414.ttf",
-    "html/lib/fonts/94f2f163d4b698242fef.otf",
-    "html/lib/fonts/535a6cf662596b3bd6a6.woff2",
-    "html/lib/fonts/72505e6a122c6acd5471.woff2",
-    "html/lib/fonts/454577c22304619db035.ttf",
-    "html/lib/fonts/b5f0f109bc88052d4000.woff2",
-    "html/lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "html/lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "html/lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "html/lib/media/3d6c1bdc4d87cde4de67.svg",
-    "html/lib/media/874d8b8e340f75575caa.svg",
-    "html/lib/metadata.json",
-    "html/lib/rss.xml",
-    "html/Allgemeines.html",
-    "html/Installation.html",
-    "html/Kurzanleitung.html",
-    "Allgemeines.md",
-    "Installation.md",
-    "Kurzanleitung.md",
+    "html.zip",
+    "OpenBoard.md",
     "lib/fonts/94f2f163d4b698242fef.otf",
     "lib/fonts/72505e6a122c6acd5471.woff2",
     "lib/fonts/2d5198822ab091ce4305.woff2",
@@ -104,471 +63,225 @@
   ],
   "fileInfo": {
     "Abbildungen/2019_Openboard-Kurzanleitung.pdf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 424710,
       "exportedPath": "Abbildungen/2019_Openboard-Kurzanleitung.pdf",
       "dependencies": []
     },
     "Abbildungen/2019_Openboard-Kurzanleitung_1.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 1806682,
       "exportedPath": "Abbildungen/2019_Openboard-Kurzanleitung_1.png",
       "dependencies": []
     },
     "Abbildungen/Installation01.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 685273,
       "exportedPath": "Abbildungen/Installation01.png",
       "dependencies": []
     },
     "Abbildungen/Installation02.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 409733,
       "exportedPath": "Abbildungen/Installation02.png",
       "dependencies": []
     },
     "Abbildungen/Installation03.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 170598,
       "exportedPath": "Abbildungen/Installation03.png",
       "dependencies": []
     },
     "Abbildungen/Installation03a.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 109205,
       "exportedPath": "Abbildungen/Installation03a.png",
       "dependencies": []
     },
     "Abbildungen/Installation04.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 103440,
       "exportedPath": "Abbildungen/Installation04.png",
       "dependencies": []
     },
     "Abbildungen/Installation05.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 56308,
       "exportedPath": "Abbildungen/Installation05.png",
       "dependencies": []
     },
     "Abbildungen/Installation06.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 60111,
       "exportedPath": "Abbildungen/Installation06.png",
       "dependencies": []
     },
     "Abbildungen/Installation07.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 1152923,
       "exportedPath": "Abbildungen/Installation07.png",
       "dependencies": []
     },
     "Abbildungen/Installation08.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 884732,
       "exportedPath": "Abbildungen/Installation08.png",
       "dependencies": []
     },
     "Abbildungen/Installation09.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 61614,
       "exportedPath": "Abbildungen/Installation09.png",
       "dependencies": []
     },
     "Abbildungen/Installation10.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 382240,
       "exportedPath": "Abbildungen/Installation10.png",
       "dependencies": []
     },
     "Abbildungen/Installation11.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 319909,
       "exportedPath": "Abbildungen/Installation11.png",
       "dependencies": []
     },
     "Abbildungen/Installation12.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 347422,
       "exportedPath": "Abbildungen/Installation12.png",
       "dependencies": []
     },
     "Abbildungen/Installation13.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 120858,
       "exportedPath": "Abbildungen/Installation13.png",
       "dependencies": []
     },
     "Abbildungen/Installation14.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 193900,
       "exportedPath": "Abbildungen/Installation14.png",
       "dependencies": []
     },
     "Abbildungen/Installation15.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 241125,
       "exportedPath": "Abbildungen/Installation15.png",
       "dependencies": []
     },
     "Abbildungen/Installation16.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 105856,
       "exportedPath": "Abbildungen/Installation16.png",
       "dependencies": []
     },
     "Abbildungen/windows.png": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 6672,
       "exportedPath": "Abbildungen/windows.png",
       "dependencies": []
     },
-    "Allgemeines.md": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 2105,
-      "exportedPath": "Allgemeines.html",
+    "html.zip": {
+      "modifiedTime": 1720120785930,
+      "sourceSize": 25995991,
+      "exportedPath": "html.zip",
       "dependencies": []
     },
-    "Installation.md": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 2653,
-      "exportedPath": "Installation.html",
-      "dependencies": []
-    },
-    "Kurzanleitung.md": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 219,
-      "exportedPath": "Kurzanleitung.html",
+    "OpenBoard.md": {
+      "modifiedTime": 1720120785930,
+      "sourceSize": 5223,
+      "exportedPath": "OpenBoard.html",
       "dependencies": []
     },
     "lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 66800,
       "exportedPath": "lib/fonts/94f2f163d4b698242fef.otf",
       "dependencies": []
     },
     "lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 104232,
       "exportedPath": "lib/fonts/72505e6a122c6acd5471.woff2",
       "dependencies": []
     },
     "lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 104332,
       "exportedPath": "lib/fonts/2d5198822ab091ce4305.woff2",
       "dependencies": []
     },
     "lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 98868,
       "exportedPath": "lib/fonts/c8ba52b05a9ef10f4758.woff2",
       "dependencies": []
     },
     "lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 106876,
       "exportedPath": "lib/fonts/cb10ffd7684cd9836a05.woff2",
       "dependencies": []
     },
     "lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 105804,
       "exportedPath": "lib/fonts/b5f0f109bc88052d4000.woff2",
       "dependencies": []
     },
     "lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 106108,
       "exportedPath": "lib/fonts/cbe0ae49c52c920fd563.woff2",
       "dependencies": []
     },
     "lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 111708,
       "exportedPath": "lib/fonts/535a6cf662596b3bd6a6.woff2",
       "dependencies": []
     },
     "lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 192740,
       "exportedPath": "lib/fonts/70cc7ff27245e82ad414.ttf",
       "dependencies": []
     },
     "lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 161376,
       "exportedPath": "lib/fonts/454577c22304619db035.ttf",
       "dependencies": []
     },
     "lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 191568,
       "exportedPath": "lib/fonts/52ac8f3034507f1d9e53.ttf",
       "dependencies": []
     },
     "lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 155288,
       "exportedPath": "lib/fonts/05b618077343fbbd92b7.ttf",
       "dependencies": []
     },
     "lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 7876,
       "exportedPath": "lib/fonts/4bb6ac751d1c5478ff3a.woff2",
       "dependencies": []
     },
     "lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 317,
       "exportedPath": "lib/media/874d8b8e340f75575caa.svg",
       "dependencies": []
     },
     "lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1720108515745,
+      "modifiedTime": 1720120785930,
       "sourceSize": 279,
       "exportedPath": "lib/media/3d6c1bdc4d87cde4de67.svg",
-      "dependencies": []
-    },
-    "html/Abbildungen/2019_Openboard-Kurzanleitung.pdf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 424710,
-      "exportedPath": "html/Abbildungen/2019_Openboard-Kurzanleitung.pdf",
-      "dependencies": []
-    },
-    "html/Abbildungen/2019_Openboard-Kurzanleitung_1.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 1806682,
-      "exportedPath": "html/Abbildungen/2019_Openboard-Kurzanleitung_1.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation01.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 685273,
-      "exportedPath": "html/Abbildungen/Installation01.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation02.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 409733,
-      "exportedPath": "html/Abbildungen/Installation02.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation03.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 170598,
-      "exportedPath": "html/Abbildungen/Installation03.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation03a.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 109205,
-      "exportedPath": "html/Abbildungen/Installation03a.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation04.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 103440,
-      "exportedPath": "html/Abbildungen/Installation04.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation05.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 56308,
-      "exportedPath": "html/Abbildungen/Installation05.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation06.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 60111,
-      "exportedPath": "html/Abbildungen/Installation06.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation07.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 1152923,
-      "exportedPath": "html/Abbildungen/Installation07.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation08.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 884732,
-      "exportedPath": "html/Abbildungen/Installation08.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation09.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 61614,
-      "exportedPath": "html/Abbildungen/Installation09.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation10.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 382240,
-      "exportedPath": "html/Abbildungen/Installation10.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation11.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 319909,
-      "exportedPath": "html/Abbildungen/Installation11.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation12.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 347422,
-      "exportedPath": "html/Abbildungen/Installation12.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation13.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 120858,
-      "exportedPath": "html/Abbildungen/Installation13.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation14.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 193900,
-      "exportedPath": "html/Abbildungen/Installation14.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation15.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 241125,
-      "exportedPath": "html/Abbildungen/Installation15.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/Installation16.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 105856,
-      "exportedPath": "html/Abbildungen/Installation16.png",
-      "dependencies": []
-    },
-    "html/Abbildungen/windows.png": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 6672,
-      "exportedPath": "html/Abbildungen/windows.png",
-      "dependencies": []
-    },
-    "html/lib/fonts/2d5198822ab091ce4305.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 104332,
-      "exportedPath": "html/lib/fonts/2d5198822ab091ce4305.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/4bb6ac751d1c5478ff3a.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 7876,
-      "exportedPath": "html/lib/fonts/4bb6ac751d1c5478ff3a.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/05b618077343fbbd92b7.ttf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 155288,
-      "exportedPath": "html/lib/fonts/05b618077343fbbd92b7.ttf",
-      "dependencies": []
-    },
-    "html/lib/fonts/52ac8f3034507f1d9e53.ttf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 191568,
-      "exportedPath": "html/lib/fonts/52ac8f3034507f1d9e53.ttf",
-      "dependencies": []
-    },
-    "html/lib/fonts/70cc7ff27245e82ad414.ttf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 192740,
-      "exportedPath": "html/lib/fonts/70cc7ff27245e82ad414.ttf",
-      "dependencies": []
-    },
-    "html/lib/fonts/94f2f163d4b698242fef.otf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 66800,
-      "exportedPath": "html/lib/fonts/94f2f163d4b698242fef.otf",
-      "dependencies": []
-    },
-    "html/lib/fonts/535a6cf662596b3bd6a6.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 111708,
-      "exportedPath": "html/lib/fonts/535a6cf662596b3bd6a6.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/72505e6a122c6acd5471.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 104232,
-      "exportedPath": "html/lib/fonts/72505e6a122c6acd5471.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/454577c22304619db035.ttf": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 161376,
-      "exportedPath": "html/lib/fonts/454577c22304619db035.ttf",
-      "dependencies": []
-    },
-    "html/lib/fonts/b5f0f109bc88052d4000.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 105804,
-      "exportedPath": "html/lib/fonts/b5f0f109bc88052d4000.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/c8ba52b05a9ef10f4758.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 98868,
-      "exportedPath": "html/lib/fonts/c8ba52b05a9ef10f4758.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/cb10ffd7684cd9836a05.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 106876,
-      "exportedPath": "html/lib/fonts/cb10ffd7684cd9836a05.woff2",
-      "dependencies": []
-    },
-    "html/lib/fonts/cbe0ae49c52c920fd563.woff2": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 106108,
-      "exportedPath": "html/lib/fonts/cbe0ae49c52c920fd563.woff2",
-      "dependencies": []
-    },
-    "html/lib/media/3d6c1bdc4d87cde4de67.svg": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 279,
-      "exportedPath": "html/lib/media/3d6c1bdc4d87cde4de67.svg",
-      "dependencies": []
-    },
-    "html/lib/media/874d8b8e340f75575caa.svg": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 317,
-      "exportedPath": "html/lib/media/874d8b8e340f75575caa.svg",
-      "dependencies": []
-    },
-    "html/lib/metadata.json": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 9887,
-      "exportedPath": "html/lib/metadata.json",
-      "dependencies": []
-    },
-    "html/lib/rss.xml": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 4842843,
-      "exportedPath": "html/lib/rss.xml",
-      "dependencies": []
-    },
-    "html/Allgemeines.html": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 216081,
-      "exportedPath": "html/Allgemeines.html",
-      "dependencies": []
-    },
-    "html/Installation.html": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 12320595,
-      "exportedPath": "html/Installation.html",
-      "dependencies": []
-    },
-    "html/Kurzanleitung.html": {
-      "modifiedTime": 1720108515745,
-      "sourceSize": 7440474,
-      "exportedPath": "html/Kurzanleitung.html",
       "dependencies": []
     }
   }
