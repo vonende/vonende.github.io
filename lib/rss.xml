@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Openboard]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib\media\favicon.png</url><title>Openboard</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 17 Jul 2024 09:18:28 GMT</lastBuildDate><atom:link href="lib\rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 17 Jul 2024 09:18:27 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Inhalt]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="#Allgemeines" href="about:blank#Allgemeines" class="internal-link" target="_self" rel="noopener">Allgemeines</a>
+
+<br><a data-href="#Was ist Openboard?" href="about:blank#Was_ist_Openboard" class="internal-link" target="_self" rel="noopener">Was ist Openboard?</a>
+<br><a data-href="#Weshalb lohnt es sich, mich mit Openboard zu beschäftigen?" href="about:blank#Weshalb_lohnt_es_sich,_mich_mit_Openboard_zu_beschäftigen" class="internal-link" target="_self" rel="noopener">Weshalb lohnt es sich, mich mit Openboard zu beschäftigen?</a>
+<br><a data-href="#Vorteile" href="about:blank#Vorteile" class="internal-link" target="_self" rel="noopener">Vorteile</a>
+<br><a data-href="#Nachteile" href="about:blank#Nachteile" class="internal-link" target="_self" rel="noopener">Nachteile</a>
+
+
+<br><a data-href="#Installation" href="about:blank#Installation" class="internal-link" target="_self" rel="noopener">Installation</a>
+
+<br><a data-href="#Vorbereitungen" href="about:blank#Vorbereitungen" class="internal-link" target="_self" rel="noopener">Vorbereitungen</a>
+<br><a data-href="#Installation aus dem Unternehmensportal" href="about:blank#Installation_aus_dem_Unternehmensportal" class="internal-link" target="_self" rel="noopener">Installation aus dem Unternehmensportal</a>
+<br><a data-href="#Anheften an die Taskleiste am unteren Bildschirmrand" href="about:blank#Anheften_an_die_Taskleiste_am_unteren_Bildschirmrand" class="internal-link" target="_self" rel="noopener">Anheften an die Taskleiste am unteren Bildschirmrand</a>
+<br><a data-href="#Anpassen der Schrift- und Symbolgrößen" href="about:blank#Anpassen_der_Schrift-_und_Symbolgrößen" class="internal-link" target="_self" rel="noopener">Anpassen der Schrift- und Symbolgrößen</a>
+
+
+<br><a data-href="#Kurzanleitung" href="about:blank#Kurzanleitung" class="internal-link" target="_self" rel="noopener">Kurzanleitung</a>
+<br><br><br>Openboard ist eine kostenlose, freie und interaktive Whiteboard-Software, die speziell für den Unterricht verwendet wird. Mit diesem Programm können Sie interaktive Displays wie Smartboards oder Tablets gezielt in den Unterricht integrieren. Die Software steht in den Sprachen Deutsch, Englisch, Französisch und Italienisch zur Verfügung.<br>
+Download für private Endgeräte: <a rel="noopener" class="external-link" href="https://openboard.ch/download.de.html" target="_blank">https://openboard.ch/download.de.html</a><br><br>In unserer Schule sind nun bereits digitale Whiteboards drei verschiedener Hersteller in Benutzung. Die Verwendung der gewohnten Smart-Notebook-Software auf den Geräten anderer Hersteller erfordert eine sehr teure Lizenz. Das Geld würde an anderer Stelle schmerzlich fehlen. Damit unabhängig von der Hardware eine einheitliches Arbeiten an den digitalen Whiteboards möglich ist, wird auf jedem Gerät die voll funktionsfähige Whiteboard-Software Openboard zur Verfügung gestellt. Die Benutzung ist freiwillig und lediglich ein Angebot.<br><br>
+<br>Die Software ist kostenlos und ohne Registrierung nutzbar und mit folgenden Betriebssystemen kompatibel: Windows, MacOS, Linux
+<br>Zur Nutzung ist keine Internetverbindung notwendig.
+<br>Anwendung auf dem Notebook/Tablet zusätzlich mit Touch- und Stifteingabe möglich
+<br>Whiteboard-Software läuft auf allen gängigen Smartboards, digitalen Tafeln, elektronischen Whiteboards usw.
+<br>erstellte Dokumente können im&nbsp;Openboard-Dateiformat oder als PDF an Lehrerinnen und Lehrer verteilt werden
+<br>Unterrichtssoftware kann auch auf dem heimischen Computer installiert werden und ermöglicht Unterrichtsvorbereitung
+<br>viele integrierte Werkzeuge: Stift, Radiergummi, Marker, LaserPointer, Uhr, Timer, Lineal, Zirkel, Lupe, Taschenrechner usw.
+<br><br>
+<br>Die automatische Stifterkennung der Whiteboards der Firma Smart funktioniert in Openboard nicht.
+<br>Ein Import der Smart-Notebook-Dateien ist nicht möglich. Man kann Inhalte aus Smart-Notebook als Bild oder PDF exportieren und diese anschließend in Openboard importieren. Sie verlieren dann aber ihre Interaktivität.
+<br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a><br><br><br>Damit Apps aus dem Unternehmensportal installiert werden können, muss sich Windows auf einem halbwegs aktuellen Stand befinden. Wie Sie den Stand der Updates einsehen und Windows aktualisieren können, erfahren Sie in diesem Abschnitt.<br>Im Startmenü finden Sie links ein Zahnrad:<br>
+<img alt="update1.png" src="abbildungen\update1.png"><br>Dieses Zahnrad führt Sie zu den Einstellungen:<br>
+<img alt="update2.png" src="abbildungen\update2.png"><br>In den Einstellungen finden Sie die Kategorie "Update &amp; Sicherheit":<br>
+<img alt="update3.png" src="abbildungen\update3.png"><br>Wenn Sie ihr Gerät regelmäßig nutzen, wird Windows vermutlich im Hintergrund die neuesten Updates eingespielt haben:<br>
+<img alt="update4.png" src="abbildungen\update4.png"><br>Aber auch wenn Ihnen Windows mitteilt, sich auf dem neuesten Stand zu befinden, lohnt es sich, nach Updates zu suchen:<br>
+<img alt="update5.png" src="abbildungen\update5.png"><br>Tatsächlich findet sich oft ein installierbares Update:<br>
+<img alt="update6.png" src="abbildungen\update6.png"><br>Achtung
+Sogenannte kumulierte Sicherheitsupdates oder Versionsupdates sind oft sehr groß und können teilweise sehr lange dauern. Sie sollten zudem mit mehreren Neustarts rechnen. Stoßen Sie deshalb kein Update an, während Sie mit dem Gerät produktiv arbeiten. 
+<br>Tipp
+Aktualisieren Sie ihr Gerät am Besten, wenn Sie daheim putzen oder fernsehen. So können Sie den Aktualisierungsprozess im Blick behalten und erforderliche Neustarts durchführen.
+<br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a><br><br>Wählen Sie im Startmenü ( <img alt="windows.png" src="abbildungen\windows.png" style="width: 12px; max-width: 100%;"> ) das Unternehmensportal aus:<br>
+<img alt="Installation01.png" src="abbildungen\installation01.png"><br>Geben Sie in den Suchbereich oben links "Openboard" ein:<br>
+<img alt="Installation02.png" src="abbildungen\installation02.png"><br>Klicken Sie auf das Openboard-Symbol:<br>
+<img alt="Installation03.png" src="abbildungen\installation03.png"><br>Wählen Sie "Installieren" aus und warten geduldig:<br>
+<img alt="Installation03a.png" src="abbildungen\installation03a.png"><br>Sobald diese Auswahlbox erscheint, klicken Sie auf "Weiter":<br>
+<img alt="Installation04.png" src="abbildungen\installation04.png" style="width: 400px; max-width: 100%;"><br>Die Installation sollte nun beginnen:<br>
+<img alt="Installation05.png" src="abbildungen\installation05.png" style="width: 400px; max-width: 100%;"><br>Sobald die Installation beendet ist, klicken Sie auf "OK":<br>
+<img alt="Installation06.png" src="abbildungen\installation06.png" style="width: 400px; max-width: 100%;"><br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a><br><br>Geben Sie in die Suchleiste "Openboard" ein und wählen Sie anschließend "An Taskleiste anheften" aus:<br>
+<img alt="Installation07.png" src="abbildungen\installation07.png"><br>Hinweis
+Sollte keine Suchleiste sichtbar sein, dann drücken Sie einfach die Windowstaste ( <img alt="windows.png" src="abbildungen\windows.png" style="width: 12px; max-width: 100%;"> ) und tippen "Openboard" ein.
+<br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a><br><br>Wenn Sie Openboard nun zum ersten Mal starten, dann werden Sie feststellen, dass alle Symbole und die Schrift sehr klein sind:<br>
+<img alt="Installation09.png" src="abbildungen\installation09.png"><br>Beenden Sie Openboard wieder, indem Sie ganz oben rechts auf "Openboard" klicken und in der Liste ganz unten "Beenden" auswählen. <br>Gehen Sie nun mit dem Mauszeiger zum Openboard-Symbol unten in der Taskleiste. Klicken Sie nun mit der rechten Maustaste auf das Symbol oder mit 2 Fingern auf das Touchpad, dann noch einmal auf "OpenBoard" und danach auf "Eigenschaften":<br>
+<img alt="Installation10.png" src="abbildungen\installation10.png"><br>Wählen Sie die Karte "Kompatibilität" aus und klicken Sie auf "Hohe DPI-Einstellungen ändern":<br>
+<img alt="Installation11.png" src="abbildungen\installation11.png"><br>Wählen Sie nun im unteren Auswahlbereich "System" aus. Schließen Sie anschließend beide Fenster, indem Sie jeweils auf "OK" klicken.<br>
+<img alt="Installation12.png" src="abbildungen\installation12.png"><br>Wenn Sie jetzt noch einmal Openboard starten, sollte alles viel besser erkennbar sein:<br>
+<img alt="Installation13.png" src="abbildungen\installation13.png"><br>Durch die Beschriftungen der Symbole in der oberen Leiste ist nicht genug Platz und das Symbol "OpenBoard" versteckt sich hinter einem "&gt;&gt;". Durch Ausblenden des Textes können wir dies beheben. Dafür auf "&gt;&gt;", dann auf "OpenBoard" und danach auf "Einstellungen" klicken:<br>
+<img alt="Installation14.png" src="abbildungen\installation14.png"><br>Jetzt das Häkchen bei "Text unterhalb der Tasten anzeigen" entfernen und auf "Schließen" klicken:<br>
+<img alt="Installation15.png" src="abbildungen\installation15.png"><br>Jetzt sollte Openboard vollständig einsatzbereit sein:<br>
+<img alt="Installation16.png" src="abbildungen\installation16.png"><br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a><br><br><img alt="Kurzanleitung" src="abbildungen\2019_openboard-kurzanleitung_1.png"><br>
+<a data-href="2019_Openboard-Kurzanleitung.pdf" href="abbildungen\2019_openboard-kurzanleitung.pdf" class="internal-link" target="_self" rel="noopener">2019_Openboard-Kurzanleitung.pdf</a><br>Weitergehende Informationen finden Sie unter dem folgenden Link:<br>
+<a rel="noopener" class="external-link" href="https://www.openboard.at" target="_blank">https://www.openboard.at</a><br>zurück: <a data-href="#Inhalt" href="about:blank#Inhalt" class="internal-link" target="_self" rel="noopener">Inhalt</a>]]></description><link>openboard.html</link><guid isPermaLink="false">OpenBoard.md</guid><pubDate>Wed, 17 Jul 2024 09:07:13 GMT</pubDate><enclosure url="abbildungen\update1.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;abbildungen\update1.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
