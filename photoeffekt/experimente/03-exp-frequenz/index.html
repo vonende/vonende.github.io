@@ -1,0 +1,1631 @@
+<!DOCTYPE html><html><head> <meta charset="utf-8">  <title>V04-03 Frequenz</title>  <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black">  <link rel="apple-touch-icon" href="images/tet_logo_small.png">  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"> <link rel="stylesheet" type="text/css" href="css/webstyles.all.min.css">   <script type="text/javascript">
+	username="guest"; // global !!  data from django
+	first_name=""; // global !!  data from django
+	last_name=""; // global !!  data from django
+
+</script>   <script src="js/jquery-4.0.0.min.js"></script> <script src="js/jquery-migrate-4.0.2.min.js"></script> <script src="js/jquery-ui.min.js"></script> <script src="js/webscript.all.min.js"></script>   </head>   <body class="web guest_login">  <div id="mainPane" class="tetpage  mathjax_only_dollar" itemtitle="V04-03 Frequenz" tetfoliopage="tf_1110550" tetfoliopage_ii="ii_798415" tetfoliobook_ii="ii_691005" tfowner="juek" iiowner="juek" leftpage="1110549" rightpage="1110551" itemtype="TETpage" page_index="44" page_count="881" hidetitle="1">      <div class="tetitem   " itemtype="TETbox" itemtitle="V04-03" tfowner="juek" iiowner="juek" style="top:0px;left:0px;width:1024px;height:683px;" id="pl_1113093" ii_id="ii_800481">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="bg1.jpg" tfowner="juek" iiowner="juek" style="top:0px;left:0px;width:1024px;height:683px;" id="pl_1113096" ii_id="ii_800486">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800486.jpg">   </div>      </div>     <div class="tetitem   logicCodeBox" itemtype="tettool" itemtitle="Logic →  Controller" tfowner="shaase" iiowner="shaase" tettool_param_rules="action%20%3D%3D%3D%20%22loadpage%22%20%E2%87%92%20%0A%20%20%20dia_show%28%22meter%22%2C%201%29%0A%0Aaction%20%3D%3D%3D%20%22schwenken%22%20%E2%87%92%20%0A%20%20%20console.log%28action%2C%20arg%29%0A%20%20%20%20switch%28arg.i%29%20%7B%0A%20%20%20%20%20%20%20%20case%203%3A%20e610.setInputUT%280%29%3B%20break%3B%20//%20rot%20%284/15%29%200%2C00%20/%20-%0A%20%20%20%20%20%20%20%20case%209%3A%20e610.setInputUT%28.36%2C%20550%29%3B%20break%3B%20//%20gr%C3%BCn%20%2810/15%29%200%2C36%20/%209%3A10%0A%20%20%20%20%20%20%20%20case%2011%3A%20e610.setInputUT%28.57%2C%20340%29%3B%20break%3B%20//%20blau%20%2812/15%29%200%2C57%20/%205%3A40%0A%20%20%20%20%20%20%20%20case%2012%3A%20e610.setInputUT%28.62%2C%20390%29%3B%20break%3B%20//%20violet%20%2813/15%29%200%2C62%20/%206%3A30%0A%20%20%20%20%20%20%20%20default%3A%20e610.setInputUT%280%29%3B%0A%20%20%20%20%7D%0A" style="top:0px;left:0px;width:199px;height:95px;" id="pl_1123523" ii_id="ii_661483">   <div class="tetitem_inner">      <script src="js/logicController.js"></script>
+<script type="sebscript">$('#pl_1123523').on("tet:beforeinit", function() { tettool_logicController.init("logicController", $('#pl_1123523')) })</script>
+<div class="errorMsg"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schwenken" tfowner="juek" iiowner="juek" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" style="top:124px;left:705px;width:350px;height:347px;" id="pl_1113097" ii_id="ii_800487">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0001.jpg" tfowner="juek" iiowner="juek" style="top:0px;left:0px;width:319px;height:346px;" id="pl_1113099" ii_id="ii_800489">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800489.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0002.jpg" tfowner="juek" iiowner="juek" style="top:71px;left:88px;width:319px;height:346px;" id="pl_1113098" ii_id="ii_800488">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800488.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0003.jpg" tfowner="juek" iiowner="juek" style="top:121px;left:138px;width:319px;height:346px;" id="pl_1113100" ii_id="ii_800491">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800491.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0004.jpg" tfowner="juek" iiowner="juek" style="top:171px;left:188px;width:319px;height:346px;" id="pl_1113101" ii_id="ii_800490">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800490.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0005.jpg" tfowner="juek" iiowner="juek" style="top:221px;left:238px;width:319px;height:346px;" id="pl_1113103" ii_id="ii_800493">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800493.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0006.jpg" tfowner="juek" iiowner="juek" style="top:271px;left:288px;width:319px;height:346px;" id="pl_1113104" ii_id="ii_800495">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800495.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0007.jpg" tfowner="juek" iiowner="juek" style="top:321px;left:338px;width:319px;height:346px;" id="pl_1113106" ii_id="ii_800496">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800496.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0008.jpg" tfowner="juek" iiowner="juek" style="top:371px;left:388px;width:319px;height:346px;" id="pl_1113105" ii_id="ii_800494">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800494.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0009.jpg" tfowner="juek" iiowner="juek" style="top:421px;left:438px;width:319px;height:346px;" id="pl_1113102" ii_id="ii_800492">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800492.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0010.jpg" tfowner="juek" iiowner="juek" style="top:471px;left:488px;width:319px;height:346px;" id="pl_1113107" ii_id="ii_800497">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800497.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0011.jpg" tfowner="juek" iiowner="juek" style="top:521px;left:538px;width:319px;height:346px;" id="pl_1113110" ii_id="ii_800500">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800500.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0012.jpg" tfowner="juek" iiowner="juek" style="top:571px;left:588px;width:319px;height:346px;" id="pl_1113108" ii_id="ii_800498">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800498.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0013.jpg" tfowner="juek" iiowner="juek" style="top:621px;left:638px;width:319px;height:346px;" id="pl_1113109" ii_id="ii_800499">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800499.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0014.jpg" tfowner="juek" iiowner="juek" style="top:671px;left:688px;width:319px;height:346px;" id="pl_1113111" ii_id="ii_800501">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800501.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="V04_006_01_0015.jpg" tfowner="juek" iiowner="juek" style="top:721px;left:738px;width:319px;height:346px;" id="pl_1113112" ii_id="ii_800502">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800502.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Schiebe-Controller" tfowner="juek" iiowner="shaase" notetdata="1" tettool_param_diashow_name="schwenken%2C%20trigger%3Aschwenken" tettool_param_x-richtung="-52" freedrag="1" style="top:270px;left:929px;width:95px;height:170px;" id="pl_1113113" ii_id="ii_685823">   <div class="tetitem_inner">      <script src="js/dia_drag_ctrl.js"></script>
+<script type="sebscript">$('#pl_1113113').on("tet:beforeinit", function() { tettool_dia_drag_ctrl.init("dia_drag_ctrl", $('#pl_1113113')) })</script>
+<style type="text/css">
+#pl_1113113:not([layouting]):not(.ui-draggable-disabled) *:not(input):not(.ui-slider-handle) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   border_1px_solid_#ccc rounded_corners_3px" itemtype="TETbox" itemtitle="schwenken" tfowner="juek" iiowner="juek" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="detail" style="top:17px;left:700px;width:300px;height:190px;" id="pl_1113131" ii_id="ii_800521">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="0.jpg" tfowner="juek" iiowner="juek" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1113133" ii_id="ii_800522">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800522.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="1.jpg" tfowner="juek" iiowner="juek" style="top:111px;left:192px;width:300px;height:190px;" id="pl_1113134" ii_id="ii_800523">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800523.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="2.jpg" tfowner="juek" iiowner="juek" style="top:161px;left:242px;width:300px;height:190px;" id="pl_1113132" ii_id="ii_800524">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800524.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="3.jpg" tfowner="juek" iiowner="juek" style="top:211px;left:292px;width:300px;height:190px;" id="pl_1113136" ii_id="ii_800526">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800526.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="4.jpg" tfowner="juek" iiowner="juek" style="top:261px;left:342px;width:300px;height:190px;" id="pl_1113140" ii_id="ii_800529">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800529.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="5.jpg" tfowner="juek" iiowner="juek" style="top:311px;left:392px;width:300px;height:190px;" id="pl_1113135" ii_id="ii_800525">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800525.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="6.jpg" tfowner="juek" iiowner="juek" style="top:361px;left:442px;width:300px;height:190px;" id="pl_1113137" ii_id="ii_800527">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800527.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="7.jpg" tfowner="juek" iiowner="juek" style="top:411px;left:492px;width:300px;height:190px;" id="pl_1113139" ii_id="ii_800530">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800530.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="8.jpg" tfowner="juek" iiowner="juek" style="top:461px;left:542px;width:300px;height:190px;" id="pl_1113138" ii_id="ii_800528">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800528.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="9.jpg" tfowner="juek" iiowner="juek" style="top:511px;left:592px;width:300px;height:190px;" id="pl_1113141" ii_id="ii_800531">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800531.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="juek" iiowner="juek" style="top:561px;left:642px;width:300px;height:190px;" id="pl_1113142" ii_id="ii_800532">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800532.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="juek" iiowner="juek" style="top:611px;left:692px;width:300px;height:190px;" id="pl_1113143" ii_id="ii_800533">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800533.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="juek" iiowner="juek" style="top:661px;left:742px;width:300px;height:190px;" id="pl_1113144" ii_id="ii_800534">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800534.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="juek" iiowner="juek" style="top:711px;left:792px;width:300px;height:190px;" id="pl_1113145" ii_id="ii_800535">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800535.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="juek" iiowner="juek" style="top:761px;left:842px;width:300px;height:190px;" id="pl_1113146" ii_id="ii_800536">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800536.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_detail" tfowner="juek" iiowner="juek" tetaction="show: detail; show: detail_close;hide:hz_detail" style="top:209px;left:721px;width:319px;height:61px;" id="pl_1114364" ii_id="ii_801412">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="detail1" tfowner="juek" iiowner="juek" tetlabel="detail_close" tetaction="toggle: detail; toggle: detail_close; show:hz_detail" style="top:0px;left:989px;width:35px;height:34px;" id="pl_1114363" ii_id="ii_798039">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798039.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_610" tfowner="shaase" iiowner="shaase" tetaction="toggle: Electrometer-610b; toggle: close_610; hide: hz_610" style="top:240px;left:552px;width:119px;height:184px;" id="pl_1123508" ii_id="ii_807444">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   border_1px_solid_#ccc rounded_corners_3px" itemtype="TETbox" itemtitle="Electrometer-610b" tfowner="shaase" iiowner="shaase" style="top:17px;left:231px;width:443px;height:657px;" id="pl_1123510" ii_id="ii_805087">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="skala" tfowner="shaase" iiowner="juek" rotangle="rotate(-0.7deg)" style="top:16px;left:25px;width:394px;height:218px;transform:rotate(-0.7deg);-webkit-transform:rotate(-0.7deg);" id="pl_1119152" ii_id="ii_798441">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798441.jpg">   </div>      </div>     <div class="tetitem   " itemtype="TETdraw" itemtitle="zeiger" tfowner="shaase" iiowner="shaase" style="top:32px;left:40px;width:364px;height:165px;" id="pl_1119237" ii_id="ii_805145">   <div class="tetitem_inner">   <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <line stroke="#bf0000" id="svg_pl_1110067_1" y2="164" x2="183" y1="12" x1="183" fill="none"></line>
+ </g>
+</svg>  </div>      </div>     <div class="tetitem   ignore_click" itemtype="img" itemtitle="bg1" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:443px;height:660px;" id="pl_1119154" ii_id="ii_800568">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800568.png">   </div>      </div>     <div class="tetitem   codeBox" itemtype="TETbox" itemtitle="610B-Code" tfowner="shaase" iiowner="shaase" style="top:311px;left:0px;width:200px;height:26px;" id="pl_1119236" ii_id="ii_805144">   <div class="tetitem_inner">      <div class="tetitem_text"><style>
+    .tetitem[itemtitle=zeiger] svg {
+        transform: rotate(47deg);
+        transform-origin: 183px 230px;
+        transform-origin: 185px 223px;
+        transform-origin: 185px 223px;
+        transform-origin: 188px 219px;
+        xoutline: 1px solid green;
+        transition-timing-function: cubic-bezier(0, 1.06, 1.0, 0.96);
+        transition-timing-function: cubic-bezier(0.1, .3, .3, 1);
+    }
+</style><script type="sebscript">(function() {
+    console.log("610B-Code")
+    var $tetitem= $('#pl_1119236');
+    var electrometer = $tetitem.parent().closest(".tetitem");
+    var zeiger = $tet("zeiger", electrometer);
+    var zeigerSVG = zeiger.find("svg");
+
+    var on = false;
+    var zero = true;
+    var scale = 1;
+    var center = 0;
+    var negative = false;
+    var inputU=0;
+    var inputT=0;
+    //var curU=0;
+    
+    var phiLeft = -57;
+    var phiRight = 56;
+    var phiZero = -47.6;
+    var warp = 1;
+    
+    window.e610 = electrometer[0];
+    
+    window.e610.isReady = 
+    function isReady() {
+        return on && !zero;        
+    }
+    function curU() {
+        var pp = get_css_transform(zeigerSVG[0], 3);
+        var curPhi = pp.angle;
+        var u = (curPhi - phiZero) / (-phiZero/5);
+        if(center) u -= 5;
+        if(negative) u *=-1;
+        if(scale==3) u /= 10/3;
+        else    u/=10;
+        return u;
+    }
+    window.e610.curU = curU;
+
+    function rotToPhi(x, t) {
+        if(t===undefined) t = 1;
+        
+        var pp = get_css_transform(zeigerSVG[0], 3);
+        var curPhi = pp.angle;
+        console.log("curPhi", curPhi, "-->", x, "t:", t)
+        zeigerSVG.css({
+            transform: "rotate("+curPhi+"deg)",
+            "transition": ""
+        })
+        //TODO -- adjust time based on curPhi vs x
+        setTimeout(function() {
+            zeigerSVG.css({
+                transform: "rotate("+x+"deg)",
+                "transition-duration": t+"s"
+            });
+        }, 1); // otherwise "transition" not reset (on chrome at least...)
+    }
+    window.e610.rotToPhi = rotToPhi;
+    function rotToU(x, t) {
+        console.log("rotToU", x, t, "warp:",warp, "on:", on);
+        if(!on) return;
+        //curU = x;   // FIXME should be set incrementally while moving up....
+        if(scale==3) x *= 10/3;
+        else    x*=10;
+        x *= -phiZero/5;
+        if(!center) {
+            if(!negative) x+=  phiZero;
+            else          x =  phiZero -x;
+        }
+        if(x<phiLeft ) { x = phiLeft;  t = .8 }
+        if(x>phiRight ) { x = phiRight;  t = .8 }
+        rotToPhi(x, t);
+    }
+    window.e610.rotToU = rotToU;
+
+    function setInputUT(target, time) {
+        if(time === undefined) time = 1; 
+        time /= warp;
+        inputU=target;
+        inputT=time;
+        if(zero) return;
+        if(curU() > target) {
+            rotToU(curU(), 0);
+            return;
+        }
+        rotToU(target, time);
+    }
+    e610.setInputUT = setInputUT
+
+
+    $("[name=warp]", electrometer).on("change", function (ev, arg) {
+        var w = 1+4*this.checked;
+        if(warp != w) inputT = inputT * warp / w;
+        warp = w;
+        if(zero) return;
+        rotToU(inputU, inputT);
+    });
+        
+    $tet("meter", electrometer).on("diashow_change", function (ev, arg) {
+        if(arg.i>0) tetshow("on");
+        else        tethide("on");
+        center = arg.i === 4;
+        negative = arg.i === 3;
+        if(arg.i===0) {
+            on=false;
+            rotToPhi(phiLeft, 1);
+        } else if(arg.i==1) {
+            on=false;
+            rotToPhi(phiZero, 1);
+        } else {
+            on=true;
+            if(!zero) {
+                if(Math.abs(inputU - curU())>.05)         rotToU(inputU, inputT);
+                else                       rotToU(inputU, .5); // switching to negative?
+            }
+            else      rotToU(0, .3);
+        }
+    });
+    $tet("mb", electrometer).on("diashow_change", function (ev, arg) {
+        var cu=curU();
+        scale = arg.i ? 3 : 1;
+        if(!zero && on) {
+            rotToU(cu, .5);
+            setTimeout(function() { 
+                if(Math.abs(inputU - cu)>.05)         rotToU(inputU, inputT);
+                else                                      rotToU(inputU, .5);
+            }, 500);
+        }
+    });
+
+    $tet("hz_zero", electrometer).on("click", function () {
+        tettoggle("UNLOCK");
+        zero ^= 1; // toggle bool;
+        if(!on) return;
+        if(zero) {
+            rotToU(0, 1);
+        } else {
+            rotToU(inputU, inputT);
+        }
+    });
+    $tetitem.on("tet:beforedynvar", function() {
+        tethide("UNLOCK");
+        tethide("on");
+        rotToPhi(phiLeft);
+    })
+ })();
+</script></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="on" tfowner="shaase" iiowner="juek" style="top:511px;left:294px;width:61px;height:92px;" id="pl_1119155" ii_id="ii_800571">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800571.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="meter" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" style="top:382px;left:328px;width:137px;height:111px;" id="pl_1119156" ii_id="ii_805089">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="power off.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:95px;height:95px;" id="pl_1119157" ii_id="ii_800573">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800573.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="off.jpg" tfowner="shaase" iiowner="juek" style="top:107px;left:100px;width:95px;height:95px;" id="pl_1119158" ii_id="ii_800574">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800574.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="+.jpg" tfowner="shaase" iiowner="juek" style="top:120px;left:169px;width:95px;height:95px;" id="pl_1119159" ii_id="ii_800575">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800575.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="-.jpg" tfowner="shaase" iiowner="juek" style="top:126px;left:137px;width:95px;height:95px;" id="pl_1119160" ii_id="ii_800576">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800576.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="center.jpg" tfowner="shaase" iiowner="juek" style="top:98px;left:144px;width:95px;height:95px;" id="pl_1119161" ii_id="ii_800577">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800577.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Drehknopf Controller" tfowner="shaase" iiowner="shaase" tettool_param_winkelbereich="150" tettool_param_diashow_name="meter" tettool_param_keine_schleife="checked" style="top:373px;left:317px;width:110px;height:109px;" id="pl_1119162" ii_id="ii_685516">   <div class="tetitem_inner">      <div></div>
+<script type="sebscript">
+(function() {
+    "use strict";
+    console.log("Diashow Drehknopf Controller")
+    if(window.TETTOOL_DEBUG) debugger;
+    var $tetitem = $('#pl_1119162');
+    
+    var dianames = get_tettool_param($tetitem, "diashow_name");
+    var disallowLoop = get_tettool_param($tetitem, "keine_Schleife");
+    var counterclockwise = get_tettool_param($tetitem, "gegenuhrzeigersinn");
+    var anglerange = get_tettool_param($tetitem, "Winkelbereich", 360);
+    //unused var angleoffset = get_tettool_param($tetitem, "Winkeloffset", 0);
+    
+    var totalSteps,  // num of dias in 1st diashow, or set by trigger:xx <num>, or 100
+        currentStep, // cur pos in range [1..totalSteps]
+	    currentPos,  // cur pos in range [0..1]   =val/data.totalSteps;
+		lastDeg,
+		rotation,
+		skipSelfTriggered;
+    
+    
+    if(!dianames.length) {
+        $(".tetitem_inner div", $tetitem).html("<span class='tetError'>Kein Diashowname angegeben</span>");
+        return;
+    }
+    dianames = dianames.split(",");
+    
+    var dia_ids=[];
+    var diashow1st;
+
+    $.each(dianames, function(i,e) { 
+        e=e.trim();
+        if(e.substring(0,8) ==="trigger:") {
+            e = e.substring(8).trim();
+            e = e.split(/ +/);
+            dia_ids.push("trigger:"+e[0]);
+            if(!diashow1st) {
+                //not for trigger ... diashow1st = this;
+                totalSteps  = parseInt(e[1])||0; 
+            }
+        } else {
+            var par = $tet(e, $tetitem.parent().closest(".tetitem"), true/*noWarning*/);
+            if(!par.length) par = $tet(e); // if dianame not found in parent, search anywhere ...
+            par.each(function(){ 
+                if(! this.hasAttribute("tetbox_dia") ) {
+                    console.error("Diashow Controller - " + this.getAttribute("itemtitle") +": not a diashow tetbox");
+                    return true; //continue
+                }
+                if(!diashow1st) {
+                    diashow1st = this;
+                    //diashow still {} at this point ... totalSteps  = totalSteps || diashow[diashow1st.id].subs.length; 
+                }
+                dia_ids.push(this.id); 
+            });
+        }
+    })
+
+    if(!dia_ids.length) {
+        $(".tetitem_inner div", $('#pl_1119162')).html( "Diashow Controller - " + dianames +": no diashow tetboxes found" );
+        console.error("Diashow Controller - " + dianames +": no diashow tetboxes found");
+        return;
+    }
+//    $tetitem
+//        .on("tet:beforeinit", function() {
+//        });
+    $tetitem
+        .on("tet:beforedynvar", function() {
+            init();
+        });
+    
+    $(diashow1st).on("diashow_change", function() {
+        if(skipSelfTriggered) return;
+        currentStep = 1 + diashow[this.id].i;
+        if(counterclockwise) {
+            currentStep = totalSteps - currentStep;
+        }
+        currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        if(window.TETTOOL_DEBUG) console.log("Diashow Drehknopf Controller ", currentStep );
+    });
+    /*defer(function() {
+    $(".dia_i", $('#pl_1119162')).width( $(".dia_n", $('#pl_1119162')).width() );
+    console.log("WW:", $(".dia_n", $('#pl_1119162')).width());
+    });
+    */
+
+    function init() {
+        var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+
+        //20181205   todo - FIXMNE:
+        //  too many vars currentDeg(already retired,done.),lastDeg,rotation,startDeg, currentStep, tmp(should be renamed to "curMoveAngleDelta") 
+    
+        totalSteps  = totalSteps || (diashow1st ? diashow[diashow1st.id].subs.length : 100); // keep totalSteps if it was set by "trigger:<name> <num>""
+
+        currentStep = 1+dia_i;
+		if(counterclockwise) {
+		    currentStep = totalSteps - currentStep;
+		}
+
+
+		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        var $doc = $(document);
+        
+		$tetitem.on('mousedown touchstart', function(e) {
+		    if(window.layouting_mode) return;
+		    if(tetPageChanged(init)) {
+		           console.log("TET-PAGE-LEFT Diashow Drehknopf Controller");
+		           return;
+		    }
+		    
+			var offset = $tetitem.offset();
+			var center ={y: offset.top  + $tetitem.height()/2,
+			             x: offset.left + $tetitem.width()/2};
+			var startDeg;//undefined
+
+			//Position( in[0,1]) korrigieren in Abh. des Steps)
+			currentPos = (currentStep-1)/(totalSteps-1);      /////SEB FIXME LAST -1 WRONG
+			$doc.on('mousemove.rem touchmove.rem',function(evt) {
+				var e = (evt.originalEvent.touches) ? evt.originalEvent.touches[0] : evt;
+				var a = center.y - e.pageY;
+				var b = center.x - e.pageX;
+				var deg = Math.atan2(a,b) * 180/Math.PI;    // 9Uhr =0; 12Uhr =90; 6Uhr =-90
+				// we have to make sure that negative
+				// angles are turned into positive:
+				if(deg<0) {
+					deg = 360 + deg;
+				}
+				//Save the starting position of the drag
+				if(startDeg === undefined) {
+					startDeg = deg;
+				}
+					
+				// Calculating the current rotation
+				var tmp = ((deg-startDeg) + rotation);
+				
+				// Making sure the current rotation
+				// stays between 0 and 359._9
+				if(tmp < 0)	{
+//				    console.log("tmp", tmp)
+					if(disallowLoop) {
+					//    tmp = 0
+    				//	startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+					}// else {
+					    tmp = 360 + tmp;
+					//}
+				} else if(tmp >= 360) {
+					tmp = tmp % 360;
+				}
+					
+				if(lastDeg>anglerange && disallowLoop) {
+					lastDeg = anglerange;
+//					startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+				}
+							
+				// DEG -> POS -> STP
+				//deg->pos
+				currentPos=lastDeg/anglerange;
+				
+				// pos->stp
+				var turningStep = Math.floor(totalSteps*currentPos)+1
+				if(turningStep > totalSteps) turningStep=totalSteps;
+				if(turningStep != currentStep) {
+					currentStep=turningStep;
+					
+					var dia_i = currentStep-1; // 0-based
+					if(counterclockwise) {
+					    dia_i = totalSteps - 1 - dia_i;
+					}
+					skipSelfTriggered = true;
+                    for(var i in dia_ids) {
+                        if(dia_ids[i].substring(0,8)==="trigger:") {
+                            tettrigger(dia_ids[i].substring(8), 0, $tetitem, {i:dia_i});
+                        } else {
+                            diashow_show(dia_ids[i], dia_i); //diashow[dia_id].i+1);
+                        }
+                    }
+                    skipSelfTriggered = false;
+				}
+
+				// This would suggest we are at an end position;
+				// we need to block further rotation.
+//seb 20160403							if(Math.abs(tmp - data.lastDeg) > 180 && data.infinite!==true)
+				if(Math.abs(tmp - lastDeg) > 180 && disallowLoop) {
+					if(tmp<lastDeg)	{
+						lastDeg = anglerange-0.00000000001;
+					} else {
+						//currentDeg = 0;
+						lastDeg = 0;
+					}
+				} else {
+				    //currentDeg = tmp;
+    				lastDeg = tmp;
+				}
+				evt.stopImmediatePropagation();
+				//20200423  Unable to preventDefault inside passive event listener due to target being treated as passive.  evt.preventDefault();
+				return false; //prevent page move on touch scrollable page 
+			});
+			//disable default iPad "dragging background" 
+			$(web_mode?"body":"#fullBrowserWindow")[0].addEventListener("touchmove", handler_touchmove, { passive: false} );
+            function handler_touchmove(evt) {
+                evt.preventDefault();
+            }/*20200423
+			$(web_mode?"body":"#fullBrowserWindow").on('touchmove.rem',function(evt) {
+                evt.preventDefault();
+            });    */
+
+                
+			$doc.on('mouseup.rem touchend.rem',function()
+			{
+				$doc.off('.rem');
+				//20200423  $(web_mode?"body":"#fullBrowserWindow").off('touchmove.rem');
+				$(web_mode?"body":"#fullBrowserWindow")[0].removeEventListener("touchmove", handler_touchmove);
+
+				console.log("doc.off(.rem)")
+				// Saving the current rotation
+				rotation = lastDeg;
+				
+				// Marking the starting degree as invalid
+				startDeg = undefined;
+				
+				//Pos+Deg korrigieren, damit "voller" schritt für stepwechsel nötig ist
+				currentPos = (currentStep-1)/(totalSteps-1);                                  //FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+				//currentDeg = currentPos * anglerange;
+				lastDeg = currentPos * anglerange;
+				rotation = currentPos * anglerange;
+			});					
+		});
+        $tetitem.data("tettool", {
+            updatePos:  function updatePos(i) {
+                var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+                if(i !== undefined) dia_i = i;
+                currentStep = 1+dia_i;
+        		if(counterclockwise) {
+        		    currentStep = totalSteps - currentStep;
+        		}
+        		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+                //currentDeg=currentPos * anglerange;
+        		lastDeg =  currentPos * anglerange;
+        		rotation = currentPos * anglerange;
+            }
+        })
+    }
+})();//closure
+
+</script>
+<style type="text/css">
+#pl_1119162:not([layouting]) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="mb" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" style="top:354px;left:171px;width:117px;height:102px;" id="pl_1119163" ii_id="ii_805090">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="1V.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:95px;height:95px;" id="pl_1119164" ii_id="ii_800579">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800579.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="3V.jpg" tfowner="shaase" iiowner="juek" style="top:90px;left:85px;width:95px;height:95px;" id="pl_1119165" ii_id="ii_800580">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800580.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Drehknopf Controller" tfowner="shaase" iiowner="shaase" tettool_param_winkelbereich="60" tettool_param_diashow_name="mb" tettool_param_keine_schleife="checked" style="top:358px;left:175px;width:90px;height:90px;" id="pl_1119166" ii_id="ii_685516">   <div class="tetitem_inner">      <div></div>
+<script type="sebscript">
+(function() {
+    "use strict";
+    console.log("Diashow Drehknopf Controller")
+    if(window.TETTOOL_DEBUG) debugger;
+    var $tetitem = $('#pl_1119166');
+    
+    var dianames = get_tettool_param($tetitem, "diashow_name");
+    var disallowLoop = get_tettool_param($tetitem, "keine_Schleife");
+    var counterclockwise = get_tettool_param($tetitem, "gegenuhrzeigersinn");
+    var anglerange = get_tettool_param($tetitem, "Winkelbereich", 360);
+    //unused var angleoffset = get_tettool_param($tetitem, "Winkeloffset", 0);
+    
+    var totalSteps,  // num of dias in 1st diashow, or set by trigger:xx <num>, or 100
+        currentStep, // cur pos in range [1..totalSteps]
+	    currentPos,  // cur pos in range [0..1]   =val/data.totalSteps;
+		lastDeg,
+		rotation,
+		skipSelfTriggered;
+    
+    
+    if(!dianames.length) {
+        $(".tetitem_inner div", $tetitem).html("<span class='tetError'>Kein Diashowname angegeben</span>");
+        return;
+    }
+    dianames = dianames.split(",");
+    
+    var dia_ids=[];
+    var diashow1st;
+
+    $.each(dianames, function(i,e) { 
+        e=e.trim();
+        if(e.substring(0,8) ==="trigger:") {
+            e = e.substring(8).trim();
+            e = e.split(/ +/);
+            dia_ids.push("trigger:"+e[0]);
+            if(!diashow1st) {
+                //not for trigger ... diashow1st = this;
+                totalSteps  = parseInt(e[1])||0; 
+            }
+        } else {
+            var par = $tet(e, $tetitem.parent().closest(".tetitem"), true/*noWarning*/);
+            if(!par.length) par = $tet(e); // if dianame not found in parent, search anywhere ...
+            par.each(function(){ 
+                if(! this.hasAttribute("tetbox_dia") ) {
+                    console.error("Diashow Controller - " + this.getAttribute("itemtitle") +": not a diashow tetbox");
+                    return true; //continue
+                }
+                if(!diashow1st) {
+                    diashow1st = this;
+                    //diashow still {} at this point ... totalSteps  = totalSteps || diashow[diashow1st.id].subs.length; 
+                }
+                dia_ids.push(this.id); 
+            });
+        }
+    })
+
+    if(!dia_ids.length) {
+        $(".tetitem_inner div", $('#pl_1119166')).html( "Diashow Controller - " + dianames +": no diashow tetboxes found" );
+        console.error("Diashow Controller - " + dianames +": no diashow tetboxes found");
+        return;
+    }
+//    $tetitem
+//        .on("tet:beforeinit", function() {
+//        });
+    $tetitem
+        .on("tet:beforedynvar", function() {
+            init();
+        });
+    
+    $(diashow1st).on("diashow_change", function() {
+        if(skipSelfTriggered) return;
+        currentStep = 1 + diashow[this.id].i;
+        if(counterclockwise) {
+            currentStep = totalSteps - currentStep;
+        }
+        currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        if(window.TETTOOL_DEBUG) console.log("Diashow Drehknopf Controller ", currentStep );
+    });
+    /*defer(function() {
+    $(".dia_i", $('#pl_1119166')).width( $(".dia_n", $('#pl_1119166')).width() );
+    console.log("WW:", $(".dia_n", $('#pl_1119166')).width());
+    });
+    */
+
+    function init() {
+        var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+
+        //20181205   todo - FIXMNE:
+        //  too many vars currentDeg(already retired,done.),lastDeg,rotation,startDeg, currentStep, tmp(should be renamed to "curMoveAngleDelta") 
+    
+        totalSteps  = totalSteps || (diashow1st ? diashow[diashow1st.id].subs.length : 100); // keep totalSteps if it was set by "trigger:<name> <num>""
+
+        currentStep = 1+dia_i;
+		if(counterclockwise) {
+		    currentStep = totalSteps - currentStep;
+		}
+
+
+		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        var $doc = $(document);
+        
+		$tetitem.on('mousedown touchstart', function(e) {
+		    if(window.layouting_mode) return;
+		    if(tetPageChanged(init)) {
+		           console.log("TET-PAGE-LEFT Diashow Drehknopf Controller");
+		           return;
+		    }
+		    
+			var offset = $tetitem.offset();
+			var center ={y: offset.top  + $tetitem.height()/2,
+			             x: offset.left + $tetitem.width()/2};
+			var startDeg;//undefined
+
+			//Position( in[0,1]) korrigieren in Abh. des Steps)
+			currentPos = (currentStep-1)/(totalSteps-1);      /////SEB FIXME LAST -1 WRONG
+			$doc.on('mousemove.rem touchmove.rem',function(evt) {
+				var e = (evt.originalEvent.touches) ? evt.originalEvent.touches[0] : evt;
+				var a = center.y - e.pageY;
+				var b = center.x - e.pageX;
+				var deg = Math.atan2(a,b) * 180/Math.PI;    // 9Uhr =0; 12Uhr =90; 6Uhr =-90
+				// we have to make sure that negative
+				// angles are turned into positive:
+				if(deg<0) {
+					deg = 360 + deg;
+				}
+				//Save the starting position of the drag
+				if(startDeg === undefined) {
+					startDeg = deg;
+				}
+					
+				// Calculating the current rotation
+				var tmp = ((deg-startDeg) + rotation);
+				
+				// Making sure the current rotation
+				// stays between 0 and 359._9
+				if(tmp < 0)	{
+//				    console.log("tmp", tmp)
+					if(disallowLoop) {
+					//    tmp = 0
+    				//	startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+					}// else {
+					    tmp = 360 + tmp;
+					//}
+				} else if(tmp >= 360) {
+					tmp = tmp % 360;
+				}
+					
+				if(lastDeg>anglerange && disallowLoop) {
+					lastDeg = anglerange;
+//					startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+				}
+							
+				// DEG -> POS -> STP
+				//deg->pos
+				currentPos=lastDeg/anglerange;
+				
+				// pos->stp
+				var turningStep = Math.floor(totalSteps*currentPos)+1
+				if(turningStep > totalSteps) turningStep=totalSteps;
+				if(turningStep != currentStep) {
+					currentStep=turningStep;
+					
+					var dia_i = currentStep-1; // 0-based
+					if(counterclockwise) {
+					    dia_i = totalSteps - 1 - dia_i;
+					}
+					skipSelfTriggered = true;
+                    for(var i in dia_ids) {
+                        if(dia_ids[i].substring(0,8)==="trigger:") {
+                            tettrigger(dia_ids[i].substring(8), 0, $tetitem, {i:dia_i});
+                        } else {
+                            diashow_show(dia_ids[i], dia_i); //diashow[dia_id].i+1);
+                        }
+                    }
+                    skipSelfTriggered = false;
+				}
+
+				// This would suggest we are at an end position;
+				// we need to block further rotation.
+//seb 20160403							if(Math.abs(tmp - data.lastDeg) > 180 && data.infinite!==true)
+				if(Math.abs(tmp - lastDeg) > 180 && disallowLoop) {
+					if(tmp<lastDeg)	{
+						lastDeg = anglerange-0.00000000001;
+					} else {
+						//currentDeg = 0;
+						lastDeg = 0;
+					}
+				} else {
+				    //currentDeg = tmp;
+    				lastDeg = tmp;
+				}
+				evt.stopImmediatePropagation();
+				//20200423  Unable to preventDefault inside passive event listener due to target being treated as passive.  evt.preventDefault();
+				return false; //prevent page move on touch scrollable page 
+			});
+			//disable default iPad "dragging background" 
+			$(web_mode?"body":"#fullBrowserWindow")[0].addEventListener("touchmove", handler_touchmove, { passive: false} );
+            function handler_touchmove(evt) {
+                evt.preventDefault();
+            }/*20200423
+			$(web_mode?"body":"#fullBrowserWindow").on('touchmove.rem',function(evt) {
+                evt.preventDefault();
+            });    */
+
+                
+			$doc.on('mouseup.rem touchend.rem',function()
+			{
+				$doc.off('.rem');
+				//20200423  $(web_mode?"body":"#fullBrowserWindow").off('touchmove.rem');
+				$(web_mode?"body":"#fullBrowserWindow")[0].removeEventListener("touchmove", handler_touchmove);
+
+				console.log("doc.off(.rem)")
+				// Saving the current rotation
+				rotation = lastDeg;
+				
+				// Marking the starting degree as invalid
+				startDeg = undefined;
+				
+				//Pos+Deg korrigieren, damit "voller" schritt für stepwechsel nötig ist
+				currentPos = (currentStep-1)/(totalSteps-1);                                  //FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+				//currentDeg = currentPos * anglerange;
+				lastDeg = currentPos * anglerange;
+				rotation = currentPos * anglerange;
+			});					
+		});
+        $tetitem.data("tettool", {
+            updatePos:  function updatePos(i) {
+                var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+                if(i !== undefined) dia_i = i;
+                currentStep = 1+dia_i;
+        		if(counterclockwise) {
+        		    currentStep = totalSteps - currentStep;
+        		}
+        		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+                //currentDeg=currentPos * anglerange;
+        		lastDeg =  currentPos * anglerange;
+        		rotation = currentPos * anglerange;
+            }
+        })
+    }
+})();//closure
+
+</script>
+<style type="text/css">
+#pl_1119166:not([layouting]) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="UNLOCK" tfowner="shaase" iiowner="juek" style="top:535px;left:348px;width:54px;height:54px;" id="pl_1119167" ii_id="ii_800583">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800583.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_zero" tfowner="shaase" iiowner="shaase" tetaction="js:null" style="top:527px;left:346px;width:62px;height:69px;" id="pl_1119168" ii_id="ii_805091">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="input labeling" tfowner="shaase" iiowner="shaase" style="top:494px;left:30px;width:85px;height:47px;" id="pl_1119170" ii_id="ii_805093">   <div class="tetitem_inner">      <div class="tetitem_text"><span style="font-size:14px;"><em>R</em></span><span style="font-size:12px;"><sub>i</sub></span><span style="font-size:14px;"> &gt; 10<sup>14</sup>&nbsp;Ω</span></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="warp" tfowner="shaase" iiowner="shaase" style="top:209px;left:316px;width:97px;height:23px;" id="pl_1123525" ii_id="ii_807454">   <div class="tetitem_inner">      <div class="tetitem_text"><style> #pl_1123525 {
+    font-size: 13px;
+    font-style: italic;
+    color: #fff;
+x    border: 1px solid #aaa;
+x    background: #aaa;
+x    border-radius: 13px;
+    text-align: center;
+  }
+</style><label><input name="warp" nosave="" type="checkbox">WARP x5</label></div>  </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="detail1" tfowner="shaase" iiowner="juek" tetlabel="close_610" tetaction="hide: Electrometer-610b; hide: close_610; show:hz_610" style="top:2px;left:657px;width:35px;height:34px;" id="pl_1123509" ii_id="ii_798039">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798039.png">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek" style="top:683px;left:0px;width:1025px;height:60px;" id="pl_1545462" ii_id="ii_1123014">   <div class="tetitem_inner">      <div class="tetitem_text"><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">© 2020 Freie Universität Berlin |&nbsp;</span></span><span style="caret-color: rgb(44, 86, 130); color: rgb(44, 86, 130); font-size: 14px;">AG Didaktik der Physik&nbsp;</span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">in Zusammenarbeit mit QUA-LiS NRW</span></span><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span></div>  </div>      </div>      <script>var TETdata_page = undefined;</script>    
+<style type="text/css" itemtype="TETstyle" itemtitle="1m.mathjax" iiowner="shaase" ii_id="ii_1129478">
+.mathjax_only_dollar {
+}
+.mathjax_only_backets {
+}
+
+  .MathJax:focus {
+    outline: none;
+}
+
+
+</style>
+<div class="tetitem tet_underlay" itemtype="tettool" itemtitle="Math-Jax" id="mathjax-from-style-no-dynvar-skip" style="display:none;height:0;width:0"></div>
+<!-- seb fix for offline via wget  --- wget only knows "stylesheet" and "shortcut icon" -should be "prefetch" -->
+<link rel="shortcut icon" href="js/MMLorHTML.js">
+<link rel="shortcut icon" href="js/config.js">
+<link rel="shortcut icon" href="js/jax.js">
+<link rel="shortcut icon" href="js/config_1.js">
+<link rel="shortcut icon" href="js/config_2.js">
+<!--            #MathJax-2.7.5: -->
+<link rel="shortcut icon" href="js/GreekItalic.js">
+<link rel="shortcut icon" href="js/GreekItalic_1.js">
+<link rel="shortcut icon" href="js/MathItalic.js">
+<link rel="shortcut icon" href="js/MathItalic_1.js">
+            
+<link rel="shortcut icon" href="js/config_3.js">
+<link rel="shortcut icon" href="js/tex2jax.js">
+<link rel="shortcut icon" href="js/mml2jax.js">
+
+<link rel="shortcut icon" href="js/jax_1.js">
+<link rel="shortcut icon" href="js/MathEvents.js">
+<link rel="shortcut icon" href="js/AMSmath.js">
+<link rel="shortcut icon" href="js/AMSsymbols.js">
+<link rel="shortcut icon" href="js/noErrors.js">
+<link rel="shortcut icon" href="js/noUndefined.js">
+
+<link rel="shortcut icon" href="js/TeX-AMS-MML_HTMLorMML.js">
+<!--            #20190912-old                    'inc/MathJax/images/MenuArrow-15.png"/>    -->
+<link rel="shortcut icon" href="js/jax_2.js">
+<link rel="shortcut icon" href="js/fontdata.js">
+<link rel="shortcut icon" href="js/fontdata-1.0.js">
+<!-- 20230328 <link rel="shortcut icon" href="/inc/MathJax/extensions/MathMenu.js"/> -->
+<!-- 20230328 <link rel="shortcut icon" href="/inc/MathJax/extensions/MathZoom.js"/> -->
+
+<link rel="shortcut icon" href="js/multiline.js">
+<link rel="shortcut icon" href="js/MathItalic.js">
+<link rel="shortcut icon" href="js/MathItalic_1.js">
+<link rel="shortcut icon" href="js/CurrencySymbols.js">
+<link rel="shortcut icon" href="js/LetterlikeSymbols.js">
+<link rel="shortcut icon" href="js/LetterlikeSymbols_1.js">
+
+
+
+<script type="text/x-mathjax-config">
+  console.log("1m.mathjax")
+  var mathjax_only = $("[class*=mathjax_only_]");
+  mathjax_only = mathjax_only.length && getClassnameTail(mathjax_only[0], "mathjax_only_")
+  MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    showMathMenu: false, //20190301
+    tex2jax: {
+       inlineMath:  mathjax_only=="backets" ?[['\\(','\\)']] : mathjax_only=="dollar" ?[['$','$']]: [['$','$'], ['\\(','\\)']],
+       displayMath: mathjax_only=="backets" ?[['\\[','\\]']] : mathjax_only=="dollar" ?[['$$','$$']]: [['$$','$$'], ['\\[','\\]']]
+//        ignoreClass: "dynexpr"
+    },
+    //tex2jax: {inlineMath: [['\\(','\\)']]},
+    config: ["MMLorHTML.js"],
+    jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+    extensions: ["tex2jax.js","mml2jax.js"],//20190301 apparently loaded automatically if showMathMenu true:!!  ,"MathMenu.js","MathZoom.js"],
+    TeX: {
+       extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
+    "HTML-CSS": {                       // http://docs.mathjax.org/en/latest/options/output-processors/HTML-CSS.html
+       mtextFontInherit: true, //20180222 https://groups.google.com/forum/#!topic/mathjax-users/nokFUnsyDxg
+    }
+  });
+  //https://groups.google.com/forum/#!topic/mathjax-users/_HCDxJbCFjc
+  (function () {
+	  var EXT = MathJax.Extension, mm, mz;
+      MathJax.Hub.Register.StartupHook("End Typeset",function () {
+          console.log("20230328 - this never gets called - CHECK!!") // b/c skipStartupTypeset  is true!! 
+        mm = EXT.MathMenu; mz = EXT.MathZoom;
+        EXT.MathMenu = EXT.MathZoom = {};
+      });
+	  MathJax.Hub.Queue(function () {
+	    if (mm) {EXT.MathMenu = mm} else {delete EXT.MathMenu}
+	    if (mz) {EXT.MathZoom = mz} else {delete EXT.MathZoom}
+	  });
+	  //MathJax.Hub.signal.Interest(function (message) {console.log("Hub: "+message)}); // lots of "New Math", then "End math", then "End Process"
+      MathJax.Hub.Register.MessageHook("End Math", function (message) {
+    	  $(window).trigger("resize"); // mindmap: reposition mid-boxes w/ mathjax
+	  });
+  })();
+</script>
+<script type="sebscript">
+  if(window.TETTOOL_DEBUG)  console.log("1m.mathjax")
+  dynreg_fcn($("#mathjax-from-style-no-dynvar-skip"), function(action) {
+      //if(action=="loadpage" || action=="layout") {
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById("mainPane")]);
+      //}
+    },
+    $("dynvar").closest(".tetitem").map(function() {return this.id}).toArray() // go last in dyn dependencies, i.e. depend on all others
+  )
+</script>
+<!-- script type="text/javascript" src="/inc/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> -->
+<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script> -->
+<!--<script type="text/javascript" src="/inc/MathJax-2.7.5/unpacked/MathJax.js"></script>-->
+<!--<script type="text/javascript" src="/inc/MathJax-2.7.5/MathJax.js"></script>-->
+<script type="text/javascript" src="js/MathJax.js"></script>
+<style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="logicControllerStyle--tettool:Logic→Controller" iiowner="shaase" ii_id="ii_690837">
+.logicCodeBox:not([layouting]) {
+	pointer-events: none;
+}
+.logicCodeBox:not([layouting])>.tetitem_inner {
+    overflow: visible;
+}
+.logicCodeBox .errorMsg span {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 2em;
+}
+#mainPane[can_edit_ii] .logicCodeBox[layouting][can_edit_tet] {
+	font-size:8px;
+x	outline: 4px orange dotted;
+	background: rgba(127,255,0,.2);
+}
+#mainPane[can_edit_ii] .logicCodeBox[layouting][itemtype=tettool]:not(.tet_underlay):before {
+    content: "tet.tool: " attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;
+}
+.logicCodeBox .errorMsg:not(:empty):before {
+    content: "Error in Logik-Controller:";
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;    
+}
+    
+.logicCodeBox .errorMsg {
+	color: red;
+	font-family: monospace;
+	font-size: 10px;
+}
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="1a.format" iiowner="shaase" ii_id="ii_774976">
+/* tet CSS-with-vars  1. # MINIMUM 1 WHITE-SPACE BEFORE DECLARATION-BLOCK !!!    2.  NOTHING at start of selector line-> not even END-OF-ANOTHER-C-COMMENT*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.text_middle_center {                                                         /* der Text ist horizontal und vertikal zentriert */
+    display:table;
+    }
+    .text_middle_center>.tetitem_inner {
+        display:table-cell;
+        vertical-align:middle;
+        position: relative;
+    }
+    .text_middle_center>.tetitem_inner>.tetitem_text {
+        position: relative;
+        height: initial;
+        text-align: center;
+    }
+/*    .text_middle_center>.tetitem_inner>.tetitem_text>p,
+    .text_middle_center>.tetitem_inner>.tetitem_text>div {
+        display: inline;
+    }
+*/
+      .text_middle_center>.tetitem_inner>.tetitem_text>p:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+/*    .text_middle_right_{margin}>.tetitem_inner>.tetitem_text>p,
+
+*/
+
+
+
+
+/*    .text_middle_left_{margin}>.tetitem_inner>.tetitem_text>p,
+
+*/
+
+.text_bottom {                                                         /* der Text ist vertikal bottom */
+    display:table;
+    }
+    .text_bottom>.tetitem_inner {
+        display:table-cell;
+        vertical-align:bottom;
+        position: relative;
+    }
+    .text_bottom>.tetitem_inner>.tetitem_text {
+        position: relative;
+        height: initial;
+x        text-align: center;
+    }
+    .text_bottom>.tetitem_inner>.tetitem_text>p,
+    .text_bottom>.tetitem_inner>.tetitem_text>div {
+        display: inline-block;
+    }
+
+.border_1px_solid_\#ccc {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+   }
+
+.rounded_corners_3px {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.rounded_corners_3px:not([layouting]) {
+    overflow: hidden;
+    -webkit-background-clip: padding-box; /* Safari bug - 20220223 - https://stackoverflow.com/questions/17416879/safari-bug-with-border-radius-rounded-corners-and-strange-background-repeat */
+}
+
+
+
+
+
+
+
+
+
+
+.text_selectable .tetitem_inner , .text_selectable .tetitem_inner * {
+   -webkit-user-select: initial;
+   user-select: text;
+   -moz-user-select: text;    
+}
+
+.overflow>.tetitem_inner {
+    overflow:visible;
+}
+
+
+
+
+
+@media not print {
+
+}
+
+
+@media print
+{
+.noprint {
+		display:none !important;
+    }
+.doprint {
+		display:initial !important;
+    }
+}    
+
+
+
+
+
+.hyphens .tetitem_inner {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.tethide {}
+/*.hyphens_lang_{lang=!de;en} {
+}
+*/
+</style><script type="sebscript">$("#mainPane .hyphens,#mainPane.hyphens").length && ( console.log("lang=de"), document.body.lang="de" )</script><style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="ibe.box" iiowner="shaase" ii_id="ii_17209">
+/* non-master TETstyle */
+.clickable.tetitem:not([layouting]) * {
+	cursor: pointer !important;
+}
+.not-allowed.tetitem:not([layouting]) * {
+	cursor: not-allowed !important;
+}
+
+.bottomText.tetitem>.tetitem_inner>.tetitem_text {
+    height: initial;
+    top: auto;
+    bottom: 0px;
+}
+.bottomText.tetitem>.tetitem_inner>.tetitem_text>p:last-child {
+    margin-bottom: 0px;
+}
+
+.preStandardFont pre {
+    font-family:inherit;
+}
+
+.tethide {}
+.authorsOnlyNote {
+    background: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+body.web .authorsOnlyNote.tetitem,
+body.tetnoteMode .authorsOnlyNote.tetitem,
+body.guest_login .authorsOnlyNote.tetitem{
+    display: none !important;
+}
+.TeachersOnly {
+    background: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+body:not(.tc_teacher) .TeachersOnly:not([can_edit_ii]) {
+    display: none !important;
+}
+
+.tetbutton {
+	cursor: pointer;
+    border: 1px solid #CCC;
+	
+	background-image: linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -o-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -moz-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -webkit-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -ms-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.25, rgb(243,243,243)),
+		color-stop(0.82, rgb(218,218,218))
+	);
+	
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.tetbutton.jqhover,
+.tetbutton:hover {
+	/* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dadada), to(#f3f3f3)); */
+	background-image: linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -o-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -moz-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -webkit-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -ms-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.25, rgb(218,218,218)),
+		color-stop(0.82, rgb(243,243,243))
+	);
+}
+
+
+.tetcamBox.tetitem:not([layouting]) {
+	outline: 1px dashed #777; 
+}
+.tetcamBox.tetitem:not([layouting]) * {
+	cursor: pointer;
+}
+.vertical-middle {
+  display:table-cell; 
+  vertical-align:middle;
+}
+.vertical-container-centered {
+  display: table;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.ibeBox {
+	/*border: 1px solid black;*/
+/*	cursor: pointer; */
+/*	text-align: center; */
+	vertical-align: middle;
+}
+
+
+.ibeBox .tetitem_inner {
+/*why???*/	overflow: visible;
+	white-space: nowrap;
+}
+
+.ibeBox:not([layouting]) .param {
+	opacity:.0;
+	margin: 0px;
+}
+.ibeBox[layouting] .param {
+	color: red;
+	font-weight: 1000;
+	margin: 0px;
+}
+.IBEslider {
+	width:100%;
+	height: 100%;
+	cursor: pointer;
+/*	outline:1px dashed #ffd; */
+}
+/*
+.IBEslider.IBEslider2 {
+	width:100%;
+	height: 100%;
+	background:#ff0;
+	position: absolute !important;
+}*/
+
+.dragme {
+	border: solid 1px grey;
+	border-radius: 30px;
+}
+.dropziel {
+   outline: dotted 1px red;
+   content: "Ziel";
+}
+.gray_border {
+   outline: 1px #ddd solid;
+}
+.grayDark555_border {
+   outline: 1px #555 solid;
+}
+.back {
+   background: firebrick;
+}
+.ignore_click:not([layouting]) {
+        pointer-events: none;
+}
+.ignore_click_reset:not([layouting]) {
+        pointer-events: all;
+}
+.hidden:not([layouting]) {
+	display: none;
+}
+.hidden[layouting] {
+	opacity:.3
+}
+.noInteraction:not([layouting]) {
+	pointer-events: none;
+}
+
+
+
+.drehbar {
+   x outline: 1px solid #ccc;
+}
+.drehbar_hover_cursor:not([layouting]),
+.drehbar_hover_cursor:not([layouting])  *:not(input):not(.ui-slider-handle) {
+    cursor: alias;
+}
+
+</style><script type="sebscript">(function() {
+    "use strict";
+    var mp=$("#mainPane")[0];
+
+window.init_drehbar = 
+function init_drehbar(_this) {
+    if(_this  instanceof jQuery) {
+        _this.each(function() {
+            init_drehbar(this);
+        });
+        return;
+    }
+    var $doc = $(document);
+
+    //if(window.TETTOOL_DEBUG) 
+    console.log("ibe.box->drehbar:", _this.id, _this.getAttribute("itemtitle"))
+
+function offCenter(_this, e) {
+    var mpx = -mp.offsetLeft + mp.parentElement.scrollLeft,  mpy = -mp.offsetTop + mp.parentElement.scrollTop;
+
+    var x = (!e.touches ? e.pageX : e.touches[0].pageX) + mpx;
+    var y = (!e.touches ? e.pageY : e.touches[0].pageY) + mpy;
+//    var x = (!e.touches ? e.offsetX : e.touches[0].pageX) + mpx;
+//    var y = (!e.touches ? e.offsetY : e.touches[0].pageY) + mpy;
+
+//20190706
+_this.drehbar_x = x;
+//20190706
+_this.drehbar_y = y;
+
+    var x0 = _this.offsetLeft;
+    var y0 = _this.offsetTop;
+
+    var el=_this.offsetParent; //20190706 parentElement
+    while(el!=mp) {
+        //20200914  x += el.offsetLeft;
+        //20200914  y += el.offsetTop;
+
+        x0 += el.offsetLeft;
+        y0 += el.offsetTop;
+
+        el=el.offsetParent; //20190706 parentElement
+    }
+//    _this.drehbar_x = x;
+//    _this.drehbar_y = y;
+
+    var xc = x0 + _this.offsetWidth/2;
+    var yc = y0 + _this.offsetHeight/2;
+    
+    _this.drehbar_xc = xc;
+    _this.drehbar_yc = yc;
+
+    var theta = _this.drehbar_a!==undefined?_this.drehbar_a:get_css_transform(_this).angle
+    theta *= Math.PI/180;
+    var co = Math.cos(theta);
+    var si = Math.sin(theta);
+
+    var h = Math.abs(_this.offsetWidth * si) + Math.abs(_this.offsetHeight * co);
+    var w = Math.abs(_this.offsetWidth * co) + Math.abs(_this.offsetHeight * si);
+
+    var xoffrel=Math.abs(x - xc) / w;
+    var yoffrel=Math.abs(y - yc) / h;
+
+    //console.log(xoffrel, yoffrel);
+    
+    return  !_this.classList.contains("ui-draggable") || (xoffrel*xoffrel + yoffrel*yoffrel) > .3*.3;
+}
+$(_this)
+.on("tet:init_from_TETdata_page", function(evt, TETdata_page) {
+    var a = TETdata_page.tettool;
+    if(a) a = a[this.id];
+    if(a) a = a.drehbar_angle;
+    if(a) $(this).css("transform", "rotate("+a+"deg)");
+    $(this).triggerHandler("tet:drehbar", a || 0);
+})
+.click(function() {
+    if(window.layouting_mode) return;    
+return;
+    var a = get_css_transform(this);
+    a = a && a.angle || 0;
+    a = prompt("Winkel", a);
+    $(this).css("transform", "rotate("+a+"deg)");
+	sebSend("tetroom_action", "tettool", {
+		id:_this.id, 
+		drehbar_angle:a
+	});
+	update_TETdata_thisPage("tettool", _this.id, { drehbar_angle:a });
+})
+/*.on("mouseleave", function(e) {
+    if(window.layouting_mode) return;
+    if(!this.drehbar_on) return;
+    var $this = $(this);
+    //20250127  this.drehbar_on = false;
+    if($this.hasClass("ui-draggable")) {
+        $this.draggable( "enable" );
+        $this.trigger("mouseup");
+    }
+    this.drehbar_on = false;//20250127
+})
+*/
+.on("mousedown touchstart", function(e) {
+    if(window.layouting_mode) return;
+    var $this = $(_this);
+    
+    if (e.touches && e.touches.length > 1) {
+        _this.drehbar_on = false;
+        if($this.hasClass("ui-draggable")) {
+            $this.draggable( "enable" );
+            $this.trigger("mouseup");
+        }
+        $this.removeClass("drehbar_hover_cursor");
+        return;
+    }
+
+    tetinfobar( $this.hasClass("ui-draggable") ? "Zum Drehen am Rand anfassen [Strg: 90°/4 Schritte]"
+        : "drehen [Strg: 90°/4 Schritte]", 4000);
+    
+    // drehen_if_not_draggable_or_.3_outside_obj_center
+    if(!offCenter(_this, e)) return;
+    $this.addClass("drehbar_hover_cursor");
+    _this.drehbar_on = true;
+    _this.drehbar_x0 = _this.drehbar_x;
+    _this.drehbar_y0 = _this.drehbar_y;
+    _this.drehbar_a0 = get_css_transform(_this);
+    _this.drehbar_a0 = (_this.drehbar_a0 && _this.drehbar_a0.angle) || 0;
+
+    var a = Math.atan2(_this.drehbar_y-_this.drehbar_yc, _this.drehbar_x-_this.drehbar_xc);
+    a = a * (180 / Math.PI);
+    _this.drehbar_a0 -= a;
+
+    if(window.TETTOOL_DEBUG) console.log("start", _this.id, _this.drehbar_a0,  a)
+    if($this.hasClass("ui-draggable")) $this.draggable( "disable" );
+
+//////////////////////    $this.data("drehbar", {x0: x, y0: y})
+
+	$doc.on('mousemove.rem touchmove.rem',function(e) {
+        if(window.layouting_mode) return;
+
+        //20250806- what was this for??
+        //if(!_this.drehbar_on) {
+        //    var oc = offCenter(_this, e);
+        //    $this.toggleClass("drehbar_hover_cursor", !!oc);
+        //    return;
+        //}
+        var mpx = -mp.offsetLeft + mp.parentElement.scrollLeft,  mpy = -mp.offsetTop + mp.parentElement.scrollTop;
+    
+        var x = (!e.touches ? e.pageX : e.touches[0].pageX) + mpx;
+        var y = (!e.touches ? e.pageY : e.touches[0].pageY) + mpy;
+    
+        var a = Math.atan2(y-_this.drehbar_yc, x-_this.drehbar_xc);
+        a = a * (180 / Math.PI);
+    
+        if(window.TETTOOL_DEBUG) console.log( _this.drehbar_a0,  a, y-_this.drehbar_yc, x-_this.drehbar_xc)
+        a = _this.drehbar_a0  + a;
+        if(e.altKey ||e.shiftKey || e.ctrlKey) {
+            a = Int(a / 22.5, "r") * 22.5;
+        }        
+        _this.drehbar_a = a;
+        $this.css("transform", "rotate("+a+"deg)");
+        
+    	sebSend("tetroom_action", "tettool", {
+    		id:_this.id, 
+    		drehbar_angle:a
+    	});
+        $this.triggerHandler("tet:drehbar", a);
+        ////d.x = x;
+        ////d.y = y;
+        ////d.a = a;
+        return false; // no draggable !!
+    })
+	.on('mouseup.rem touchend.rem',function() {
+		$doc.off('.rem');
+	    if(window.layouting_mode) return;
+        if(!_this.drehbar_on) return;
+        _this.drehbar_on = false;
+        if($this.hasClass("ui-draggable")) {
+            $this.draggable( "enable" );
+            $this.trigger("mouseup");
+        }
+        $this.removeClass("drehbar_hover_cursor");
+    	////var d = $this.data("drehbar");
+    	if(!_this.hasAttribute("notetdata")) {
+        	update_TETdata_thisPage("tettool", _this.id, { drehbar_angle: _this.drehbar_a });
+        }
+    });
+})
+.data("onmessage", function(d) {
+    if(window.layouting_mode) return;    
+    _this.css("transform", "rotate("+d.drehbar_angle+"deg)");
+});
+}//function init_drehbar()
+
+    init_drehbar($(".drehbar"));
+})();
+</script><style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="dynvar" iiowner="shaase" ii_id="ii_82661">
+/* non-master TETstyle */
+.dragme {
+	border: solid 1px grey;
+	border-radius: 30px;
+}
+t{}
+.dropziel {
+   outline: dotted 1px red;
+   content: "Ziel";
+}
+.gray_border {
+   outline: 1px #ddd solid;
+}
+.back {
+   background-color: firebrick;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) {
+	pointer-events: none;
+    display: none;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) .tetitem,
+#mainPane .codeBox:not([layouting][can_edit_tet]) button,
+#mainPane .codeBox:not([layouting][can_edit_tet]) input,
+#mainPane .codeBox:not([layouting][can_edit_tet]) label,
+#mainPane .codeBox:not([layouting][can_edit_tet]) textarea,
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetaction],
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetbox_dia]/*Safari wants this!!!!*/ {
+	pointer-events: initial;
+}
+#mainPane[can_edit_ii] .codeBox[layouting][can_edit_tet] { /* don't ! [can_edit_ii]   20170922 but[can_edit_tet] to hide nested in tet.tool */
+	font-size:8px;
+x	outline: 4px orange dotted;
+	background-color: rgba(127,255,0,.2);
+}
+#mainPane[can_edit_ii] .codeBox[layouting][itemtype=tettool]:not(.tet_underlay):before {
+    content: "tet.tool: " attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background-color: #f5f5dcbb;
+    z-index: 1;
+}
+#mainPane[can_edit_ii] .codeBox[layouting]:not(.tet_underlay):not([itemtype=tettool]):before {
+    content: attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background-color: #f5f5dcbb;
+    z-index: 1;
+}
+
+
+.img-crisp-edges {
+image-rendering: -moz-crisp-edges;         /* Firefox */
+image-rendering:   -o-crisp-edges;         /* Opera */
+image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.tethide {}
+.authorsOnlyNote {
+    background-color: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+.authorsOnlyNote>.tetitem_inner>.tetitem_text {
+    padding: 4px 0 0 4px;
+    width: calc(100% - 8px);
+}
+body.web .authorsOnlyNote.tetitem,
+body.tetnoteMode .authorsOnlyNote.tetitem,
+body.guest_login .authorsOnlyNote.tetitem{
+    display: none !important;
+}
+
+.codeBox[layouting][can_edit_ii] script {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) script:before {
+	content: "\003cscript\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script {
+    margin: 28px 5px 7px;
+}
+
+
+.codeBox[layouting][can_edit_ii] style {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) style:before {
+	content: "\003cstyle\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style {
+    margin: 28px 5px 7px;
+}
+
+.codeBox-showStandardContent {}
+body #mainPane .codeBox.codeBox-showStandardContent {
+    display: block !important;
+}
+
+.kopfBox:not([layouting]) {
+   z-index: 10000;
+}
+.kopfBox.tetitem>.tetitem_inner {
+    overflow:visible;
+}
+
+
+.authorInfoTag::after {
+    content: "Autor: " attr(iiowner);
+    font-size: 12px;
+    font-family: cursive;
+    position: absolute;
+    top: -21px;
+    left: 5px;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+    padding: 0px 7px 0px;
+}
+.titleInfoTag .tetitem:not([itemtitle=""])::after,
+.titleInfoTag:not([itemtitle=""])::after {
+    content: attr(itemtitle);
+    font-size: 12px;
+    font-family: monospace;
+    position: absolute;
+    top: -21px;
+    left: 5px;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+    padding: 0px 7px 0px;
+}
+
+.whiteBox {
+	background-color: white;
+}
+.overflow.tetitem>.tetitem_inner {
+    overflow:visible;
+}
+.overflow_tetitem.tetitem {
+    overflow:visible;
+}
+.overflow_tetitem_text_scroll.tetitem>.tetitem_inner>.tetitem_text {
+    overflow:auto;
+}
+.padding10>.tetitem_inner>.tetitem_text {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+.padding20>.tetitem_inner>.tetitem_text {
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+}
+
+
+.opacity_02{
+	opacity: .02;
+}
+.opacity_05 {
+	opacity: .05;
+}
+.opacity_10 {
+	opacity: .1;
+}
+.opacity_20 {
+	opacity: .2;
+}
+.opacity_40 {
+	opacity: .4;
+}
+.opacity_60 {
+	opacity: .6;
+}
+
+
+.relative_position {
+	position: relative !important;
+}
+.user-select-text, .user-select-text * {
+   -ms-user-select: text;
+   -khtml-user-select: initial;
+   -webkit-user-select: initial;
+   user-select: text;
+   -moz-user-select: text;    
+}
+.text_pre {
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+}
+.z-index_1000:not([layouting]) {
+    z-index:1000;
+}
+
+.textarea_fullsize>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;    
+}
+.textarea_fullwidth>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 0;
+    padding: 0;
+}
+/*
+.header_navigation_center {
+    left: 50% !important;
+    margin-left: -50px;
+    top: auto !important;
+    position: fixed !important;
+    z-index: 26;
+}
+*/
+.header_navigation_left {}
+.header_navigation_right {}
+</style>  </div>    <script>if(location.protocol==='file:') { $('iframe').each(function(){if(this.src.match(/file:\/\/.*?\/web\/\d+.html($|[?])/)) this.src+='?nonavi'});
+if(location.search.match(/[?&]nonavi([^=]|$)/)) $('.header_navigation').remove() }</script>    </body></html>

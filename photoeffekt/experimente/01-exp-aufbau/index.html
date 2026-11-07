@@ -1,0 +1,1689 @@
+<!DOCTYPE html><html><head> <meta charset="utf-8">  <title>V04-01 Aufbau</title>  <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black">  <link rel="apple-touch-icon" href="images/tet_logo_small.png">  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"> <link rel="stylesheet" type="text/css" href="css/webstyles.all.min.css">   <script type="text/javascript">
+	username="guest"; // global !!  data from django
+	first_name=""; // global !!  data from django
+	last_name=""; // global !!  data from django
+
+</script>   <script src="js/jquery-4.0.0.min.js"></script> <script src="js/jquery-migrate-4.0.2.min.js"></script> <script src="js/jquery-ui.min.js"></script> <script src="js/webscript.all.min.js"></script>   </head>   <body class="web guest_login">  <div id="mainPane" class="tetpage  mathjax_only_dollar" itemtitle="V04-01 Aufbau" tetfoliopage="tf_1118944" tetfoliopage_ii="ii_805073" tetfoliobook_ii="ii_691005" tfowner="shaase" iiowner="shaase" leftpage="1273249" rightpage="1110549" itemtype="TETpage" page_index="42" page_count="881" hidetitle="1">      <div class="tetitem   " itemtype="TETbox" itemtitle="V04-01" tfowner="shaase" iiowner="shaase" style="top:0px;left:0px;width:1024px;height:683px;" id="pl_1118945" ii_id="ii_805074">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="bg2.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:1024px;height:683px;" id="pl_1118946" ii_id="ii_806745">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806745.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="bg_schwenken" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:1024px;height:683px;" id="pl_1118947" ii_id="ii_800022">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800022.jpg">   </div>      </div>     <div class="tetitem   logicCodeBox" itemtype="tettool" itemtitle="Logic →  Controller" tfowner="shaase" iiowner="shaase" tettool_param_rules="action%20%3D%3D%3D%20%22loadpage%22%20%E2%87%92%20%0A%20%20%20%20tethide%28%22detail_box%22%29%0A%20%20%20%20tethide%28%22detail_close%22%29%0A%20%20%20%20tethide%28%22hz_detail%22%29%0A%0A%20%20%20%20/////////////////////////////tethide%28%22zelle_gehaeuse_tisch%22%29%0A%20%20%20%20tethide%28%22schieben%22%29%0A%20%20%20%20tethide%28%22hz_schieben%22%29%0A%20%20%20%20//tethide%28%2208%22%29%20%20//also%20named%20%22schieben%22%0A%20%20%20%20//tethide%28%2202%22%29%20%20//also%20named%20%22schieben%22%20%20//%20%20in%20front%20of%2008%0A%20%20%20%20tethide%28%22spalt08%22%29%20//%20hier%2008%20%20%20in%20front%20of%2002%28part%20of%20spalt%20AND%20lines%28which%20also%20includes%20spalt%29%0A%20%20%20%20tethide%28%22hz_spaltbreite%22%29%0A%0A%20%20%20%20spalt_02_shown%20%3D%20true%20//%20used%20later%2C%20and%20in%20logic-condition%20now%0A%20%20%20%20hv_shown%20%3D%20false%0A%20%20%20%20schwenken_modus%3Dfalse%0A%0A%20%20%20%20tethide%28%22zelle%22%29%20%20%20%20%20//%20messspalt%20hier%20im%20Bild%20mit%20drin...%0A%20%20%20%20tethide%28%22zelle_gehaeuse_tisch%22%29%0A%0A%20%20%20%20tethide%28%22close_610%22%29%0A%20%20%20%20tethide%28%22Electrometer-610b%22%29%0A%0A%20%20%20%20dia_show%28%22schwenken%22%2C%206%29%20//%20initial%20%20schwenkarm%20GERADE%20%E2%80%93%20ACHTUNG%3A%20hz_schwenken%20muss%20noch%20sichtbar%20sein%21%21%0A%20%20%20%20tethide%28%22hz_schwenken%22%29%0A%20%20%20%20tethide%28%22schwenken%22%29%0A%20%20%20%20tethide%28%22bg_schwenken%22%29%0A%20%20%20%20tethide%28%22prisma%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//alt-PNG-Version...%20unscharf%20in%20%20bg_schwenken%20...%0A%0A%20%20%20%20tethide%28%22detail_ohne_uv%22%29%0A%20%20%20%20tethide%28%22detail_mit_uv%22%29%0A%0A%20%20%20%20tethide%28%22kondensor%22%29%0A%20%20%20%20tethide%28%22spalt%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20tetaction_disable%28%22spalt_tisch%22%29%0A%20%20%20%20tethide%28%22linse%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20tetaction_disable%28%22linse_tisch%22%29%0A%20%20%20%20tethide%28%22messspalt%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20tetaction_disable%28%22messspalt_tisch%22%29%0A%20%20%20%20tethide%28%22messspalt_uv_tisch%22%29%20%20%20%20%20//%20%20%3B%20tetaction_disable%28%22spalt_tisch%22%29%0A%20%20%20%20//OK-async%20%20%20tetaction_disable%28%22gehaeuse_tisch%22%29%0A%20%20%20%20tetaction_disable%28%22zelle_gehaeuse_tisch%22%29%0A%20%20%20%20tethide%28%22hz_lampe%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20tetaction_disable%28%22prisma_tisch%22%29%0A%20%20%20%20tethide%28%22lampe_an%22%29%0A%0A%20%20%20%20%24tet%28%22prisma_tisch%22%29.css%28%22opacity%22%2C%20.2%29%3B%0A%0A%20%20%20%20if%28window.location.search.substring%281%29.split%28/%5B%26%3D%5D/%29.indexOf%28%22faster%22%29%3E-1%29%20setTimeout%28function%28%29%20%7B%20%24tet%28%22faster%22%29.click%28%29%20%7D%2C%201%29%0A%20%20%20%20if%28window.location.search.substring%281%29.split%28/%5B%26%3D%5D/%29.indexOf%28%22fast%22%29%3E-1%29%20setTimeout%28function%28%29%20%7B%20%24tet%28%22fast%22%29.click%28%29%20%7D%2C%201%29%0A%0A%0Aaction%20%3D%3D%3D%20%22kondensor_tisch%22%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tetshow%28%22kondensor%22%29%0A%20%20%20%20tetaction_enable%28%22spalt_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22spalt_tisch%22%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tetshow%28%22spalt%22%29%0A%20%20%20%20tethide%28%22kondensor%22%29%20%20%20//%20bei%20%22spalt%22%20inegriert...%0A%20%20%20%20tetaction_enable%28%22linse_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22linse_tisch%22%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tetshow%28%22linse%22%29%0A%20%20%20%20tetaction_enable%28%22messspalt_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22messspalt_tisch%22%20%26%26%20%21schwenken_modus%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tetshow%28%22messspalt%22%29%0A%20%20%20%20//OK-async%20%20%20tetaction_enable%28%22gehaeuse_tisch%22%29%0A%20%20%20%20tetaction_enable%28%22zelle_gehaeuse_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22gehaeuse_tisch%22%20%E2%87%92%0A%20%20%20%20tethide%28action%29%3B%0A%20%20%20%20tethide%28%22zelle_tisch%22%29%3B%0A%20%20%20%20tetshow%28%22zelle_gehaeuse_tisch%22%29%3B%0A%0Aaction%20%3D%3D%3D%20%22zelle_gehaeuse_tisch%22%20%E2%87%92%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tethide%28%22messspalt%22%29%0A%20%20%20%20tetshow%28%22zelle%22%29%20%20%20%20%20//%20messspalt%20hier%20im%20Bild%20mit%20drin...%0A%20%20%20%20tetshow%28%22hz_lampe%22%29%0A%0A//%20trigger%3Alampe%20toggle%3A%20schieben%3B%20hide%3A%20linse%3B%20toggle%3A%20hz_spaltbreite%0Aaction%20%3D%3D%3D%20%22lampe%22%20%E2%87%92%0A%20%20%20%20tethide%28%22hz_lampe%22%29%0A%20%20%20%20tetshow%28%22lampe_an%22%29%0A%20%20%20%20tetshow%28%22hz_spaltbreite%22%29%0A%20%20%20%20tetshow%28%22schieben%22%29%0A%20%20%20%20if%28%21spalt_02_shown%29%20%20%7B%20%0A%20%20%20%20%20%20%20%20%20tethide%28%22spalt02%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//3x%20diashows%20fuer%20spaltbreite%2002%20%28linse%2Cspalt%26detail%29%20%20%20%20//%20heisst%20auch%20%22schieben%22...%0A%20%20%20%20%7D%0A%20%20%20%20tetshow%28%22hz_detail%22%29%0A%20%20%20%20tetshow%28%22hz_schieben%22%29%0A%0Aaction%20%3D%3D%3D%20%22schieben%22%20%20%26%26%20%21arg.stop%20%E2%87%92%0A%20%20%20%20%20%20%20%20%24tet%28%22prisma_tisch%22%29.css%28%22opacity%22%2C%20.2%29%3B%0A%20%20%20%20%20%20%20%20tetaction_disable%28%22prisma_tisch%22%29%0A%20%20%20%0Aaction%20%3D%3D%3D%20%22schieben%22%20%20%26%26%20arg.stop%20%26%26%20arg.i%3D%3D9%20%26%26%20spalt_02_shown%20%E2%87%92%20%0A%20%20%20%20%20%20%20%20%24tet%28%22prisma_tisch%22%29.css%28%22opacity%22%2C%201%29%3B%0A%20%20%20%20%20%20%20%20tetaction_enable%28%22prisma_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22prisma_tisch%22%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tethide%28%22hz_schieben%22%29%0A%20%20%20%20tethide%28%22hz_spaltbreite%22%29%0A%20%20%20%20tethide%28%22spalt08%22%29%20%20//%20just-to-be-sure%20%E2%80%93%20sollte%20eigentlich%20bereits%20ausgeblendet%20sein%20%20%0A%20%20%20%20schwenken_modus%3Dtrue%0A%20%20%20%20tethide%28%22schieben%22%29%0A%20%20%20%20tethide%28%22linse%22%29%0A%20%20%20%20tethide%28%22zelle%22%29%0A%20%20%20%20tetshow%28%22bg_schwenken%22%29%0A%20%20%20%20tetshow%28%22hz_schwenken%22%29%0A%0A%20%20%20%20tetshow%28%22schwenken%22%29%0A%20%20%20%20if%28%21hv_shown%29%20%7B%0A%20%20%20%20%20%20%20%20tethide%28%22schwenken_mit_uv%22%29%0A%20%20%20%20%20%20%20%20tethide%28%22detail_mit_uv%22%29%0A%20%20%20%20%7D%20%0A%0A%0A%20%20%20//toggle%3A%20prisma%3B%20toggle%3A%20schwenken%3B%20hide%3A%20detail%3B%20hide%3A%20detail_uv%3B%20%0A%20%20%20//toggle%3A%20bg_schwenken%3B%20toggle1%3A%20hz_schieben02%0A%20%20%20%0Aaction%20%3D%3D%3D%20%22spaltbreite%22%20%E2%87%92%0A%20%20%20%20spalt_02_shown%20%5E%3D%20true%3B%20%20%20//-%20toggle%20value%0A%20%20%20%20tettoggle%28%22spalt02%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//3x%20diashows%20fuer%20spaltbreite%2002%20%28linse%2Cspalt%26detail%29%20%20%20%20//%20heisst%20auch%20%22schieben%22...%0A%20%20%20%20tettoggle%28%22spalt08%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%201%20img%20of%20%22the%20spalt%20itselft%22%20%20%E2%80%93%20hier%2008%20%20%20in%20front%20of%2002%28part%20of%20spalt%20AND%20lines%28which%20also%20includes%20spalt%29%0A%20%20%20%20if%28spalt_02_shown%20%26%26%20dia_nr%28%22schieben%22%29%20%3D%3D%2010%29%20%7B%20//%201-based%20%21%21%0A%20%20%20%20%20%20%20%20%20%20%20%20%24tet%28%22prisma_tisch%22%29.css%28%22opacity%22%2C%201%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20tetaction_enable%28%22prisma_tisch%22%29%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%24tet%28%22prisma_tisch%22%29.css%28%22opacity%22%2C%20.2%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20tetaction_disable%28%22prisma_tisch%22%29%0A%20%20%20%20%7D%0A%0Aaction%20%3D%3D%3D%20%22detail%22%20%E2%87%92%0A%20%20%20tetshow%28%22detail_box%22%29%0A%20%20%20tetshow%28%22detail_close%22%29%0A//%20%20%20%20tetshow%28%22detail08%22%29%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//CHECK%0A//%20%20%20%20if%28%24tet%28%2202%22%29.is%28%22%3Avisible%22%29%29%20tetshow%28%22detail02%22%29%20%20%20%20%20%20%20%20%20%20%20%20//CHECK%0A%0A%0Aaction%20%3D%3D%3D%20%22schwenken%22%20%E2%87%92%20%0A%20%20%20console.log%28action%2C%20arg%29%0A%20%20%20%20switch%28arg.i%29%20%7B%0A%20%20%20%20%20%20%20%20case%202%3A%20e610.setInputUT%28.28%2C%2040%29%3B%20break%3B%20//%20gelb%20%283/26%29%200%2C28%20/%200%3A40%0A%20%20%20%20%20%20%20%20case%204%3A%20e610.setInputUT%28.37%2C%2031%29%3B%20break%3B%20//%20gr%C3%BCn%20%285/26%29%200%2C37%20/%200%3A31%0A%20%20%20%20%20%20%20%20case%208%3A%20e610.setInputUT%28.38%2C%20190%29%3B%20break%3B%20//%20cyan%20%288/26%29%200%2C38%20/%203%3A10%0A%20%20%20%20%20%20%20%20case%2014%3A%20e610.setInputUT%28.82%2C%2087%29%3B%20break%3B%20//%20blau%20%2814/26%29%200%2C82%20/%201%3A27%0A%20%20%20%20%20%20%20%20case%2018%3A%20e610.setInputUT%281.0%2C%2056%29%3B%20break%3B%20//%20violet%20%2818/26%29%201%2C0%20/%200%3A56%0A%20%20%20%20%20%20%20%20case%2025%3A%20e610.setInputUT%281.15%2C%2033%29%3B%20%20//%20UV%20%2825/26%29%201%2C15%20/%200%3A33%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%28%21hv_shown%20%26%26%20e610.isReady%28%29%20%20%29%20tettrigger%28%22uv_on%22%2C%20100%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20default%3A%20e610.setInputUT%280%29%3B%0A%20%20%20%20%7D%0Aaction%20%3D%3D%3D%20%22uv_on%22%20%E2%87%92%20%0A%20%20%20%20tetshow%28%22messspalt_uv_tisch%22%29%0A%0Aaction%20%3D%3D%3D%20%22messspalt_uv_tisch%22%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%3B%0A%20%20%20%20tetshow%28%22messspalt_tisch%22%29%0A%20%20%20%20hv_shown%20%3D%20true%3B%0A%20%20%20%20tetshow%28%22detail_mit_uv%22%29%0A%20%20%20%20tetshow%28%22schwenken_mit_uv%22%29%0Aaction%20%3D%3D%3D%20%22messspalt_tisch%22%20%26%26%20schwenken_modus%20%E2%87%92%20%0A%20%20%20%20tethide%28action%29%0A%20%20%20%20tetshow%28%22messspalt_uv_tisch%22%29%0A%20%20%20%20//OK-async%20%20%20tetaction_enable%28%22gehaeuse_tisch%22%29%0A%20%20%20%20tethide%28%22detail_mit_uv%22%29%0A%20%20%20%20tethide%28%22schwenken_mit_uv%22%29%0A%0A%20%20%20%20" style="top:0px;left:0px;width:199px;height:95px;" id="pl_1119176" ii_id="ii_661483">   <div class="tetitem_inner">      <script src="js/logicController.js"></script>
+<script type="sebscript">$('#pl_1119176').on("tet:beforeinit", function() { tettool_logicController.init("logicController", $('#pl_1119176')) })</script>
+<div class="errorMsg"></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="kondensor" tfowner="shaase" iiowner="juek" style="top:265px;left:74px;width:112px;height:374px;" id="pl_1118948" ii_id="ii_806740">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806740.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="spalt" tfowner="shaase" iiowner="juek" style="top:238px;left:0px;width:227px;height:433px;" id="pl_1118949" ii_id="ii_806748">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806748.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="linse" tfowner="shaase" iiowner="juek" style="top:238px;left:0px;width:313px;height:433px;" id="pl_1118950" ii_id="ii_806750">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806750.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="lampe_an" tfowner="shaase" iiowner="juek" style="top:240px;left:0px;width:223px;height:173px;" id="pl_1122905" ii_id="ii_807305">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/807305.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="spalt08" tfowner="shaase" iiowner="juek" style="top:240px;left:0px;width:223px;height:173px;" id="pl_1123442" ii_id="ii_807306">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/807306.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="messspalt" tfowner="shaase" iiowner="juek" style="top:178px;left:707px;width:311px;height:311px;" id="pl_1118951" ii_id="ii_806760">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806760.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="zelle" tfowner="shaase" iiowner="juek" style="top:0px;left:561px;width:463px;height:472px;" id="pl_1118952" ii_id="ii_806763">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806763.jpg">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="08linse" style="top:230px;left:216px;width:188px;height:386px;" id="pl_1122909" ii_id="ii_807135">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:163px;height:386px;" id="pl_1122913" ii_id="ii_806516">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806516.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:262px;left:144px;width:163px;height:386px;" id="pl_1122917" ii_id="ii_806517">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806517.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:312px;left:194px;width:163px;height:386px;" id="pl_1122921" ii_id="ii_806518">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806518.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:362px;left:244px;width:163px;height:386px;" id="pl_1122925" ii_id="ii_806519">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806519.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:412px;left:294px;width:163px;height:386px;" id="pl_1122929" ii_id="ii_806520">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806520.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:462px;left:344px;width:163px;height:386px;" id="pl_1122933" ii_id="ii_806521">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806521.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:512px;left:394px;width:163px;height:386px;" id="pl_1122936" ii_id="ii_806522">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806522.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:562px;left:444px;width:163px;height:386px;" id="pl_1122940" ii_id="ii_806523">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806523.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:612px;left:494px;width:163px;height:386px;" id="pl_1122944" ii_id="ii_806524">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806524.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:662px;left:544px;width:163px;height:386px;" id="pl_1122948" ii_id="ii_806525">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806525.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:712px;left:594px;width:163px;height:386px;" id="pl_1122952" ii_id="ii_806526">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806526.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:762px;left:644px;width:163px;height:386px;" id="pl_1122956" ii_id="ii_806527">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806527.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:812px;left:694px;width:163px;height:386px;" id="pl_1122959" ii_id="ii_806530">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806530.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:862px;left:744px;width:163px;height:386px;" id="pl_1122964" ii_id="ii_806528">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806528.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:912px;left:794px;width:163px;height:386px;" id="pl_1122968" ii_id="ii_806529">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806529.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:962px;left:844px;width:163px;height:386px;" id="pl_1122972" ii_id="ii_806531">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806531.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1012px;left:894px;width:163px;height:386px;" id="pl_1122976" ii_id="ii_806532">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806532.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="08spalt" style="top:133px;left:900px;width:135px;height:202px;" id="pl_1122906" ii_id="ii_807132">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:68px;height:202px;" id="pl_1122910" ii_id="ii_806535">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806535.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:78px;left:80px;width:68px;height:202px;" id="pl_1122914" ii_id="ii_806536">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806536.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:128px;left:130px;width:68px;height:202px;" id="pl_1122918" ii_id="ii_806537">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806537.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:178px;left:180px;width:68px;height:202px;" id="pl_1122922" ii_id="ii_806538">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806538.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:228px;left:230px;width:68px;height:202px;" id="pl_1122926" ii_id="ii_806539">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806539.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:278px;left:280px;width:68px;height:202px;" id="pl_1122931" ii_id="ii_806540">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806540.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:328px;left:330px;width:68px;height:202px;" id="pl_1122935" ii_id="ii_806541">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806541.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:378px;left:380px;width:68px;height:202px;" id="pl_1122938" ii_id="ii_806542">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806542.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:428px;left:430px;width:68px;height:202px;" id="pl_1122942" ii_id="ii_806543">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806543.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:478px;left:480px;width:68px;height:202px;" id="pl_1122946" ii_id="ii_806544">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806544.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:528px;left:530px;width:68px;height:202px;" id="pl_1122950" ii_id="ii_806545">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806545.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:578px;left:580px;width:68px;height:202px;" id="pl_1122954" ii_id="ii_806546">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806546.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:628px;left:630px;width:68px;height:202px;" id="pl_1122958" ii_id="ii_806548">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806548.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:678px;left:680px;width:68px;height:202px;" id="pl_1122961" ii_id="ii_806547">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806547.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:728px;left:730px;width:68px;height:202px;" id="pl_1122965" ii_id="ii_806549">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806549.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:778px;left:780px;width:68px;height:202px;" id="pl_1122969" ii_id="ii_806550">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806550.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:828px;left:830px;width:68px;height:202px;" id="pl_1122973" ii_id="ii_806551">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806551.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="spalt02" style="top:133px;left:900px;width:107px;height:202px;" id="pl_1122907" ii_id="ii_807134">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:68px;height:202px;" id="pl_1122911" ii_id="ii_806498">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806498.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:77px;left:75px;width:68px;height:202px;" id="pl_1122915" ii_id="ii_806499">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806499.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:127px;left:125px;width:68px;height:202px;" id="pl_1122919" ii_id="ii_806500">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806500.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:177px;left:175px;width:68px;height:202px;" id="pl_1122924" ii_id="ii_806501">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806501.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:227px;left:225px;width:68px;height:202px;" id="pl_1122928" ii_id="ii_806502">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806502.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:277px;left:275px;width:68px;height:202px;" id="pl_1122932" ii_id="ii_806503">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806503.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:327px;left:325px;width:68px;height:202px;" id="pl_1122937" ii_id="ii_806504">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806504.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:377px;left:375px;width:68px;height:202px;" id="pl_1122941" ii_id="ii_806505">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806505.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:427px;left:425px;width:68px;height:202px;" id="pl_1122945" ii_id="ii_806506">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806506.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:477px;left:475px;width:68px;height:202px;" id="pl_1122949" ii_id="ii_806507">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806507.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:527px;left:525px;width:68px;height:202px;" id="pl_1122953" ii_id="ii_806508">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806508.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:577px;left:575px;width:68px;height:202px;" id="pl_1122957" ii_id="ii_806509">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806509.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:627px;left:625px;width:68px;height:202px;" id="pl_1122962" ii_id="ii_806510">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806510.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:677px;left:675px;width:68px;height:202px;" id="pl_1122966" ii_id="ii_806511">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806511.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:727px;left:725px;width:68px;height:202px;" id="pl_1122970" ii_id="ii_806512">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806512.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:777px;left:775px;width:68px;height:202px;" id="pl_1122975" ii_id="ii_806514">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806514.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:827px;left:825px;width:68px;height:202px;" id="pl_1122977" ii_id="ii_806513">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806513.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="spalt02" style="top:230px;left:216px;width:188px;height:386px;" id="pl_1122908" ii_id="ii_807133">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:163px;height:386px;" id="pl_1122912" ii_id="ii_806480">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806480.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02.jpg" tfowner="shaase" iiowner="juek" style="top:74px;left:113px;width:163px;height:386px;" id="pl_1122916" ii_id="ii_806481">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806481.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03.jpg" tfowner="shaase" iiowner="juek" style="top:124px;left:163px;width:163px;height:386px;" id="pl_1122920" ii_id="ii_806482">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806482.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04.jpg" tfowner="shaase" iiowner="juek" style="top:174px;left:213px;width:163px;height:386px;" id="pl_1122923" ii_id="ii_806483">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806483.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05.jpg" tfowner="shaase" iiowner="juek" style="top:224px;left:263px;width:163px;height:386px;" id="pl_1122927" ii_id="ii_806484">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806484.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06.jpg" tfowner="shaase" iiowner="juek" style="top:274px;left:313px;width:163px;height:386px;" id="pl_1122930" ii_id="ii_806485">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806485.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07.jpg" tfowner="shaase" iiowner="juek" style="top:324px;left:363px;width:163px;height:386px;" id="pl_1122934" ii_id="ii_806486">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806486.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08.jpg" tfowner="shaase" iiowner="juek" style="top:374px;left:413px;width:163px;height:386px;" id="pl_1122939" ii_id="ii_806487">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806487.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09.jpg" tfowner="shaase" iiowner="juek" style="top:424px;left:463px;width:163px;height:386px;" id="pl_1122943" ii_id="ii_806488">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806488.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="shaase" iiowner="juek" style="top:824px;left:863px;width:163px;height:386px;" id="pl_1122947" ii_id="ii_806495">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806495.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="shaase" iiowner="juek" style="top:474px;left:513px;width:163px;height:386px;" id="pl_1122951" ii_id="ii_806490">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806490.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="shaase" iiowner="juek" style="top:524px;left:563px;width:163px;height:386px;" id="pl_1122955" ii_id="ii_806489">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806489.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="shaase" iiowner="juek" style="top:574px;left:613px;width:163px;height:386px;" id="pl_1122960" ii_id="ii_806491">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806491.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="shaase" iiowner="juek" style="top:624px;left:663px;width:163px;height:386px;" id="pl_1122963" ii_id="ii_806492">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806492.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15.jpg" tfowner="shaase" iiowner="juek" style="top:674px;left:713px;width:163px;height:386px;" id="pl_1122967" ii_id="ii_806493">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806493.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16.jpg" tfowner="shaase" iiowner="juek" style="top:724px;left:763px;width:163px;height:386px;" id="pl_1122971" ii_id="ii_806494">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806494.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17.jpg" tfowner="shaase" iiowner="juek" style="top:774px;left:813px;width:163px;height:386px;" id="pl_1122974" ii_id="ii_806496">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806496.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="prisma" tfowner="shaase" iiowner="juek" style="top:200px;left:425px;width:134px;height:377px;" id="pl_1118989" ii_id="ii_798272">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798272.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schwenken_ohne_uv" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="schwenken" style="top:124px;left:695px;width:504px;height:399px;" id="pl_1122982" ii_id="ii_807137">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:328px;height:381px;" id="pl_1122985" ii_id="ii_806703">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806703.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:128px;left:164px;width:328px;height:381px;" id="pl_1122987" ii_id="ii_806702">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806702.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:178px;left:214px;width:328px;height:381px;" id="pl_1122989" ii_id="ii_806704">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806704.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:228px;left:264px;width:328px;height:381px;" id="pl_1122991" ii_id="ii_806716">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806716.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:278px;left:314px;width:328px;height:381px;" id="pl_1122993" ii_id="ii_806718">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806718.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:328px;left:364px;width:328px;height:381px;" id="pl_1122995" ii_id="ii_806720">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806720.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:378px;left:414px;width:328px;height:381px;" id="pl_1122996" ii_id="ii_806719">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806719.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:428px;left:464px;width:328px;height:381px;" id="pl_1122998" ii_id="ii_806721">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806721.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:478px;left:514px;width:328px;height:381px;" id="pl_1123000" ii_id="ii_806723">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806723.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:528px;left:564px;width:328px;height:381px;" id="pl_1123001" ii_id="ii_806722">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806722.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:578px;left:614px;width:328px;height:381px;" id="pl_1123003" ii_id="ii_806724">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806724.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:628px;left:664px;width:328px;height:381px;" id="pl_1123005" ii_id="ii_806725">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806725.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:678px;left:714px;width:328px;height:381px;" id="pl_1123007" ii_id="ii_806726">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806726.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:728px;left:764px;width:328px;height:381px;" id="pl_1123009" ii_id="ii_806727">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806727.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:778px;left:814px;width:328px;height:381px;" id="pl_1123011" ii_id="ii_806728">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806728.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:828px;left:864px;width:328px;height:381px;" id="pl_1123013" ii_id="ii_806705">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806705.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:878px;left:914px;width:328px;height:381px;" id="pl_1123015" ii_id="ii_806706">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806706.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="18 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:928px;left:964px;width:328px;height:381px;" id="pl_1123017" ii_id="ii_806707">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806707.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="19 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:978px;left:1014px;width:328px;height:381px;" id="pl_1123019" ii_id="ii_806708">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806708.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="20 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1028px;left:1064px;width:328px;height:381px;" id="pl_1123021" ii_id="ii_806709">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806709.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="21 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1078px;left:1114px;width:328px;height:381px;" id="pl_1123023" ii_id="ii_806710">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806710.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="22 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1128px;left:1164px;width:328px;height:381px;" id="pl_1123025" ii_id="ii_806711">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806711.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="23 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1178px;left:1214px;width:328px;height:381px;" id="pl_1123028" ii_id="ii_806712">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806712.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="24 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1228px;left:1264px;width:328px;height:381px;" id="pl_1123030" ii_id="ii_806714">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806714.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="25 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1278px;left:1314px;width:328px;height:381px;" id="pl_1123031" ii_id="ii_806713">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806713.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="26 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1328px;left:1364px;width:328px;height:381px;" id="pl_1123032" ii_id="ii_806715">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806715.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="27 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1378px;left:1414px;width:328px;height:381px;" id="pl_1123033" ii_id="ii_806717">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806717.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schwenken_mit_uv" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="schwenken" style="top:124px;left:695px;width:395px;height:399px;" id="pl_1122978" ii_id="ii_807136">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:328px;height:381px;" id="pl_1122979" ii_id="ii_806673">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806673.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:100px;left:253px;width:328px;height:381px;" id="pl_1122980" ii_id="ii_806674">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806674.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:150px;left:303px;width:328px;height:381px;" id="pl_1122981" ii_id="ii_806675">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806675.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:200px;left:353px;width:328px;height:381px;" id="pl_1122983" ii_id="ii_806676">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806676.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:250px;left:403px;width:328px;height:381px;" id="pl_1122984" ii_id="ii_806690">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806690.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:300px;left:453px;width:328px;height:381px;" id="pl_1122986" ii_id="ii_806691">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806691.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:350px;left:503px;width:328px;height:381px;" id="pl_1122988" ii_id="ii_806689">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806689.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:400px;left:553px;width:328px;height:381px;" id="pl_1122990" ii_id="ii_806692">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806692.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:450px;left:603px;width:328px;height:381px;" id="pl_1122992" ii_id="ii_806693">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806693.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:500px;left:653px;width:328px;height:381px;" id="pl_1122994" ii_id="ii_806699">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806699.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:550px;left:703px;width:328px;height:381px;" id="pl_1122997" ii_id="ii_806696">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806696.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:600px;left:753px;width:328px;height:381px;" id="pl_1122999" ii_id="ii_806694">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806694.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:650px;left:803px;width:328px;height:381px;" id="pl_1123002" ii_id="ii_806698">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806698.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:700px;left:853px;width:328px;height:381px;" id="pl_1123004" ii_id="ii_806695">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806695.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:750px;left:903px;width:328px;height:381px;" id="pl_1123006" ii_id="ii_806697">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806697.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:800px;left:953px;width:328px;height:381px;" id="pl_1123008" ii_id="ii_806677">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806677.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:850px;left:1003px;width:328px;height:381px;" id="pl_1123010" ii_id="ii_806678">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806678.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="18 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:900px;left:1053px;width:328px;height:381px;" id="pl_1123012" ii_id="ii_806679">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806679.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="19 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:950px;left:1103px;width:328px;height:381px;" id="pl_1123014" ii_id="ii_806680">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806680.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="20 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1000px;left:1153px;width:328px;height:381px;" id="pl_1123016" ii_id="ii_806681">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806681.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="21 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1050px;left:1203px;width:328px;height:381px;" id="pl_1123018" ii_id="ii_806682">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806682.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="22 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1100px;left:1253px;width:328px;height:381px;" id="pl_1123020" ii_id="ii_806683">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806683.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="23 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1150px;left:1303px;width:328px;height:381px;" id="pl_1123022" ii_id="ii_806684">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806684.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="24 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1200px;left:1353px;width:328px;height:381px;" id="pl_1123024" ii_id="ii_806685">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806685.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="25 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1250px;left:1403px;width:328px;height:381px;" id="pl_1123026" ii_id="ii_806686">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806686.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="26 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1300px;left:1453px;width:328px;height:381px;" id="pl_1123027" ii_id="ii_806687">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806687.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="27 Kopie.jpg" tfowner="shaase" iiowner="juek" style="top:1350px;left:1503px;width:328px;height:381px;" id="pl_1123029" ii_id="ii_806688">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/806688.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="komponenten" tfowner="shaase" iiowner="shaase" style="top:543px;left:471px;width:402px;height:109px;" id="pl_1119046" ii_id="ii_805079">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="prisma_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger:prisma_tisch" style="top:5px;left:225px;width:58px;height:116px;" id="pl_1119047" ii_id="ii_798361">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798361.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="linse_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger: linse_tisch" style="top:8px;left:153px;width:51px;height:102px;" id="pl_1119048" ii_id="ii_798360">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798360.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="spalt_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger: spalt_tisch" style="top:6px;left:92px;width:48px;height:106px;" id="pl_1119049" ii_id="ii_798359">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798359.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="kondensor_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger: kondensor_tisch" style="top:19px;left:0px;width:73px;height:95px;" id="pl_1119050" ii_id="ii_798358">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798358.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="messspalt_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger:messspalt_tisch" style="top:5px;left:315px;width:80px;height:110px;" id="pl_1119051" ii_id="ii_801028">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801028.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="messspalt_uv_tisch" tfowner="juek" iiowner="juek" tetaction="trigger:messspalt_uv_tisch" style="top:5px;left:315px;width:80px;height:110px;" id="pl_1136560" ii_id="ii_816138">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/816138.png">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="zelle_gehaeuse_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger: zelle_gehaeuse_tisch" style="top:511px;left:919px;width:86px;height:149px;" id="pl_1119053" ii_id="ii_798364">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798364.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="zelle_tisch" tfowner="shaase" iiowner="juek" style="top:524px;left:919px;width:85px;height:136px;" id="pl_1119054" ii_id="ii_798370">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798370.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="gehaeuse_tisch" tfowner="shaase" iiowner="juek" tetaction="trigger:gehaeuse_tisch" style="top:497px;left:903px;width:45px;height:80px;" id="pl_1119055" ii_id="ii_798371">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798371.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_spaltbreite" tfowner="shaase" iiowner="shaase" tetaction="trigger: spaltbreite" style="top:340px;left:146px;width:74px;height:67px;" id="pl_1119056" ii_id="ii_805080">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_detail" tfowner="shaase" iiowner="shaase" tetaction="trigger:detail" style="top:205px;left:700px;width:324px;height:45px;" id="pl_1119113" ii_id="ii_805083">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_lampe" tfowner="shaase" iiowner="shaase" tetaction="trigger:lampe" style="top:250px;left:0px;width:97px;height:159px;" id="pl_1119114" ii_id="ii_805084">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   border_1px_solid_#ccc rounded_corners_3px" itemtype="TETbox" itemtitle="detail_box" tfowner="shaase" iiowner="shaase" style="top:17px;left:700px;width:302px;height:192px;" id="pl_1119189" ii_id="ii_805107">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="TETbox" itemtitle="schwenken" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="detail_ohne_uv" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119057" ii_id="ii_805081">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119058" ii_id="ii_801030">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801030.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02.jpg" tfowner="shaase" iiowner="juek" style="top:77px;left:107px;width:300px;height:190px;" id="pl_1119059" ii_id="ii_801031">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801031.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03.jpg" tfowner="shaase" iiowner="juek" style="top:127px;left:157px;width:300px;height:190px;" id="pl_1119060" ii_id="ii_801032">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801032.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04.jpg" tfowner="shaase" iiowner="juek" style="top:177px;left:207px;width:300px;height:190px;" id="pl_1119061" ii_id="ii_801033">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801033.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05.jpg" tfowner="shaase" iiowner="juek" style="top:227px;left:257px;width:300px;height:190px;" id="pl_1119062" ii_id="ii_801049">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801049.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06.jpg" tfowner="shaase" iiowner="juek" style="top:277px;left:307px;width:300px;height:190px;" id="pl_1119063" ii_id="ii_801052">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801052.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07.jpg" tfowner="shaase" iiowner="juek" style="top:327px;left:357px;width:300px;height:190px;" id="pl_1119064" ii_id="ii_801055">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801055.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08.jpg" tfowner="shaase" iiowner="juek" style="top:377px;left:407px;width:300px;height:190px;" id="pl_1119065" ii_id="ii_801044">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801044.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09.jpg" tfowner="shaase" iiowner="juek" style="top:427px;left:457px;width:300px;height:190px;" id="pl_1119066" ii_id="ii_801045">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801045.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="shaase" iiowner="juek" style="top:477px;left:507px;width:300px;height:190px;" id="pl_1119067" ii_id="ii_801046">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801046.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="shaase" iiowner="juek" style="top:527px;left:557px;width:300px;height:190px;" id="pl_1119068" ii_id="ii_801050">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801050.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="shaase" iiowner="juek" style="top:577px;left:607px;width:300px;height:190px;" id="pl_1119069" ii_id="ii_801048">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801048.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="shaase" iiowner="juek" style="top:627px;left:657px;width:300px;height:190px;" id="pl_1119070" ii_id="ii_801056">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801056.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="shaase" iiowner="juek" style="top:677px;left:707px;width:300px;height:190px;" id="pl_1119071" ii_id="ii_801053">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801053.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15.jpg" tfowner="shaase" iiowner="juek" style="top:727px;left:757px;width:300px;height:190px;" id="pl_1119072" ii_id="ii_801051">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801051.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16.jpg" tfowner="shaase" iiowner="juek" style="top:777px;left:807px;width:300px;height:190px;" id="pl_1119073" ii_id="ii_801054">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801054.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17.jpg" tfowner="shaase" iiowner="juek" style="top:827px;left:857px;width:300px;height:190px;" id="pl_1119074" ii_id="ii_801047">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801047.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="18.jpg" tfowner="shaase" iiowner="juek" style="top:877px;left:907px;width:300px;height:190px;" id="pl_1119075" ii_id="ii_801036">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801036.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="19.jpg" tfowner="shaase" iiowner="juek" style="top:927px;left:957px;width:300px;height:190px;" id="pl_1119076" ii_id="ii_801037">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801037.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="20.jpg" tfowner="shaase" iiowner="juek" style="top:977px;left:1007px;width:300px;height:190px;" id="pl_1119077" ii_id="ii_801038">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801038.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="21.jpg" tfowner="shaase" iiowner="juek" style="top:1027px;left:1057px;width:300px;height:190px;" id="pl_1119078" ii_id="ii_801039">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801039.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="22.jpg" tfowner="shaase" iiowner="juek" style="top:1077px;left:1107px;width:300px;height:190px;" id="pl_1119079" ii_id="ii_801041">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801041.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="23.jpg" tfowner="shaase" iiowner="juek" style="top:1127px;left:1157px;width:300px;height:190px;" id="pl_1119080" ii_id="ii_801040">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801040.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="24.jpg" tfowner="shaase" iiowner="juek" style="top:1177px;left:1207px;width:300px;height:190px;" id="pl_1119081" ii_id="ii_801043">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801043.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="25.jpg" tfowner="shaase" iiowner="juek" style="top:1227px;left:1257px;width:300px;height:190px;" id="pl_1119082" ii_id="ii_801034">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801034.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="26.jpg" tfowner="shaase" iiowner="juek" style="top:1277px;left:1307px;width:300px;height:190px;" id="pl_1119083" ii_id="ii_801035">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801035.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="27.jpg" tfowner="shaase" iiowner="juek" style="top:1327px;left:1357px;width:300px;height:190px;" id="pl_1119084" ii_id="ii_801042">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/801042.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schwenken" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="detail_mit_uv" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119085" ii_id="ii_805082">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119086" ii_id="ii_800055">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800055.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02.jpg" tfowner="shaase" iiowner="juek" style="top:108px;left:194px;width:300px;height:190px;" id="pl_1119087" ii_id="ii_800058">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800058.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03.jpg" tfowner="shaase" iiowner="juek" style="top:158px;left:244px;width:300px;height:190px;" id="pl_1119088" ii_id="ii_800054">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800054.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04.jpg" tfowner="shaase" iiowner="juek" style="top:208px;left:294px;width:300px;height:190px;" id="pl_1119089" ii_id="ii_800056">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800056.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05.jpg" tfowner="shaase" iiowner="juek" style="top:258px;left:344px;width:300px;height:190px;" id="pl_1119090" ii_id="ii_800057">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800057.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06.jpg" tfowner="shaase" iiowner="juek" style="top:308px;left:394px;width:300px;height:190px;" id="pl_1119091" ii_id="ii_800059">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800059.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07.jpg" tfowner="shaase" iiowner="juek" style="top:358px;left:444px;width:300px;height:190px;" id="pl_1119092" ii_id="ii_800060">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800060.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08.jpg" tfowner="shaase" iiowner="juek" style="top:408px;left:494px;width:300px;height:190px;" id="pl_1119093" ii_id="ii_800062">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800062.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09.jpg" tfowner="shaase" iiowner="juek" style="top:458px;left:544px;width:300px;height:190px;" id="pl_1119094" ii_id="ii_800063">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800063.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="shaase" iiowner="juek" style="top:508px;left:594px;width:300px;height:190px;" id="pl_1119095" ii_id="ii_800061">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800061.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="shaase" iiowner="juek" style="top:558px;left:644px;width:300px;height:190px;" id="pl_1119096" ii_id="ii_800064">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800064.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="shaase" iiowner="juek" style="top:608px;left:694px;width:300px;height:190px;" id="pl_1119097" ii_id="ii_800065">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800065.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="shaase" iiowner="juek" style="top:658px;left:744px;width:300px;height:190px;" id="pl_1119098" ii_id="ii_800066">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800066.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="shaase" iiowner="juek" style="top:708px;left:794px;width:300px;height:190px;" id="pl_1119099" ii_id="ii_800068">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800068.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15.jpg" tfowner="shaase" iiowner="juek" style="top:758px;left:844px;width:300px;height:190px;" id="pl_1119100" ii_id="ii_800067">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800067.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16.jpg" tfowner="shaase" iiowner="juek" style="top:808px;left:894px;width:300px;height:190px;" id="pl_1119101" ii_id="ii_800069">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800069.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17.jpg" tfowner="shaase" iiowner="juek" style="top:858px;left:944px;width:300px;height:190px;" id="pl_1119102" ii_id="ii_800071">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800071.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="18.jpg" tfowner="shaase" iiowner="juek" style="top:908px;left:994px;width:300px;height:190px;" id="pl_1119103" ii_id="ii_800070">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800070.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="19.jpg" tfowner="shaase" iiowner="juek" style="top:66px;left:349px;width:300px;height:190px;" id="pl_1119104" ii_id="ii_800091">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800091.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="20.jpg" tfowner="shaase" iiowner="juek" style="top:1008px;left:1094px;width:300px;height:190px;" id="pl_1119105" ii_id="ii_800072">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800072.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="21.jpg" tfowner="shaase" iiowner="juek" style="top:1058px;left:1144px;width:300px;height:190px;" id="pl_1119106" ii_id="ii_800074">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800074.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="22.jpg" tfowner="shaase" iiowner="juek" style="top:1108px;left:1194px;width:300px;height:190px;" id="pl_1119107" ii_id="ii_800075">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800075.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="23.jpg" tfowner="shaase" iiowner="juek" style="top:1158px;left:1244px;width:300px;height:190px;" id="pl_1119108" ii_id="ii_800077">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800077.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="24.jpg" tfowner="shaase" iiowner="juek" style="top:1208px;left:1294px;width:300px;height:190px;" id="pl_1119109" ii_id="ii_800076">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800076.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="25.jpg" tfowner="shaase" iiowner="juek" style="top:1258px;left:1344px;width:300px;height:190px;" id="pl_1119110" ii_id="ii_800078">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800078.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="26.jpg" tfowner="shaase" iiowner="juek" style="top:1308px;left:1394px;width:300px;height:190px;" id="pl_1119111" ii_id="ii_800079">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800079.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="27.jpg" tfowner="shaase" iiowner="juek" style="top:1358px;left:1444px;width:300px;height:190px;" id="pl_1119112" ii_id="ii_800080">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800080.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="detail08" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119115" ii_id="ii_805085">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119116" ii_id="ii_800870">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800870.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02.jpg" tfowner="shaase" iiowner="juek" style="top:78px;left:96px;width:300px;height:190px;" id="pl_1119117" ii_id="ii_800868">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800868.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03.jpg" tfowner="shaase" iiowner="juek" style="top:128px;left:146px;width:300px;height:190px;" id="pl_1119118" ii_id="ii_800867">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800867.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04.jpg" tfowner="shaase" iiowner="juek" style="top:178px;left:196px;width:300px;height:190px;" id="pl_1119119" ii_id="ii_800872">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800872.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05.jpg" tfowner="shaase" iiowner="juek" style="top:228px;left:246px;width:300px;height:190px;" id="pl_1119120" ii_id="ii_800873">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800873.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06.jpg" tfowner="shaase" iiowner="juek" style="top:278px;left:296px;width:300px;height:190px;" id="pl_1119121" ii_id="ii_800871">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800871.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07.jpg" tfowner="shaase" iiowner="juek" style="top:328px;left:346px;width:300px;height:190px;" id="pl_1119122" ii_id="ii_800869">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800869.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08.jpg" tfowner="shaase" iiowner="juek" style="top:378px;left:396px;width:300px;height:190px;" id="pl_1119123" ii_id="ii_800874">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800874.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09.jpg" tfowner="shaase" iiowner="juek" style="top:428px;left:446px;width:300px;height:190px;" id="pl_1119124" ii_id="ii_800876">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800876.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="shaase" iiowner="juek" style="top:478px;left:496px;width:300px;height:190px;" id="pl_1119125" ii_id="ii_800875">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800875.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="shaase" iiowner="juek" style="top:528px;left:546px;width:300px;height:190px;" id="pl_1119126" ii_id="ii_800877">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800877.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="shaase" iiowner="juek" style="top:578px;left:596px;width:300px;height:190px;" id="pl_1119127" ii_id="ii_800878">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800878.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="shaase" iiowner="juek" style="top:628px;left:646px;width:300px;height:190px;" id="pl_1119128" ii_id="ii_800879">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800879.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="shaase" iiowner="juek" style="top:678px;left:696px;width:300px;height:190px;" id="pl_1119129" ii_id="ii_800880">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800880.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15.jpg" tfowner="shaase" iiowner="juek" style="top:728px;left:746px;width:300px;height:190px;" id="pl_1119130" ii_id="ii_800881">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800881.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16.jpg" tfowner="shaase" iiowner="juek" style="top:778px;left:796px;width:300px;height:190px;" id="pl_1119131" ii_id="ii_800882">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800882.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17.jpg" tfowner="shaase" iiowner="juek" style="top:828px;left:846px;width:300px;height:190px;" id="pl_1119132" ii_id="ii_800883">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800883.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="schieben" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" tetlabel="spalt02" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119133" ii_id="ii_805086">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="01.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:300px;height:190px;" id="pl_1119134" ii_id="ii_800849">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800849.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="02.jpg" tfowner="shaase" iiowner="juek" style="top:110px;left:156px;width:300px;height:190px;" id="pl_1119135" ii_id="ii_800851">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800851.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="03.jpg" tfowner="shaase" iiowner="juek" style="top:160px;left:206px;width:300px;height:190px;" id="pl_1119136" ii_id="ii_800850">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800850.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="04.jpg" tfowner="shaase" iiowner="juek" style="top:210px;left:256px;width:300px;height:190px;" id="pl_1119137" ii_id="ii_800854">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800854.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="05.jpg" tfowner="shaase" iiowner="juek" style="top:260px;left:306px;width:300px;height:190px;" id="pl_1119138" ii_id="ii_800852">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800852.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="06.jpg" tfowner="shaase" iiowner="juek" style="top:310px;left:356px;width:300px;height:190px;" id="pl_1119139" ii_id="ii_800853">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800853.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="07.jpg" tfowner="shaase" iiowner="juek" style="top:360px;left:406px;width:300px;height:190px;" id="pl_1119140" ii_id="ii_800855">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800855.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="08.jpg" tfowner="shaase" iiowner="juek" style="top:410px;left:456px;width:300px;height:190px;" id="pl_1119141" ii_id="ii_800856">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800856.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="09.jpg" tfowner="shaase" iiowner="juek" style="top:460px;left:506px;width:300px;height:190px;" id="pl_1119142" ii_id="ii_800857">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800857.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="10.jpg" tfowner="shaase" iiowner="juek" style="top:510px;left:556px;width:300px;height:190px;" id="pl_1119143" ii_id="ii_800858">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800858.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="11.jpg" tfowner="shaase" iiowner="juek" style="top:560px;left:606px;width:300px;height:190px;" id="pl_1119144" ii_id="ii_800859">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800859.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="12.jpg" tfowner="shaase" iiowner="juek" style="top:610px;left:656px;width:300px;height:190px;" id="pl_1119145" ii_id="ii_800860">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800860.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="13.jpg" tfowner="shaase" iiowner="juek" style="top:660px;left:706px;width:300px;height:190px;" id="pl_1119146" ii_id="ii_800863">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800863.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="14.jpg" tfowner="shaase" iiowner="juek" style="top:710px;left:756px;width:300px;height:190px;" id="pl_1119147" ii_id="ii_800861">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800861.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="15.jpg" tfowner="shaase" iiowner="juek" style="top:760px;left:806px;width:300px;height:190px;" id="pl_1119148" ii_id="ii_800862">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800862.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="16.jpg" tfowner="shaase" iiowner="juek" style="top:810px;left:856px;width:300px;height:190px;" id="pl_1119149" ii_id="ii_800864">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800864.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="17.jpg" tfowner="shaase" iiowner="juek" style="top:860px;left:906px;width:300px;height:190px;" id="pl_1119150" ii_id="ii_800865">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800865.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   border_1px_solid_#ccc rounded_corners_3px" itemtype="TETbox" itemtitle="Electrometer-610b" tfowner="shaase" iiowner="shaase" style="top:17px;left:236px;width:445px;height:653px;" id="pl_1119151" ii_id="ii_805087">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="skala" tfowner="shaase" iiowner="juek" rotangle="rotate(-0.7deg)" style="top:16px;left:25px;width:394px;height:218px;transform:rotate(-0.7deg);-webkit-transform:rotate(-0.7deg);" id="pl_1119152" ii_id="ii_798441">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798441.jpg">   </div>      </div>     <div class="tetitem   " itemtype="TETdraw" itemtitle="zeiger" tfowner="shaase" iiowner="shaase" style="top:32px;left:40px;width:364px;height:165px;" id="pl_1119237" ii_id="ii_805145">   <div class="tetitem_inner">   <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <line stroke="#bf0000" id="svg_pl_1110067_1" y2="164" x2="183" y1="12" x1="183" fill="none"></line>
+ </g>
+</svg>  </div>      </div>     <div class="tetitem   ignore_click" itemtype="img" itemtitle="bg1" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:443px;height:660px;" id="pl_1119154" ii_id="ii_800568">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800568.png">   </div>      </div>     <div class="tetitem   codeBox" itemtype="TETbox" itemtitle="610B-Code" tfowner="shaase" iiowner="shaase" style="top:311px;left:0px;width:200px;height:26px;" id="pl_1119236" ii_id="ii_805144">   <div class="tetitem_inner">      <div class="tetitem_text"><style>
+    .tetitem[itemtitle=zeiger] svg {
+        transform: rotate(47deg);
+        transform-origin: 183px 230px;
+        transform-origin: 185px 223px;
+        transform-origin: 185px 223px;
+        transform-origin: 188px 219px;
+        xoutline: 1px solid green;
+        transition-timing-function: cubic-bezier(0, 1.06, 1.0, 0.96);
+        transition-timing-function: cubic-bezier(0.1, .3, .3, 1);
+    }
+</style><script type="sebscript">(function() {
+    console.log("610B-Code")
+    var $tetitem= $('#pl_1119236');
+    var electrometer = $tetitem.parent().closest(".tetitem");
+    var zeiger = $tet("zeiger", electrometer);
+    var zeigerSVG = zeiger.find("svg");
+
+    var on = false;
+    var zero = true;
+    var scale = 1;
+    var center = 0;
+    var negative = false;
+    var inputU=0;
+    var inputT=0;
+    //var curU=0;
+    
+    var phiLeft = -57;
+    var phiRight = 56;
+    var phiZero = -47.6;
+    var warp = 1;
+    
+    window.e610 = electrometer[0];
+    
+    window.e610.isReady = 
+    function isReady() {
+        return on && !zero;        
+    }
+    function curU() {
+        var pp = get_css_transform(zeigerSVG[0], 3);
+        var curPhi = pp.angle;
+        var u = (curPhi - phiZero) / (-phiZero/5);
+        if(center) u -= 5;
+        if(negative) u *=-1;
+        if(scale==3) u /= 10/3;
+        else    u/=10;
+        return u;
+    }
+    window.e610.curU = curU;
+
+    function rotToPhi(x, t) {
+        if(t===undefined) t = 1;
+        
+        var pp = get_css_transform(zeigerSVG[0], 3);
+        var curPhi = pp.angle;
+        console.log("curPhi", curPhi, "-->", x, "t:", t)
+        zeigerSVG.css({
+            transform: "rotate("+curPhi+"deg)",
+            "transition": ""
+        })
+        //TODO -- adjust time based on curPhi vs x
+        setTimeout(function() {
+            zeigerSVG.css({
+                transform: "rotate("+x+"deg)",
+                "transition-duration": t+"s"
+            });
+        }, 1); // otherwise "transition" not reset (on chrome at least...)
+    }
+    window.e610.rotToPhi = rotToPhi;
+    function rotToU(x, t) {
+        console.log("rotToU", x, t, "warp:",warp, "on:", on);
+        if(!on) return;
+        //curU = x;   // FIXME should be set incrementally while moving up....
+        if(scale==3) x *= 10/3;
+        else    x*=10;
+        x *= -phiZero/5;
+        if(!center) {
+            if(!negative) x+=  phiZero;
+            else          x =  phiZero -x;
+        }
+        if(x<phiLeft ) { x = phiLeft;  t = .8 }
+        if(x>phiRight ) { x = phiRight;  t = .8 }
+        rotToPhi(x, t);
+    }
+    window.e610.rotToU = rotToU;
+
+    function setInputUT(target, time) {
+        if(time === undefined) time = 1; 
+        time /= warp;
+        inputU=target;
+        inputT=time;
+        if(zero) return;
+        if(curU() > target) {
+            rotToU(curU(), 0);
+            return;
+        }
+        rotToU(target, time);
+    }
+    e610.setInputUT = setInputUT
+
+
+    $("[name=warp]", electrometer).on("change", function (ev, arg) {
+        var w = 1+4*this.checked;
+        if(warp != w) inputT = inputT * warp / w;
+        warp = w;
+        if(zero) return;
+        rotToU(inputU, inputT);
+    });
+        
+    $tet("meter", electrometer).on("diashow_change", function (ev, arg) {
+        if(arg.i>0) tetshow("on");
+        else        tethide("on");
+        center = arg.i === 4;
+        negative = arg.i === 3;
+        if(arg.i===0) {
+            on=false;
+            rotToPhi(phiLeft, 1);
+        } else if(arg.i==1) {
+            on=false;
+            rotToPhi(phiZero, 1);
+        } else {
+            on=true;
+            if(!zero) {
+                if(Math.abs(inputU - curU())>.05)         rotToU(inputU, inputT);
+                else                       rotToU(inputU, .5); // switching to negative?
+            }
+            else      rotToU(0, .3);
+        }
+    });
+    $tet("mb", electrometer).on("diashow_change", function (ev, arg) {
+        var cu=curU();
+        scale = arg.i ? 3 : 1;
+        if(!zero && on) {
+            rotToU(cu, .5);
+            setTimeout(function() { 
+                if(Math.abs(inputU - cu)>.05)         rotToU(inputU, inputT);
+                else                                      rotToU(inputU, .5);
+            }, 500);
+        }
+    });
+
+    $tet("hz_zero", electrometer).on("click", function () {
+        tettoggle("UNLOCK");
+        zero ^= 1; // toggle bool;
+        if(!on) return;
+        if(zero) {
+            rotToU(0, 1);
+        } else {
+            rotToU(inputU, inputT);
+        }
+    });
+    $tetitem.on("tet:beforedynvar", function() {
+        tethide("UNLOCK");
+        tethide("on");
+        rotToPhi(phiLeft);
+    })
+ })();
+</script></div>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="on" tfowner="shaase" iiowner="juek" style="top:511px;left:294px;width:61px;height:92px;" id="pl_1119155" ii_id="ii_800571">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800571.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="meter" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" style="top:382px;left:328px;width:137px;height:111px;" id="pl_1119156" ii_id="ii_805089">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="power off.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:95px;height:95px;" id="pl_1119157" ii_id="ii_800573">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800573.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="off.jpg" tfowner="shaase" iiowner="juek" style="top:107px;left:100px;width:95px;height:95px;" id="pl_1119158" ii_id="ii_800574">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800574.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="+.jpg" tfowner="shaase" iiowner="juek" style="top:120px;left:169px;width:95px;height:95px;" id="pl_1119159" ii_id="ii_800575">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800575.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="-.jpg" tfowner="shaase" iiowner="juek" style="top:126px;left:137px;width:95px;height:95px;" id="pl_1119160" ii_id="ii_800576">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800576.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="center.jpg" tfowner="shaase" iiowner="juek" style="top:98px;left:144px;width:95px;height:95px;" id="pl_1119161" ii_id="ii_800577">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800577.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Drehknopf Controller" tfowner="shaase" iiowner="shaase" tettool_param_winkelbereich="150" tettool_param_diashow_name="meter" tettool_param_keine_schleife="checked" style="top:373px;left:317px;width:110px;height:109px;" id="pl_1119162" ii_id="ii_685516">   <div class="tetitem_inner">      <div></div>
+<script type="sebscript">
+(function() {
+    "use strict";
+    console.log("Diashow Drehknopf Controller")
+    if(window.TETTOOL_DEBUG) debugger;
+    var $tetitem = $('#pl_1119162');
+    
+    var dianames = get_tettool_param($tetitem, "diashow_name");
+    var disallowLoop = get_tettool_param($tetitem, "keine_Schleife");
+    var counterclockwise = get_tettool_param($tetitem, "gegenuhrzeigersinn");
+    var anglerange = get_tettool_param($tetitem, "Winkelbereich", 360);
+    //unused var angleoffset = get_tettool_param($tetitem, "Winkeloffset", 0);
+    
+    var totalSteps,  // num of dias in 1st diashow, or set by trigger:xx <num>, or 100
+        currentStep, // cur pos in range [1..totalSteps]
+	    currentPos,  // cur pos in range [0..1]   =val/data.totalSteps;
+		lastDeg,
+		rotation,
+		skipSelfTriggered;
+    
+    
+    if(!dianames.length) {
+        $(".tetitem_inner div", $tetitem).html("<span class='tetError'>Kein Diashowname angegeben</span>");
+        return;
+    }
+    dianames = dianames.split(",");
+    
+    var dia_ids=[];
+    var diashow1st;
+
+    $.each(dianames, function(i,e) { 
+        e=e.trim();
+        if(e.substring(0,8) ==="trigger:") {
+            e = e.substring(8).trim();
+            e = e.split(/ +/);
+            dia_ids.push("trigger:"+e[0]);
+            if(!diashow1st) {
+                //not for trigger ... diashow1st = this;
+                totalSteps  = parseInt(e[1])||0; 
+            }
+        } else {
+            var par = $tet(e, $tetitem.parent().closest(".tetitem"), true/*noWarning*/);
+            if(!par.length) par = $tet(e); // if dianame not found in parent, search anywhere ...
+            par.each(function(){ 
+                if(! this.hasAttribute("tetbox_dia") ) {
+                    console.error("Diashow Controller - " + this.getAttribute("itemtitle") +": not a diashow tetbox");
+                    return true; //continue
+                }
+                if(!diashow1st) {
+                    diashow1st = this;
+                    //diashow still {} at this point ... totalSteps  = totalSteps || diashow[diashow1st.id].subs.length; 
+                }
+                dia_ids.push(this.id); 
+            });
+        }
+    })
+
+    if(!dia_ids.length) {
+        $(".tetitem_inner div", $('#pl_1119162')).html( "Diashow Controller - " + dianames +": no diashow tetboxes found" );
+        console.error("Diashow Controller - " + dianames +": no diashow tetboxes found");
+        return;
+    }
+//    $tetitem
+//        .on("tet:beforeinit", function() {
+//        });
+    $tetitem
+        .on("tet:beforedynvar", function() {
+            init();
+        });
+    
+    $(diashow1st).on("diashow_change", function() {
+        if(skipSelfTriggered) return;
+        currentStep = 1 + diashow[this.id].i;
+        if(counterclockwise) {
+            currentStep = totalSteps - currentStep;
+        }
+        currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        if(window.TETTOOL_DEBUG) console.log("Diashow Drehknopf Controller ", currentStep );
+    });
+    /*defer(function() {
+    $(".dia_i", $('#pl_1119162')).width( $(".dia_n", $('#pl_1119162')).width() );
+    console.log("WW:", $(".dia_n", $('#pl_1119162')).width());
+    });
+    */
+
+    function init() {
+        var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+
+        //20181205   todo - FIXMNE:
+        //  too many vars currentDeg(already retired,done.),lastDeg,rotation,startDeg, currentStep, tmp(should be renamed to "curMoveAngleDelta") 
+    
+        totalSteps  = totalSteps || (diashow1st ? diashow[diashow1st.id].subs.length : 100); // keep totalSteps if it was set by "trigger:<name> <num>""
+
+        currentStep = 1+dia_i;
+		if(counterclockwise) {
+		    currentStep = totalSteps - currentStep;
+		}
+
+
+		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        var $doc = $(document);
+        
+		$tetitem.on('mousedown touchstart', function(e) {
+		    if(window.layouting_mode) return;
+		    if(tetPageChanged(init)) {
+		           console.log("TET-PAGE-LEFT Diashow Drehknopf Controller");
+		           return;
+		    }
+		    
+			var offset = $tetitem.offset();
+			var center ={y: offset.top  + $tetitem.height()/2,
+			             x: offset.left + $tetitem.width()/2};
+			var startDeg;//undefined
+
+			//Position( in[0,1]) korrigieren in Abh. des Steps)
+			currentPos = (currentStep-1)/(totalSteps-1);      /////SEB FIXME LAST -1 WRONG
+			$doc.on('mousemove.rem touchmove.rem',function(evt) {
+				var e = (evt.originalEvent.touches) ? evt.originalEvent.touches[0] : evt;
+				var a = center.y - e.pageY;
+				var b = center.x - e.pageX;
+				var deg = Math.atan2(a,b) * 180/Math.PI;    // 9Uhr =0; 12Uhr =90; 6Uhr =-90
+				// we have to make sure that negative
+				// angles are turned into positive:
+				if(deg<0) {
+					deg = 360 + deg;
+				}
+				//Save the starting position of the drag
+				if(startDeg === undefined) {
+					startDeg = deg;
+				}
+					
+				// Calculating the current rotation
+				var tmp = ((deg-startDeg) + rotation);
+				
+				// Making sure the current rotation
+				// stays between 0 and 359._9
+				if(tmp < 0)	{
+//				    console.log("tmp", tmp)
+					if(disallowLoop) {
+					//    tmp = 0
+    				//	startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+					}// else {
+					    tmp = 360 + tmp;
+					//}
+				} else if(tmp >= 360) {
+					tmp = tmp % 360;
+				}
+					
+				if(lastDeg>anglerange && disallowLoop) {
+					lastDeg = anglerange;
+//					startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+				}
+							
+				// DEG -> POS -> STP
+				//deg->pos
+				currentPos=lastDeg/anglerange;
+				
+				// pos->stp
+				var turningStep = Math.floor(totalSteps*currentPos)+1
+				if(turningStep > totalSteps) turningStep=totalSteps;
+				if(turningStep != currentStep) {
+					currentStep=turningStep;
+					
+					var dia_i = currentStep-1; // 0-based
+					if(counterclockwise) {
+					    dia_i = totalSteps - 1 - dia_i;
+					}
+					skipSelfTriggered = true;
+                    for(var i in dia_ids) {
+                        if(dia_ids[i].substring(0,8)==="trigger:") {
+                            tettrigger(dia_ids[i].substring(8), 0, $tetitem, {i:dia_i});
+                        } else {
+                            diashow_show(dia_ids[i], dia_i); //diashow[dia_id].i+1);
+                        }
+                    }
+                    skipSelfTriggered = false;
+				}
+
+				// This would suggest we are at an end position;
+				// we need to block further rotation.
+//seb 20160403							if(Math.abs(tmp - data.lastDeg) > 180 && data.infinite!==true)
+				if(Math.abs(tmp - lastDeg) > 180 && disallowLoop) {
+					if(tmp<lastDeg)	{
+						lastDeg = anglerange-0.00000000001;
+					} else {
+						//currentDeg = 0;
+						lastDeg = 0;
+					}
+				} else {
+				    //currentDeg = tmp;
+    				lastDeg = tmp;
+				}
+				evt.stopImmediatePropagation();
+				//20200423  Unable to preventDefault inside passive event listener due to target being treated as passive.  evt.preventDefault();
+				return false; //prevent page move on touch scrollable page 
+			});
+			//disable default iPad "dragging background" 
+			$(web_mode?"body":"#fullBrowserWindow")[0].addEventListener("touchmove", handler_touchmove, { passive: false} );
+            function handler_touchmove(evt) {
+                evt.preventDefault();
+            }/*20200423
+			$(web_mode?"body":"#fullBrowserWindow").on('touchmove.rem',function(evt) {
+                evt.preventDefault();
+            });    */
+
+                
+			$doc.on('mouseup.rem touchend.rem',function()
+			{
+				$doc.off('.rem');
+				//20200423  $(web_mode?"body":"#fullBrowserWindow").off('touchmove.rem');
+				$(web_mode?"body":"#fullBrowserWindow")[0].removeEventListener("touchmove", handler_touchmove);
+
+				console.log("doc.off(.rem)")
+				// Saving the current rotation
+				rotation = lastDeg;
+				
+				// Marking the starting degree as invalid
+				startDeg = undefined;
+				
+				//Pos+Deg korrigieren, damit "voller" schritt für stepwechsel nötig ist
+				currentPos = (currentStep-1)/(totalSteps-1);                                  //FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+				//currentDeg = currentPos * anglerange;
+				lastDeg = currentPos * anglerange;
+				rotation = currentPos * anglerange;
+			});					
+		});
+        $tetitem.data("tettool", {
+            updatePos:  function updatePos(i) {
+                var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+                if(i !== undefined) dia_i = i;
+                currentStep = 1+dia_i;
+        		if(counterclockwise) {
+        		    currentStep = totalSteps - currentStep;
+        		}
+        		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+                //currentDeg=currentPos * anglerange;
+        		lastDeg =  currentPos * anglerange;
+        		rotation = currentPos * anglerange;
+            }
+        })
+    }
+})();//closure
+
+</script>
+<style type="text/css">
+#pl_1119162:not([layouting]) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="mb" tfowner="shaase" iiowner="shaase" notetdata="1" tetbox_dia="1" tetbox_dia_noclick="1" style="top:354px;left:171px;width:117px;height:102px;" id="pl_1119163" ii_id="ii_805090">   <div class="tetitem_inner">        <div class="tetitem   " itemtype="img" itemtitle="1V.jpg" tfowner="shaase" iiowner="juek" style="top:0px;left:0px;width:95px;height:95px;" id="pl_1119164" ii_id="ii_800579">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800579.jpg">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="3V.jpg" tfowner="shaase" iiowner="juek" style="top:90px;left:85px;width:95px;height:95px;" id="pl_1119165" ii_id="ii_800580">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800580.jpg">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Drehknopf Controller" tfowner="shaase" iiowner="shaase" tettool_param_winkelbereich="60" tettool_param_diashow_name="mb" tettool_param_keine_schleife="checked" style="top:358px;left:175px;width:90px;height:90px;" id="pl_1119166" ii_id="ii_685516">   <div class="tetitem_inner">      <div></div>
+<script type="sebscript">
+(function() {
+    "use strict";
+    console.log("Diashow Drehknopf Controller")
+    if(window.TETTOOL_DEBUG) debugger;
+    var $tetitem = $('#pl_1119166');
+    
+    var dianames = get_tettool_param($tetitem, "diashow_name");
+    var disallowLoop = get_tettool_param($tetitem, "keine_Schleife");
+    var counterclockwise = get_tettool_param($tetitem, "gegenuhrzeigersinn");
+    var anglerange = get_tettool_param($tetitem, "Winkelbereich", 360);
+    //unused var angleoffset = get_tettool_param($tetitem, "Winkeloffset", 0);
+    
+    var totalSteps,  // num of dias in 1st diashow, or set by trigger:xx <num>, or 100
+        currentStep, // cur pos in range [1..totalSteps]
+	    currentPos,  // cur pos in range [0..1]   =val/data.totalSteps;
+		lastDeg,
+		rotation,
+		skipSelfTriggered;
+    
+    
+    if(!dianames.length) {
+        $(".tetitem_inner div", $tetitem).html("<span class='tetError'>Kein Diashowname angegeben</span>");
+        return;
+    }
+    dianames = dianames.split(",");
+    
+    var dia_ids=[];
+    var diashow1st;
+
+    $.each(dianames, function(i,e) { 
+        e=e.trim();
+        if(e.substring(0,8) ==="trigger:") {
+            e = e.substring(8).trim();
+            e = e.split(/ +/);
+            dia_ids.push("trigger:"+e[0]);
+            if(!diashow1st) {
+                //not for trigger ... diashow1st = this;
+                totalSteps  = parseInt(e[1])||0; 
+            }
+        } else {
+            var par = $tet(e, $tetitem.parent().closest(".tetitem"), true/*noWarning*/);
+            if(!par.length) par = $tet(e); // if dianame not found in parent, search anywhere ...
+            par.each(function(){ 
+                if(! this.hasAttribute("tetbox_dia") ) {
+                    console.error("Diashow Controller - " + this.getAttribute("itemtitle") +": not a diashow tetbox");
+                    return true; //continue
+                }
+                if(!diashow1st) {
+                    diashow1st = this;
+                    //diashow still {} at this point ... totalSteps  = totalSteps || diashow[diashow1st.id].subs.length; 
+                }
+                dia_ids.push(this.id); 
+            });
+        }
+    })
+
+    if(!dia_ids.length) {
+        $(".tetitem_inner div", $('#pl_1119166')).html( "Diashow Controller - " + dianames +": no diashow tetboxes found" );
+        console.error("Diashow Controller - " + dianames +": no diashow tetboxes found");
+        return;
+    }
+//    $tetitem
+//        .on("tet:beforeinit", function() {
+//        });
+    $tetitem
+        .on("tet:beforedynvar", function() {
+            init();
+        });
+    
+    $(diashow1st).on("diashow_change", function() {
+        if(skipSelfTriggered) return;
+        currentStep = 1 + diashow[this.id].i;
+        if(counterclockwise) {
+            currentStep = totalSteps - currentStep;
+        }
+        currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        if(window.TETTOOL_DEBUG) console.log("Diashow Drehknopf Controller ", currentStep );
+    });
+    /*defer(function() {
+    $(".dia_i", $('#pl_1119166')).width( $(".dia_n", $('#pl_1119166')).width() );
+    console.log("WW:", $(".dia_n", $('#pl_1119166')).width());
+    });
+    */
+
+    function init() {
+        var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+
+        //20181205   todo - FIXMNE:
+        //  too many vars currentDeg(already retired,done.),lastDeg,rotation,startDeg, currentStep, tmp(should be renamed to "curMoveAngleDelta") 
+    
+        totalSteps  = totalSteps || (diashow1st ? diashow[diashow1st.id].subs.length : 100); // keep totalSteps if it was set by "trigger:<name> <num>""
+
+        currentStep = 1+dia_i;
+		if(counterclockwise) {
+		    currentStep = totalSteps - currentStep;
+		}
+
+
+		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+		lastDeg =  currentPos * anglerange;
+		rotation = currentPos * anglerange;
+        var $doc = $(document);
+        
+		$tetitem.on('mousedown touchstart', function(e) {
+		    if(window.layouting_mode) return;
+		    if(tetPageChanged(init)) {
+		           console.log("TET-PAGE-LEFT Diashow Drehknopf Controller");
+		           return;
+		    }
+		    
+			var offset = $tetitem.offset();
+			var center ={y: offset.top  + $tetitem.height()/2,
+			             x: offset.left + $tetitem.width()/2};
+			var startDeg;//undefined
+
+			//Position( in[0,1]) korrigieren in Abh. des Steps)
+			currentPos = (currentStep-1)/(totalSteps-1);      /////SEB FIXME LAST -1 WRONG
+			$doc.on('mousemove.rem touchmove.rem',function(evt) {
+				var e = (evt.originalEvent.touches) ? evt.originalEvent.touches[0] : evt;
+				var a = center.y - e.pageY;
+				var b = center.x - e.pageX;
+				var deg = Math.atan2(a,b) * 180/Math.PI;    // 9Uhr =0; 12Uhr =90; 6Uhr =-90
+				// we have to make sure that negative
+				// angles are turned into positive:
+				if(deg<0) {
+					deg = 360 + deg;
+				}
+				//Save the starting position of the drag
+				if(startDeg === undefined) {
+					startDeg = deg;
+				}
+					
+				// Calculating the current rotation
+				var tmp = ((deg-startDeg) + rotation);
+				
+				// Making sure the current rotation
+				// stays between 0 and 359._9
+				if(tmp < 0)	{
+//				    console.log("tmp", tmp)
+					if(disallowLoop) {
+					//    tmp = 0
+    				//	startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+					}// else {
+					    tmp = 360 + tmp;
+					//}
+				} else if(tmp >= 360) {
+					tmp = tmp % 360;
+				}
+					
+				if(lastDeg>anglerange && disallowLoop) {
+					lastDeg = anglerange;
+//					startDeg = undefined; //20210428 if outside anglerange, never jump to other side....
+				}
+							
+				// DEG -> POS -> STP
+				//deg->pos
+				currentPos=lastDeg/anglerange;
+				
+				// pos->stp
+				var turningStep = Math.floor(totalSteps*currentPos)+1
+				if(turningStep > totalSteps) turningStep=totalSteps;
+				if(turningStep != currentStep) {
+					currentStep=turningStep;
+					
+					var dia_i = currentStep-1; // 0-based
+					if(counterclockwise) {
+					    dia_i = totalSteps - 1 - dia_i;
+					}
+					skipSelfTriggered = true;
+                    for(var i in dia_ids) {
+                        if(dia_ids[i].substring(0,8)==="trigger:") {
+                            tettrigger(dia_ids[i].substring(8), 0, $tetitem, {i:dia_i});
+                        } else {
+                            diashow_show(dia_ids[i], dia_i); //diashow[dia_id].i+1);
+                        }
+                    }
+                    skipSelfTriggered = false;
+				}
+
+				// This would suggest we are at an end position;
+				// we need to block further rotation.
+//seb 20160403							if(Math.abs(tmp - data.lastDeg) > 180 && data.infinite!==true)
+				if(Math.abs(tmp - lastDeg) > 180 && disallowLoop) {
+					if(tmp<lastDeg)	{
+						lastDeg = anglerange-0.00000000001;
+					} else {
+						//currentDeg = 0;
+						lastDeg = 0;
+					}
+				} else {
+				    //currentDeg = tmp;
+    				lastDeg = tmp;
+				}
+				evt.stopImmediatePropagation();
+				//20200423  Unable to preventDefault inside passive event listener due to target being treated as passive.  evt.preventDefault();
+				return false; //prevent page move on touch scrollable page 
+			});
+			//disable default iPad "dragging background" 
+			$(web_mode?"body":"#fullBrowserWindow")[0].addEventListener("touchmove", handler_touchmove, { passive: false} );
+            function handler_touchmove(evt) {
+                evt.preventDefault();
+            }/*20200423
+			$(web_mode?"body":"#fullBrowserWindow").on('touchmove.rem',function(evt) {
+                evt.preventDefault();
+            });    */
+
+                
+			$doc.on('mouseup.rem touchend.rem',function()
+			{
+				$doc.off('.rem');
+				//20200423  $(web_mode?"body":"#fullBrowserWindow").off('touchmove.rem');
+				$(web_mode?"body":"#fullBrowserWindow")[0].removeEventListener("touchmove", handler_touchmove);
+
+				console.log("doc.off(.rem)")
+				// Saving the current rotation
+				rotation = lastDeg;
+				
+				// Marking the starting degree as invalid
+				startDeg = undefined;
+				
+				//Pos+Deg korrigieren, damit "voller" schritt für stepwechsel nötig ist
+				currentPos = (currentStep-1)/(totalSteps-1);                                  //FIXME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+				//currentDeg = currentPos * anglerange;
+				lastDeg = currentPos * anglerange;
+				rotation = currentPos * anglerange;
+			});					
+		});
+        $tetitem.data("tettool", {
+            updatePos:  function updatePos(i) {
+                var dia_i = diashow1st ? diashow[diashow1st.id].i : 0;
+                if(i !== undefined) dia_i = i;
+                currentStep = 1+dia_i;
+        		if(counterclockwise) {
+        		    currentStep = totalSteps - currentStep;
+        		}
+        		currentPos=1/(totalSteps-1)*currentStep+1/(1-totalSteps);
+                //currentDeg=currentPos * anglerange;
+        		lastDeg =  currentPos * anglerange;
+        		rotation = currentPos * anglerange;
+            }
+        })
+    }
+})();//closure
+
+</script>
+<style type="text/css">
+#pl_1119166:not([layouting]) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="UNLOCK" tfowner="shaase" iiowner="juek" style="top:535px;left:348px;width:54px;height:54px;" id="pl_1119167" ii_id="ii_800583">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/800583.png">   </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_zero" tfowner="shaase" iiowner="shaase" tetaction="js:null" style="top:527px;left:346px;width:62px;height:69px;" id="pl_1119168" ii_id="ii_805091">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="input labeling" tfowner="shaase" iiowner="shaase" style="top:494px;left:30px;width:85px;height:47px;" id="pl_1119170" ii_id="ii_805093">   <div class="tetitem_inner">      <div class="tetitem_text"><span style="font-size:14px;"><em>R</em></span><span style="font-size:12px;"><sub>i</sub></span><span style="font-size:14px;"> &gt; 10<sup>14</sup>&nbsp;Ω</span></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="warp" tfowner="shaase" iiowner="shaase" style="top:209px;left:316px;width:97px;height:23px;" id="pl_1123525" ii_id="ii_807454">   <div class="tetitem_inner">      <div class="tetitem_text"><style> #pl_1123525 {
+    font-size: 13px;
+    font-style: italic;
+    color: #fff;
+x    border: 1px solid #aaa;
+x    background: #aaa;
+x    border-radius: 13px;
+    text-align: center;
+  }
+</style><label><input name="warp" nosave="" type="checkbox">WARP x5</label></div>  </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Schiebe-Controller" tfowner="shaase" iiowner="shaase" notetdata="1" tettool_param_x-richtung="65" tettool_param_diashow_name="schieben%2C%20trigger%3Aschieben" tettool_param_y-richtung="-7" freedrag="1" tetlabel="hz_schieben" style="top:414px;left:234px;width:76px;height:162px;" id="pl_1119171" ii_id="ii_685823">   <div class="tetitem_inner">      <script src="js/dia_drag_ctrl.js"></script>
+<script type="sebscript">$('#pl_1119171').on("tet:beforeinit", function() { tettool_dia_drag_ctrl.init("dia_drag_ctrl", $('#pl_1119171')) })</script>
+<style type="text/css">
+#pl_1119171:not([layouting]):not(.ui-draggable-disabled) *:not(input):not(.ui-slider-handle) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="hz_610" tfowner="shaase" iiowner="shaase" tetaction="toggle: Electrometer-610b; toggle: close_610; hide: hz_610" style="top:240px;left:557px;width:117px;height:184px;" id="pl_1119172" ii_id="ii_805094">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="tettool" itemtitle="Diashow Schiebe-Controller" tfowner="shaase" iiowner="shaase" notetdata="1" tettool_param_x-richtung="-167" tettool_param_diashow_name="schwenken%2C%20trigger%3Aschwenken" tettool_param_y-richtung="-24" freedrag="1" tetlabel="hz_schwenken" style="top:280px;left:923px;width:81px;height:130px;" id="pl_1119173" ii_id="ii_685823">   <div class="tetitem_inner">      <script src="js/dia_drag_ctrl.js"></script>
+<script type="sebscript">$('#pl_1119173').on("tet:beforeinit", function() { tettool_dia_drag_ctrl.init("dia_drag_ctrl", $('#pl_1119173')) })</script>
+<style type="text/css">
+#pl_1119173:not([layouting]):not(.ui-draggable-disabled) *:not(input):not(.ui-slider-handle) {
+	cursor: pointer;
+}
+</style>  </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="detail1" tfowner="shaase" iiowner="juek" tetlabel="close_610" tetaction="hide: Electrometer-610b; hide: close_610; show:hz_610" style="top:2px;left:662px;width:35px;height:34px;" id="pl_1119174" ii_id="ii_798039">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798039.png">   </div>      </div>     <div class="tetitem   " itemtype="img" itemtitle="detail1" tfowner="shaase" iiowner="juek" tetlabel="detail_close" tetaction="hide: detail_box; hide: detail_close" style="top:2px;left:985px;width:35px;height:34px;" id="pl_1119175" ii_id="ii_798039">   <div class="tetitem_inner">    <img class="tetitem_img " draggable="false" src="images/798039.png">   </div>      </div>   <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="fast" tfowner="shaase" iiowner="shaase" tetaction="js:tettrigger(&quot;kondensor_tisch&quot;);tettrigger(&quot;spalt_tisch&quot;);tettrigger(&quot;linse_tisch&quot;);tettrigger(&quot;messspalt_tisch&quot;);tettrigger(&quot;gehaeuse_tisch&quot;);tettrigger(&quot;zelle_gehaeuse_tisch&quot;)" style="top:840px;left:87px;width:58px;height:57px;" id="pl_1119183" ii_id="ii_805101">   <div class="tetitem_inner">      <div class="tetitem_text">fast</div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="faster" tfowner="shaase" iiowner="shaase" tetaction="js:tettrigger(&quot;kondensor_tisch&quot;);tettrigger(&quot;spalt_tisch&quot;);tettrigger(&quot;linse_tisch&quot;);tettrigger(&quot;messspalt_tisch&quot;);tettrigger(&quot;gehaeuse_tisch&quot;);tettrigger(&quot;zelle_gehaeuse_tisch&quot;);trigger:lampe;dia:schieben 10; trigger:prisma_tisch" style="top:840px;left:145px;width:58px;height:57px;" id="pl_1119203" ii_id="ii_805121">   <div class="tetitem_inner">      <div class="tetitem_text">faster</div>  </div>      </div>     <div class="tetitem   box_white" itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek" style="top:779px;left:28px;width:199px;height:118px;" id="pl_1136555" ii_id="ii_816132">   <div class="tetitem_inner">      <div class="tetitem_text"></div>  </div>      </div>     <div class="tetitem   " itemtype="TETbox" itemtitle="" tfowner="juek" iiowner="juek" style="top:683px;left:0px;width:1025px;height:60px;" id="pl_1545460" ii_id="ii_1123012">   <div class="tetitem_inner">      <div class="tetitem_text"><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">&nbsp;© 2020 Freie Universität Berlin |&nbsp;</span></span><span style="caret-color: rgb(44, 86, 130); color: rgb(44, 86, 130); font-size: 14px;">AG Didaktik der Physik&nbsp;</span><span style="font-size: 14px;"><span style="color: rgb(44, 86, 130);">in Zusammenarbeit mit QUA-LiS NRW</span></span><span style="font-size:14px;"><span style="color:#2c5682;"><br></span></span></div>  </div>      </div>      <script>var TETdata_page = undefined;</script>    
+<style type="text/css" itemtype="TETstyle" itemtitle="1m.mathjax" iiowner="shaase" ii_id="ii_1129478">
+.mathjax_only_dollar {
+}
+.mathjax_only_backets {
+}
+
+  .MathJax:focus {
+    outline: none;
+}
+
+
+</style>
+<div class="tetitem tet_underlay" itemtype="tettool" itemtitle="Math-Jax" id="mathjax-from-style-no-dynvar-skip" style="display:none;height:0;width:0"></div>
+<!-- seb fix for offline via wget  --- wget only knows "stylesheet" and "shortcut icon" -should be "prefetch" -->
+<link rel="shortcut icon" href="js/MMLorHTML.js">
+<link rel="shortcut icon" href="js/config.js">
+<link rel="shortcut icon" href="js/jax.js">
+<link rel="shortcut icon" href="js/config_1.js">
+<link rel="shortcut icon" href="js/config_2.js">
+<!--            #MathJax-2.7.5: -->
+<link rel="shortcut icon" href="js/GreekItalic.js">
+<link rel="shortcut icon" href="js/GreekItalic_1.js">
+<link rel="shortcut icon" href="js/MathItalic.js">
+<link rel="shortcut icon" href="js/MathItalic_1.js">
+            
+<link rel="shortcut icon" href="js/config_3.js">
+<link rel="shortcut icon" href="js/tex2jax.js">
+<link rel="shortcut icon" href="js/mml2jax.js">
+
+<link rel="shortcut icon" href="js/jax_1.js">
+<link rel="shortcut icon" href="js/MathEvents.js">
+<link rel="shortcut icon" href="js/AMSmath.js">
+<link rel="shortcut icon" href="js/AMSsymbols.js">
+<link rel="shortcut icon" href="js/noErrors.js">
+<link rel="shortcut icon" href="js/noUndefined.js">
+
+<link rel="shortcut icon" href="js/TeX-AMS-MML_HTMLorMML.js">
+<!--            #20190912-old                    'inc/MathJax/images/MenuArrow-15.png"/>    -->
+<link rel="shortcut icon" href="js/jax_2.js">
+<link rel="shortcut icon" href="js/fontdata.js">
+<link rel="shortcut icon" href="js/fontdata-1.0.js">
+<!-- 20230328 <link rel="shortcut icon" href="/inc/MathJax/extensions/MathMenu.js"/> -->
+<!-- 20230328 <link rel="shortcut icon" href="/inc/MathJax/extensions/MathZoom.js"/> -->
+
+<link rel="shortcut icon" href="js/multiline.js">
+<link rel="shortcut icon" href="js/MathItalic.js">
+<link rel="shortcut icon" href="js/MathItalic_1.js">
+<link rel="shortcut icon" href="js/CurrencySymbols.js">
+<link rel="shortcut icon" href="js/LetterlikeSymbols.js">
+<link rel="shortcut icon" href="js/LetterlikeSymbols_1.js">
+
+
+
+<script type="text/x-mathjax-config">
+  console.log("1m.mathjax")
+  var mathjax_only = $("[class*=mathjax_only_]");
+  mathjax_only = mathjax_only.length && getClassnameTail(mathjax_only[0], "mathjax_only_")
+  MathJax.Hub.Config({
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    showMathMenu: false, //20190301
+    tex2jax: {
+       inlineMath:  mathjax_only=="backets" ?[['\\(','\\)']] : mathjax_only=="dollar" ?[['$','$']]: [['$','$'], ['\\(','\\)']],
+       displayMath: mathjax_only=="backets" ?[['\\[','\\]']] : mathjax_only=="dollar" ?[['$$','$$']]: [['$$','$$'], ['\\[','\\]']]
+//        ignoreClass: "dynexpr"
+    },
+    //tex2jax: {inlineMath: [['\\(','\\)']]},
+    config: ["MMLorHTML.js"],
+    jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+    extensions: ["tex2jax.js","mml2jax.js"],//20190301 apparently loaded automatically if showMathMenu true:!!  ,"MathMenu.js","MathZoom.js"],
+    TeX: {
+       extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
+    "HTML-CSS": {                       // http://docs.mathjax.org/en/latest/options/output-processors/HTML-CSS.html
+       mtextFontInherit: true, //20180222 https://groups.google.com/forum/#!topic/mathjax-users/nokFUnsyDxg
+    }
+  });
+  //https://groups.google.com/forum/#!topic/mathjax-users/_HCDxJbCFjc
+  (function () {
+	  var EXT = MathJax.Extension, mm, mz;
+      MathJax.Hub.Register.StartupHook("End Typeset",function () {
+          console.log("20230328 - this never gets called - CHECK!!") // b/c skipStartupTypeset  is true!! 
+        mm = EXT.MathMenu; mz = EXT.MathZoom;
+        EXT.MathMenu = EXT.MathZoom = {};
+      });
+	  MathJax.Hub.Queue(function () {
+	    if (mm) {EXT.MathMenu = mm} else {delete EXT.MathMenu}
+	    if (mz) {EXT.MathZoom = mz} else {delete EXT.MathZoom}
+	  });
+	  //MathJax.Hub.signal.Interest(function (message) {console.log("Hub: "+message)}); // lots of "New Math", then "End math", then "End Process"
+      MathJax.Hub.Register.MessageHook("End Math", function (message) {
+    	  $(window).trigger("resize"); // mindmap: reposition mid-boxes w/ mathjax
+	  });
+  })();
+</script>
+<script type="sebscript">
+  if(window.TETTOOL_DEBUG)  console.log("1m.mathjax")
+  dynreg_fcn($("#mathjax-from-style-no-dynvar-skip"), function(action) {
+      //if(action=="loadpage" || action=="layout") {
+          MathJax.Hub.Queue(["Typeset", MathJax.Hub, document.getElementById("mainPane")]);
+      //}
+    },
+    $("dynvar").closest(".tetitem").map(function() {return this.id}).toArray() // go last in dyn dependencies, i.e. depend on all others
+  )
+</script>
+<!-- script type="text/javascript" src="/inc/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> -->
+<!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js"></script> -->
+<!--<script type="text/javascript" src="/inc/MathJax-2.7.5/unpacked/MathJax.js"></script>-->
+<!--<script type="text/javascript" src="/inc/MathJax-2.7.5/MathJax.js"></script>-->
+<script type="text/javascript" src="js/MathJax.js"></script>
+<style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="logicControllerStyle--tettool:Logic→Controller" iiowner="shaase" ii_id="ii_690837">
+.logicCodeBox:not([layouting]) {
+	pointer-events: none;
+}
+.logicCodeBox:not([layouting])>.tetitem_inner {
+    overflow: visible;
+}
+.logicCodeBox .errorMsg span {
+    display: list-item;
+    list-style-type: decimal;
+    margin-left: 2em;
+}
+#mainPane[can_edit_ii] .logicCodeBox[layouting][can_edit_tet] {
+	font-size:8px;
+x	outline: 4px orange dotted;
+	background: rgba(127,255,0,.2);
+}
+#mainPane[can_edit_ii] .logicCodeBox[layouting][itemtype=tettool]:not(.tet_underlay):before {
+    content: "tet.tool: " attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;
+}
+.logicCodeBox .errorMsg:not(:empty):before {
+    content: "Error in Logik-Controller:";
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background: #f5f5dcbb;
+    z-index: 1;    
+}
+    
+.logicCodeBox .errorMsg {
+	color: red;
+	font-family: monospace;
+	font-size: 10px;
+}
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="1a.format" iiowner="shaase" ii_id="ii_774976">
+/* tet CSS-with-vars  1. # MINIMUM 1 WHITE-SPACE BEFORE DECLARATION-BLOCK !!!    2.  NOTHING at start of selector line-> not even END-OF-ANOTHER-C-COMMENT*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.text_middle_center {                                                         /* der Text ist horizontal und vertikal zentriert */
+    display:table;
+    }
+    .text_middle_center>.tetitem_inner {
+        display:table-cell;
+        vertical-align:middle;
+        position: relative;
+    }
+    .text_middle_center>.tetitem_inner>.tetitem_text {
+        position: relative;
+        height: initial;
+        text-align: center;
+    }
+/*    .text_middle_center>.tetitem_inner>.tetitem_text>p,
+    .text_middle_center>.tetitem_inner>.tetitem_text>div {
+        display: inline;
+    }
+*/
+      .text_middle_center>.tetitem_inner>.tetitem_text>p:last-child {
+        margin-bottom: 0;
+    }
+
+
+
+/*    .text_middle_right_{margin}>.tetitem_inner>.tetitem_text>p,
+
+*/
+
+
+
+
+/*    .text_middle_left_{margin}>.tetitem_inner>.tetitem_text>p,
+
+*/
+
+.text_bottom {                                                         /* der Text ist vertikal bottom */
+    display:table;
+    }
+    .text_bottom>.tetitem_inner {
+        display:table-cell;
+        vertical-align:bottom;
+        position: relative;
+    }
+    .text_bottom>.tetitem_inner>.tetitem_text {
+        position: relative;
+        height: initial;
+x        text-align: center;
+    }
+    .text_bottom>.tetitem_inner>.tetitem_text>p,
+    .text_bottom>.tetitem_inner>.tetitem_text>div {
+        display: inline-block;
+    }
+
+.border_1px_solid_\#ccc {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+   }
+
+.rounded_corners_3px {
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.rounded_corners_3px:not([layouting]) {
+    overflow: hidden;
+    -webkit-background-clip: padding-box; /* Safari bug - 20220223 - https://stackoverflow.com/questions/17416879/safari-bug-with-border-radius-rounded-corners-and-strange-background-repeat */
+}
+
+
+
+
+
+
+
+
+
+
+.text_selectable .tetitem_inner , .text_selectable .tetitem_inner * {
+   -webkit-user-select: initial;
+   user-select: text;
+   -moz-user-select: text;    
+}
+
+.overflow>.tetitem_inner {
+    overflow:visible;
+}
+
+
+
+
+
+@media not print {
+
+}
+
+
+@media print
+{
+.noprint {
+		display:none !important;
+    }
+.doprint {
+		display:initial !important;
+    }
+}    
+
+
+
+
+
+.hyphens .tetitem_inner {
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.tethide {}
+/*.hyphens_lang_{lang=!de;en} {
+}
+*/
+</style><script type="sebscript">$("#mainPane .hyphens,#mainPane.hyphens").length && ( console.log("lang=de"), document.body.lang="de" )</script><style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="ibe.box" iiowner="shaase" ii_id="ii_17209">
+/* non-master TETstyle */
+.clickable.tetitem:not([layouting]) * {
+	cursor: pointer !important;
+}
+.not-allowed.tetitem:not([layouting]) * {
+	cursor: not-allowed !important;
+}
+
+.bottomText.tetitem>.tetitem_inner>.tetitem_text {
+    height: initial;
+    top: auto;
+    bottom: 0px;
+}
+.bottomText.tetitem>.tetitem_inner>.tetitem_text>p:last-child {
+    margin-bottom: 0px;
+}
+
+.preStandardFont pre {
+    font-family:inherit;
+}
+
+.tethide {}
+.authorsOnlyNote {
+    background: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+body.web .authorsOnlyNote.tetitem,
+body.tetnoteMode .authorsOnlyNote.tetitem,
+body.guest_login .authorsOnlyNote.tetitem{
+    display: none !important;
+}
+.TeachersOnly {
+    background: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+body:not(.tc_teacher) .TeachersOnly:not([can_edit_ii]) {
+    display: none !important;
+}
+
+.tetbutton {
+	cursor: pointer;
+    border: 1px solid #CCC;
+	
+	background-image: linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -o-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -moz-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -webkit-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	background-image: -ms-linear-gradient(bottom, rgb(243,243,243) 25%, rgb(218,218,218) 82%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.25, rgb(243,243,243)),
+		color-stop(0.82, rgb(218,218,218))
+	);
+	
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.tetbutton.jqhover,
+.tetbutton:hover {
+	/* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dadada), to(#f3f3f3)); */
+	background-image: linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -o-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -moz-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -webkit-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	background-image: -ms-linear-gradient(bottom, rgb(218,218,218) 25%, rgb(243,243,243) 82%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.25, rgb(218,218,218)),
+		color-stop(0.82, rgb(243,243,243))
+	);
+}
+
+
+.tetcamBox.tetitem:not([layouting]) {
+	outline: 1px dashed #777; 
+}
+.tetcamBox.tetitem:not([layouting]) * {
+	cursor: pointer;
+}
+.vertical-middle {
+  display:table-cell; 
+  vertical-align:middle;
+}
+.vertical-container-centered {
+  display: table;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.ibeBox {
+	/*border: 1px solid black;*/
+/*	cursor: pointer; */
+/*	text-align: center; */
+	vertical-align: middle;
+}
+
+
+.ibeBox .tetitem_inner {
+/*why???*/	overflow: visible;
+	white-space: nowrap;
+}
+
+.ibeBox:not([layouting]) .param {
+	opacity:.0;
+	margin: 0px;
+}
+.ibeBox[layouting] .param {
+	color: red;
+	font-weight: 1000;
+	margin: 0px;
+}
+.IBEslider {
+	width:100%;
+	height: 100%;
+	cursor: pointer;
+/*	outline:1px dashed #ffd; */
+}
+/*
+.IBEslider.IBEslider2 {
+	width:100%;
+	height: 100%;
+	background:#ff0;
+	position: absolute !important;
+}*/
+
+.dragme {
+	border: solid 1px grey;
+	border-radius: 30px;
+}
+.dropziel {
+   outline: dotted 1px red;
+   content: "Ziel";
+}
+.gray_border {
+   outline: 1px #ddd solid;
+}
+.grayDark555_border {
+   outline: 1px #555 solid;
+}
+.back {
+   background: firebrick;
+}
+.ignore_click:not([layouting]) {
+        pointer-events: none;
+}
+.ignore_click_reset:not([layouting]) {
+        pointer-events: all;
+}
+.hidden:not([layouting]) {
+	display: none;
+}
+.hidden[layouting] {
+	opacity:.3
+}
+.noInteraction:not([layouting]) {
+	pointer-events: none;
+}
+
+
+
+.drehbar {
+   x outline: 1px solid #ccc;
+}
+.drehbar_hover_cursor:not([layouting]),
+.drehbar_hover_cursor:not([layouting])  *:not(input):not(.ui-slider-handle) {
+    cursor: alias;
+}
+
+</style><script type="sebscript">(function() {
+    "use strict";
+    var mp=$("#mainPane")[0];
+
+window.init_drehbar = 
+function init_drehbar(_this) {
+    if(_this  instanceof jQuery) {
+        _this.each(function() {
+            init_drehbar(this);
+        });
+        return;
+    }
+    var $doc = $(document);
+
+    //if(window.TETTOOL_DEBUG) 
+    console.log("ibe.box->drehbar:", _this.id, _this.getAttribute("itemtitle"))
+
+function offCenter(_this, e) {
+    var mpx = -mp.offsetLeft + mp.parentElement.scrollLeft,  mpy = -mp.offsetTop + mp.parentElement.scrollTop;
+
+    var x = (!e.touches ? e.pageX : e.touches[0].pageX) + mpx;
+    var y = (!e.touches ? e.pageY : e.touches[0].pageY) + mpy;
+//    var x = (!e.touches ? e.offsetX : e.touches[0].pageX) + mpx;
+//    var y = (!e.touches ? e.offsetY : e.touches[0].pageY) + mpy;
+
+//20190706
+_this.drehbar_x = x;
+//20190706
+_this.drehbar_y = y;
+
+    var x0 = _this.offsetLeft;
+    var y0 = _this.offsetTop;
+
+    var el=_this.offsetParent; //20190706 parentElement
+    while(el!=mp) {
+        //20200914  x += el.offsetLeft;
+        //20200914  y += el.offsetTop;
+
+        x0 += el.offsetLeft;
+        y0 += el.offsetTop;
+
+        el=el.offsetParent; //20190706 parentElement
+    }
+//    _this.drehbar_x = x;
+//    _this.drehbar_y = y;
+
+    var xc = x0 + _this.offsetWidth/2;
+    var yc = y0 + _this.offsetHeight/2;
+    
+    _this.drehbar_xc = xc;
+    _this.drehbar_yc = yc;
+
+    var theta = _this.drehbar_a!==undefined?_this.drehbar_a:get_css_transform(_this).angle
+    theta *= Math.PI/180;
+    var co = Math.cos(theta);
+    var si = Math.sin(theta);
+
+    var h = Math.abs(_this.offsetWidth * si) + Math.abs(_this.offsetHeight * co);
+    var w = Math.abs(_this.offsetWidth * co) + Math.abs(_this.offsetHeight * si);
+
+    var xoffrel=Math.abs(x - xc) / w;
+    var yoffrel=Math.abs(y - yc) / h;
+
+    //console.log(xoffrel, yoffrel);
+    
+    return  !_this.classList.contains("ui-draggable") || (xoffrel*xoffrel + yoffrel*yoffrel) > .3*.3;
+}
+$(_this)
+.on("tet:init_from_TETdata_page", function(evt, TETdata_page) {
+    var a = TETdata_page.tettool;
+    if(a) a = a[this.id];
+    if(a) a = a.drehbar_angle;
+    if(a) $(this).css("transform", "rotate("+a+"deg)");
+    $(this).triggerHandler("tet:drehbar", a || 0);
+})
+.click(function() {
+    if(window.layouting_mode) return;    
+return;
+    var a = get_css_transform(this);
+    a = a && a.angle || 0;
+    a = prompt("Winkel", a);
+    $(this).css("transform", "rotate("+a+"deg)");
+	sebSend("tetroom_action", "tettool", {
+		id:_this.id, 
+		drehbar_angle:a
+	});
+	update_TETdata_thisPage("tettool", _this.id, { drehbar_angle:a });
+})
+/*.on("mouseleave", function(e) {
+    if(window.layouting_mode) return;
+    if(!this.drehbar_on) return;
+    var $this = $(this);
+    //20250127  this.drehbar_on = false;
+    if($this.hasClass("ui-draggable")) {
+        $this.draggable( "enable" );
+        $this.trigger("mouseup");
+    }
+    this.drehbar_on = false;//20250127
+})
+*/
+.on("mousedown touchstart", function(e) {
+    if(window.layouting_mode) return;
+    var $this = $(_this);
+    
+    if (e.touches && e.touches.length > 1) {
+        _this.drehbar_on = false;
+        if($this.hasClass("ui-draggable")) {
+            $this.draggable( "enable" );
+            $this.trigger("mouseup");
+        }
+        $this.removeClass("drehbar_hover_cursor");
+        return;
+    }
+
+    tetinfobar( $this.hasClass("ui-draggable") ? "Zum Drehen am Rand anfassen [Strg: 90°/4 Schritte]"
+        : "drehen [Strg: 90°/4 Schritte]", 4000);
+    
+    // drehen_if_not_draggable_or_.3_outside_obj_center
+    if(!offCenter(_this, e)) return;
+    $this.addClass("drehbar_hover_cursor");
+    _this.drehbar_on = true;
+    _this.drehbar_x0 = _this.drehbar_x;
+    _this.drehbar_y0 = _this.drehbar_y;
+    _this.drehbar_a0 = get_css_transform(_this);
+    _this.drehbar_a0 = (_this.drehbar_a0 && _this.drehbar_a0.angle) || 0;
+
+    var a = Math.atan2(_this.drehbar_y-_this.drehbar_yc, _this.drehbar_x-_this.drehbar_xc);
+    a = a * (180 / Math.PI);
+    _this.drehbar_a0 -= a;
+
+    if(window.TETTOOL_DEBUG) console.log("start", _this.id, _this.drehbar_a0,  a)
+    if($this.hasClass("ui-draggable")) $this.draggable( "disable" );
+
+//////////////////////    $this.data("drehbar", {x0: x, y0: y})
+
+	$doc.on('mousemove.rem touchmove.rem',function(e) {
+        if(window.layouting_mode) return;
+
+        //20250806- what was this for??
+        //if(!_this.drehbar_on) {
+        //    var oc = offCenter(_this, e);
+        //    $this.toggleClass("drehbar_hover_cursor", !!oc);
+        //    return;
+        //}
+        var mpx = -mp.offsetLeft + mp.parentElement.scrollLeft,  mpy = -mp.offsetTop + mp.parentElement.scrollTop;
+    
+        var x = (!e.touches ? e.pageX : e.touches[0].pageX) + mpx;
+        var y = (!e.touches ? e.pageY : e.touches[0].pageY) + mpy;
+    
+        var a = Math.atan2(y-_this.drehbar_yc, x-_this.drehbar_xc);
+        a = a * (180 / Math.PI);
+    
+        if(window.TETTOOL_DEBUG) console.log( _this.drehbar_a0,  a, y-_this.drehbar_yc, x-_this.drehbar_xc)
+        a = _this.drehbar_a0  + a;
+        if(e.altKey ||e.shiftKey || e.ctrlKey) {
+            a = Int(a / 22.5, "r") * 22.5;
+        }        
+        _this.drehbar_a = a;
+        $this.css("transform", "rotate("+a+"deg)");
+        
+    	sebSend("tetroom_action", "tettool", {
+    		id:_this.id, 
+    		drehbar_angle:a
+    	});
+        $this.triggerHandler("tet:drehbar", a);
+        ////d.x = x;
+        ////d.y = y;
+        ////d.a = a;
+        return false; // no draggable !!
+    })
+	.on('mouseup.rem touchend.rem',function() {
+		$doc.off('.rem');
+	    if(window.layouting_mode) return;
+        if(!_this.drehbar_on) return;
+        _this.drehbar_on = false;
+        if($this.hasClass("ui-draggable")) {
+            $this.draggable( "enable" );
+            $this.trigger("mouseup");
+        }
+        $this.removeClass("drehbar_hover_cursor");
+    	////var d = $this.data("drehbar");
+    	if(!_this.hasAttribute("notetdata")) {
+        	update_TETdata_thisPage("tettool", _this.id, { drehbar_angle: _this.drehbar_a });
+        }
+    });
+})
+.data("onmessage", function(d) {
+    if(window.layouting_mode) return;    
+    _this.css("transform", "rotate("+d.drehbar_angle+"deg)");
+});
+}//function init_drehbar()
+
+    init_drehbar($(".drehbar"));
+})();
+</script><style>
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="dynvar" iiowner="shaase" ii_id="ii_82661">
+/* non-master TETstyle */
+.dragme {
+	border: solid 1px grey;
+	border-radius: 30px;
+}
+t{}
+.dropziel {
+   outline: dotted 1px red;
+   content: "Ziel";
+}
+.gray_border {
+   outline: 1px #ddd solid;
+}
+.back {
+   background-color: firebrick;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) {
+	pointer-events: none;
+    display: none;
+}
+#mainPane .codeBox:not([layouting][can_edit_tet]) .tetitem,
+#mainPane .codeBox:not([layouting][can_edit_tet]) button,
+#mainPane .codeBox:not([layouting][can_edit_tet]) input,
+#mainPane .codeBox:not([layouting][can_edit_tet]) label,
+#mainPane .codeBox:not([layouting][can_edit_tet]) textarea,
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetaction],
+#mainPane .codeBox:not([layouting][can_edit_tet])[tetbox_dia]/*Safari wants this!!!!*/ {
+	pointer-events: initial;
+}
+#mainPane[can_edit_ii] .codeBox[layouting][can_edit_tet] { /* don't ! [can_edit_ii]   20170922 but[can_edit_tet] to hide nested in tet.tool */
+	font-size:8px;
+x	outline: 4px orange dotted;
+	background-color: rgba(127,255,0,.2);
+}
+#mainPane[can_edit_ii] .codeBox[layouting][itemtype=tettool]:not(.tet_underlay):before {
+    content: "tet.tool: " attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background-color: #f5f5dcbb;
+    z-index: 1;
+}
+#mainPane[can_edit_ii] .codeBox[layouting]:not(.tet_underlay):not([itemtype=tettool]):before {
+    content: attr(itemtitle);
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    width: calc(100% - 11px);
+    border: 2px solid green;
+    margin: 3px;
+    background-color: #f5f5dcbb;
+    z-index: 1;
+}
+
+
+.img-crisp-edges {
+image-rendering: -moz-crisp-edges;         /* Firefox */
+image-rendering:   -o-crisp-edges;         /* Opera */
+image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+image-rendering: crisp-edges;
+-ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.tethide {}
+.authorsOnlyNote {
+    background-color: rgba(255, 153, 0, 0.2);
+    outline: 1px solid rgba(0, 0, 255, 0.6);
+}
+.authorsOnlyNote>.tetitem_inner>.tetitem_text {
+    padding: 4px 0 0 4px;
+    width: calc(100% - 8px);
+}
+body.web .authorsOnlyNote.tetitem,
+body.tetnoteMode .authorsOnlyNote.tetitem,
+body.guest_login .authorsOnlyNote.tetitem{
+    display: none !important;
+}
+
+.codeBox[layouting][can_edit_ii] script {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) script:before {
+	content: "\003cscript\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] script {
+    margin: 28px 5px 7px;
+}
+
+
+.codeBox[layouting][can_edit_ii] style {
+  display: block;
+x  word-wrap: break-word;
+white-space: pre-wrap;
+  /* padding: 7px; */
+  /* word-break: normal; */
+  outline: grey 1px solid;
+  margin: 12px 5px 7px;
+}
+
+.codeBox[layouting][can_edit_ii]:not(.tet_underlay) style:before {
+	content: "\003cstyle\003e";
+	font-size: 10px;
+	font-style: italic;
+	font-weight: 800;
+	text-align: center;
+	display: block;
+	position: absolute;
+    top: 1px;
+    width: 100%;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style:before {
+    top: 15px;
+}
+.codeBox[itemtype=tettool][layouting][can_edit_ii] style {
+    margin: 28px 5px 7px;
+}
+
+.codeBox-showStandardContent {}
+body #mainPane .codeBox.codeBox-showStandardContent {
+    display: block !important;
+}
+
+.kopfBox:not([layouting]) {
+   z-index: 10000;
+}
+.kopfBox.tetitem>.tetitem_inner {
+    overflow:visible;
+}
+
+
+.authorInfoTag::after {
+    content: "Autor: " attr(iiowner);
+    font-size: 12px;
+    font-family: cursive;
+    position: absolute;
+    top: -21px;
+    left: 5px;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+    padding: 0px 7px 0px;
+}
+.titleInfoTag .tetitem:not([itemtitle=""])::after,
+.titleInfoTag:not([itemtitle=""])::after {
+    content: attr(itemtitle);
+    font-size: 12px;
+    font-family: monospace;
+    position: absolute;
+    top: -21px;
+    left: 5px;
+    border: #ccc solid 1px;
+    border-radius: 4px;
+    padding: 0px 7px 0px;
+}
+
+.whiteBox {
+	background-color: white;
+}
+.overflow.tetitem>.tetitem_inner {
+    overflow:visible;
+}
+.overflow_tetitem.tetitem {
+    overflow:visible;
+}
+.overflow_tetitem_text_scroll.tetitem>.tetitem_inner>.tetitem_text {
+    overflow:auto;
+}
+.padding10>.tetitem_inner>.tetitem_text {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+.padding20>.tetitem_inner>.tetitem_text {
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+}
+
+
+.opacity_02{
+	opacity: .02;
+}
+.opacity_05 {
+	opacity: .05;
+}
+.opacity_10 {
+	opacity: .1;
+}
+.opacity_20 {
+	opacity: .2;
+}
+.opacity_40 {
+	opacity: .4;
+}
+.opacity_60 {
+	opacity: .6;
+}
+
+
+.relative_position {
+	position: relative !important;
+}
+.user-select-text, .user-select-text * {
+   -ms-user-select: text;
+   -khtml-user-select: initial;
+   -webkit-user-select: initial;
+   user-select: text;
+   -moz-user-select: text;    
+}
+.text_pre {
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
+}
+.z-index_1000:not([layouting]) {
+    z-index:1000;
+}
+
+.textarea_fullsize>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;    
+}
+.textarea_fullwidth>.tetitem_inner>.tetitem_text textarea {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 0;
+    padding: 0;
+}
+/*
+.header_navigation_center {
+    left: 50% !important;
+    margin-left: -50px;
+    top: auto !important;
+    position: fixed !important;
+    z-index: 26;
+}
+*/
+.header_navigation_left {}
+.header_navigation_right {}
+</style>  
+<style type="text/css" itemtype="TETstyle" itemtitle="Box background" iiowner="sommerer" ii_id="ii_344529">
+.meineStyles {
+	/* Box background erlaubt die Wahl der Hintergrundfarbe in der Box */
+}
+
+.box_white {
+        background: white;
+    }
+.box_lightblue{
+        background: rgb(197,216,235);
+    }
+.box_lightgreen {
+        background: rgb(196,223,131);
+    }
+.box_lightgrey {
+        background: lightgrey;
+    }
+.box_lightorange {
+        background: rgb(246,200,100);
+    }
+.box_lightred{
+        background: rgb(240,100,100);
+    }
+.box_lightyellow {
+        background: rgb(255,255,128);
+    }
+
+.box_black {
+        background: black;
+    }
+.box_darkblue {
+        background: rgb(22, 69, 116);
+    }
+.box_darkgrey {
+        background: darkgrey;
+    }
+.box_darkgreen {
+        background: darkgreen;
+    }
+.box_darkorange {
+        background: rgb(255, 153, 0);
+    }
+.box_red {
+	background: rgb(255,0,0);
+    }
+.box_darkred {
+        background: darkred;
+    }
+.box_darkyellow {
+        background: rgb(255, 255, 0);
+    }
+</style>  </div>    <script>if(location.protocol==='file:') { $('iframe').each(function(){if(this.src.match(/file:\/\/.*?\/web\/\d+.html($|[?])/)) this.src+='?nonavi'});
+if(location.search.match(/[?&]nonavi([^=]|$)/)) $('.header_navigation').remove() }</script>    </body></html>
